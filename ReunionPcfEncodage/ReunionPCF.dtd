@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!ELEMENT TEI (teiHeader, text)>
+<!ATTLIST TEI xmlns CDATA #IMPLIED>
+
+
+<!-- TEI Header -->
+<!ELEMENT teiHeader (fileDesc, back)>
+<!ELEMENT fileDesc (titleStmt, editionStmt, respStmt, publicationStmt, sourceDesc)>
+<!ELEMENT titleStmt (title)>
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT editionStmt (edition)>
+<!ELEMENT edition (#PCDATA | date)*>
+<!ELEMENT date (#PCDATA)>
+<!ATTLIST date when CDATA #IMPLIED>
+<!ELEMENT respStmt (resp, persName)>
+<!ELEMENT resp (#PCDATA)>
+
+<!ELEMENT persName (#PCDATA | alias|forename | surname| roleName| idno)*>
+<!ATTLIST persName 
+    xml:id ID #IMPLIED
+    ref IDREF #IMPLIED>
+<!ELEMENT alias (#PCDATA) >
+<!ELEMENT forename (#PCDATA)>
+<!ELEMENT surname (#PCDATA)>
+<!ELEMENT roleName (#PCDATA |org|placeName)*>
+
+<!ELEMENT publicationStmt (publisher, pubPlace, availability)>
+<!ELEMENT publisher (#PCDATA)>
+<!ELEMENT pubPlace (#PCDATA)>
+<!ELEMENT availability (licence)>
+<!ELEMENT licence (#PCDATA)>
+<!ELEMENT sourceDesc (msDesc)>
+<!ELEMENT msDesc (msIdentifier)>
+<!ELEMENT msIdentifier (country, settlement, repository, idno)>
+<!ELEMENT country (#PCDATA)>
+<!ELEMENT settlement (#PCDATA)>
+<!ATTLIST settlement 
+    ref IDREF #IMPLIED
+    type NMTOKEN #IMPLIED>
+<!ELEMENT repository (#PCDATA)>
+<!ATTLIST repository xml:lang NMTOKEN #REQUIRED>
+<!ELEMENT idno (#PCDATA)>
+<!ATTLIST idno type (Wikidata | OtherType) "Wikidata">
+
+<!-- Back Section -->
+<!ELEMENT back (listPerson, listPlace, listEvent, listOrg)>
+<!ELEMENT listPerson (person)+>
+<!ELEMENT person (persName, idno?)>
+<!ATTLIST person xml:id ID #REQUIRED>
+
+<!ELEMENT listPlace (place)+>
+<!ELEMENT place (placeName, alias?, desc?, idno, geo?)>
+<!ATTLIST place xml:id ID #REQUIRED>
+<!ELEMENT placeName (#PCDATA )>
+<!ATTLIST placeName 
+    ref IDREF #IMPLIED>
+<!ELEMENT desc (#PCDATA |placeName)* >
+
+<!ELEMENT listEvent (event)+>
+<!ELEMENT event (#PCDATA |eventName| note | idno| date| placeName| persName)*>
+<!ATTLIST event 
+    xml:id ID #IMPLIED
+    ref IDREF #IMPLIED>
+<!ELEMENT eventName (#PCDATA| persName)*>
+<!ELEMENT note (#PCDATA)>
+
+<!ELEMENT listOrg (org)+>
+<!ELEMENT org (#PCDATA |orgName| description| geo|idno)*>
+<!ATTLIST org 
+    xml:id ID #IMPLIED
+    ref IDREF #IMPLIED>
+<!ELEMENT orgName (#PCDATA)>
+<!ELEMENT description (#PCDATA |org)*>
+<!ELEMENT geo (location) >
+<!ELEMENT location (#PCDATA)>
+
+<!-- Text Section -->
+<!ELEMENT text (body)>
+<!ELEMENT body (div1+)>
+<!ATTLIST div1 type (Compte_Rendue | decisions | OtherType) "Compte_Rendue">
+
+<!-- div1 and div2 for body structure -->
+<!ELEMENT div1 (head, div2*)>
+<!ELEMENT head (#PCDATA)>
+<!ELEMENT div2 (head| div3| p+)*>
+<!ATTLIST div2 type (decisions_arretés | ordre_du_jour| other) #IMPLIED>
+<!ELEMENT div3 (#PCDATA | head|p)*>
+<!ATTLIST div3 type (Chapter) "Chapter">
+<!ELEMENT p (#PCDATA | placeName | persName| event |org |div4)*>
+<!ELEMENT div4 (p)>
+
