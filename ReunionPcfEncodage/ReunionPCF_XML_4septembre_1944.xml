@@ -1,159 +1,332 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE TEI SYSTEM "ReunionPCF.dtd">
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="out/odd_ReunionPCF_XML_11_septembre_1944.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Secretariat du PCF du 4 septembre 1944</title>
+            <respStmt>
+               <resp>Transcription and encoding of the minutes of the meeting of the French
+                  Communist Party </resp>
+               <persName>
+                  <forename>Adonis</forename>
+                  <surname>Dulaurent</surname>
+               </persName>
+            </respStmt>
          </titleStmt>
-         <editionStmt>
-            <edition>Assignement XML TEI - École nationale des Chartes <date when="2025-01">January 2025</date></edition>
-         </editionStmt>
-         
-         <respStmt>
-            <resp>Transcription and encoding of the minutes of the meeting of the French Communist Party </resp>
-            <persName>
-               <forename>Adonis</forename>
-               <surname>Dulaurent</surname>
-            </persName>
-         </respStmt>
-         
+
          <publicationStmt>
-            <publisher>Archives Départemental de Seine Saint Denis</publisher>
-            <pubPlace>Seine Saint Denis</pubPlace>
+            <distributor>
+               <surname>Adonis</surname>
+               <forename>Dulaurent</forename>
+               <date when="2025-01">January 2025</date>
+            </distributor>
             <availability>
-               <licence>Uknow</licence>
+               <licence>This file is available under a Creative Commons Attribution 4.0 licence:
+                     <ref type="url" target="https://creativecommons.org/licenses/by/4.0/deed.en"
+                     >https://creativecommons.org/licenses/by/4.0/deed.en</ref>. </licence>
             </availability>
          </publicationStmt>
-         
          <sourceDesc>
             <msDesc>
                <msIdentifier>
-                  <country>France</country>
-                  <settlement>Seine Saint Denis</settlement>
+                  <country key="FR"/>
+                  <settlement type="city">Bobigny</settlement>
                   <repository xml:lang="fr">Archives Départemental de Seine Saint Denis</repository>
-                  <idno>261J5/1-1</idno>
+                  <idno>261J5-2</idno>
                </msIdentifier>
             </msDesc>
          </sourceDesc>
       </fileDesc>
+
+      <profileDesc>
+         <particDesc>
+            <listPerson>
+
+               <person xml:id="Maf_001">
+                  <persName>
+                     <forename>Mafran</forename>
+                     <roleName>Member of the <affiliation>French Communist
+                        Party</affiliation></roleName>
+                  </persName>
+               </person>
+
+               <person xml:id="Dor_001">
+                  <persName>
+                     <forename>Dorval</forename>
+                     <roleName>Member of the <affiliation>French Communist
+                        Party</affiliation></roleName>
+                  </persName>
+               </person>
+
+               <person xml:id="JD_001">
+                  <persName>
+                     <forename>Jacques</forename>
+                     <surname>Duclos</surname>
+                     <roleName>Member of the <affiliation>French Communist
+                        Party</affiliation></roleName>
+                  </persName>
+                  <idno type="Wikidata">Q377790</idno>
+               </person>
+
+               <person xml:id="Cog_001">
+                  <persName>
+                     <forename>Cogniot</forename>
+                     <surname>Georges</surname>
+                     <roleName>Member of the <affiliation>French Communist
+                        Party</affiliation></roleName>
+                     <idno type="Wikidata">Q3102498</idno>
+                  </persName>
+               </person>
+
+               <person xml:id="BR_001">
+                  <persName>
+                     <surname>Roger</surname>
+                     <forename>Barbatin</forename>
+                     <roleName>Member of the <affiliation>French Communist
+                        Party</affiliation></roleName>
+                  </persName>
+               </person>
+
+               <person xml:id="Ram_001">
+                  <persName>
+                     <forename>Rambanchner</forename>
+                     <roleName>Member of the <affiliation>French Communist
+                        Party</affiliation></roleName>
+                  </persName>
+               </person>
+
+               <person xml:id="Wei_001">
+                  <persName>
+                     <forename>Weingaertner</forename>
+                     <roleName>Member of the <affiliation>French Communist
+                        Part</affiliation>y</roleName>
+                  </persName>
+               </person>
+
+               <person xml:id="Rig_001">
+                  <persName>
+                     <forename>Rigal</forename>
+                     <roleName>Member of the <affiliation>French Communist
+                        Party</affiliation></roleName>
+                  </persName>
+               </person>
+
+               <person xml:id="Ham_001">
+                  <persName>
+                     <surname>Hamont</surname>
+                     <forename>Dubreuil</forename>
+                     <roleName>Member of the <affiliation>French Communist Party</affiliation> and
+                        commander of the<affiliation ref="FTP_001">F.T.P.F</affiliation></roleName>
+                  </persName>
+               </person>
+
+               <person xml:id="Jan_001">
+                  <persName>
+                     <forename>La Janine</forename>
+                     <roleName>Member of the <affiliation>French Communist Party</affiliation> and
+                        member of the <affiliation>Mouvement de libération des
+                        femmes</affiliation></roleName>
+                  </persName>
+               </person>
+
+               <person xml:id="Cas_001">
+                  <persName>
+                     <forename>Casanova</forename>
+                     <roleName>Member of the <affiliation>French Communist Party</affiliation> and
+                        journalist</roleName>
+                  </persName>
+               </person>
+
+               <person xml:id="Til_001">
+                  <persName>
+                     <forename>Tillon</forename>
+                     <roleName>Member of the <affiliation>French Communist
+                        Party</affiliation></roleName>
+                  </persName>
+               </person>
+            </listPerson>
+         </particDesc>
+
+         <settingDesc>
+            <listPlace>
+               
+               <place xml:id="Bre_001">
+                  <placeName>
+                     <name>Bretagne</name>
+                  </placeName>
+                  <country key="FR"/>
+                  <location>
+                     <geo>47.599998 7</geo>
+                     <!-- lat long -->
+                  </location>
+                  <idno type="Wikidata">Q12130</idno>
+               </place>
+
+               <place xml:id="RP_001">
+                  <placeName>
+                     <name>Ile-de-France</name>
+                  </placeName>
+                  <country key="FR"/>
+                  <location>
+                     <geo>48.8499198 2.6370411</geo>
+                     <!-- lat long -->
+                  </location>
+                  <idno type="Wikidata">Q13917</idno>
+               </place>
+            </listPlace>
+         </settingDesc>
+      </profileDesc>
+
+     
+   </teiHeader>
+
+   <text>
+      <body>
+         <div1 type="Compte_Rendue">
+            <head>Secretariat du 4 septembre 1944</head>
+            <div2 type="decisions_arretés">
+               <head>Décisions et Arrêtés</head>
+
+               <div3 type="Chapter">
+                  <head>1</head>
+                  <p>Mise en place d'un responsable à <orgName ref="AFP_001">l'agence de presse et
+                        d'information</orgName> - <persName ref="Maf_001">Mafran</persName> ayant
+                     quelqu'un en vue. </p>
+               </div3>
+
+               <div3 type="Chapter">
+                  <head>2</head>
+                  <p>Le camarade <persName ref="Dor_001">Dorval</persName> sera candidat à la
+                     vice-présidence de la <orgName ref="FdP_001">Fédération de la presse</orgName>. </p>
+               </div3>
+
+               <div3 type="Chapter">
+                  <head>3</head>
+                  <p>Une enquête devra être demandée à la <orgName ref="FdP_002">Fédération du
+                        papier</orgName> afin de connaître les stocks de papier et de pâte à papier dans
+                     les divers dépôts et usines. </p>
+               </div3>
+
+               <div3 type="Chapter">
+                  <head>4</head>
+                  <p>Les camrades ayant qualité réclameront la révision de l'attribution du papier
+                     pour la presse et cela compte tenu de la vente des divers journaux. </p>
+               </div3>
+
+               <div3 type="Chapter">
+                  <head>5</head>
+                  <p>En liaison avec les conditions actuelles de répartition du papier aux journaux,
+                     il est décidé d'organiser une <eventName ref="ClP_001">campagne pour la liberté de
+                        la presse</eventName> (lettres aux journaux et aux pouvoirs intéressés,
+                     pétitions, etc.). </p>
+               </div3>
+
+               <div3 type="Chapter">
+                  <head>6</head>
+                  <p>Le camarade <persName ref="JD_001">Jacques Duclos</persName> acceptera de
+                     donner l'interview demandée par "<orgName ref="CS_001">Ce Soir</orgName>". </p>
+               </div3>
+
+               <div3 type="Chapter">
+                  <head>7</head>
+                  <p>Après un dernier effort pour régler à l'amiable, les locaux du <orgName
+                        ref="PP_001">Petit Parisien</orgName> seront occupés de droit. </p>
+               </div3>
+
+               <div3 type="Chapter">
+                  <head>8</head>
+                  <p>Il est décidé de donner à <persName ref="Dor_001">Dorval</persName> un
+                     administrateur adjoint. </p>
+               </div3>
+
+               <div3 type="Chapter">
+                  <head>9</head>
+                  <p>Seront recherché pour le service du camarade <persName ref="Cog_001"
+                        >Cognot</persName> 1e) <persName ref="BR_001">Barbatin Roger</persName> 2e)
+                        <persName ref="Ram_001">Rambanchner</persName> 3e) <persName ref="Wei_001"
+                        >Weingaertner dit Contois</persName>
+                  </p>
+               </div3>
+
+               <div3 type="Chapter">
+                  <head>10</head>
+                  <p>Le camarade <persName ref="Rig_001">Rigal</persName> reste affecté à l'<orgName
+                        ref="Hum_001">Huma</orgName> dans le service du camarade <persName ref="Cog_001"
+                        >Cogno</persName>. </p>
+               </div3>
+
+               <div3 type="Chapter">
+                  <head>11</head>
+                  <p><persName ref="Ham_001">Hamont dit Dubreuil</persName> actuellement en
+                        <placeName ref="Bre_001">Bretagne</placeName> commandant <orgName ref="FTP_001"
+                        >F.T.P.F.</orgName> est affecté à l'<orgName ref="Hum_001">Huma</orgName>. </p>
+               </div3>
+
+               <div3 type="Chapter">
+                  <head>12</head>
+                  <p> La <persName ref="Jan_001">Janine</persName> Marchand des femmes sera
+                     rédactrice à l'<orgName ref="Hum_001">Huma</orgName> tout en resta en liaison avec le
+                        <orgName ref="MdF_001">mouvement des femmes</orgName>. </p>
+               </div3>
+
+               <div3 type="Chapter">
+                  <head>13</head>
+                  <p>Les salaires des permanents sont fixés à 4.000 plus 200 Frs par enfant. Le
+                     salaire des femmes est égal dans la mesure ou celles-ci sont seules à se
+                     subvenir. Les salaires dits de "ménage", sont suprimés. </p>
+               </div3>
+
+               <div3 type="Chapter">
+                  <head>14</head>
+                  <p>Le camarade <persName ref="Cas_001">Casanova</persName> est chargé de faire
+                     dans le courant de la semaine une brochure sur " <eventName ref="IP_001"
+                        >l'insurrection parisienne</eventName> " - Le camarade <persName ref="Til_001"
+                        >Tillon</persName> est chargé de faire préparer le recueil des communiqués
+                        <orgName ref="FTP_001">F.T.P.F.</orgName>
+                  </p>
+               </div3>
+
+               <div3 type="Chapter">
+                  <head>15</head>
+                  <p>Le camarade <persName ref="Til_001">Tillon</persName> se fera interviewer par
+                        l'<orgName ref="Hum_001">Humanité</orgName>. </p>
+               </div3>
+
+               <div3 type="Chapter">
+                  <head>16</head>
+                  <p>Il sera procédé le plus rapidement possible à l'affichage des instructions aux
+                        <orgName ref="MP_001">milices patriotiques</orgName>. </p>
+               </div3>
+
+               <div3 type="Chapter">
+                  <head>17</head>
+                  <p> Le <eventName ref="BP_001">B.P.</eventName> tiendra sa réunion Jeudi 7 septembre à 9
+                     heures ou les 6 régions de la <placeName ref="RP_001">région
+                        Parisienne</placeName> seront présents.</p>
+               </div3>
+
+            </div2>
+            <div2 type="ordre_du_jour">
+               <head>Ordre du jour</head>
+               <p>La sitution politique </p>
+               <p>L'état dans la région Parisienne.</p>
+            </div2>
+
+            <div2 type="other">
+               <p>Dans les décisions du secrétariat du 4 septembre 1944, manque le point suivant
+                  :</p>
+               <p>Le camarade <persName ref="Cog_001">COGNIOT</persName> sera candidat à la <orgName
+                     ref="CEP_001">commission d'Epuration de la Presse</orgName> de la Région parisienne
+                     (<orgName ref="MdI_001">Ministre de l'information</orgName> ).</p>
+            </div2>
+         </div1>
+      </body>
       
       <back>
-         
-         <listPerson>
-            <person xml:id="Maf_001">
-               <persName>
-                  <alias>Mafran</alias>
-                  <roleName>Member of the French Communist Party</roleName>
-               </persName>
-            </person>
-            
-            <person xml:id="Dor_001">
-               <persName>
-                  <alias>Dorval</alias>
-                  <roleName>Member of the French Communist Party</roleName>
-               </persName>
-            </person>
-            
-            <person xml:id="JD_001">
-               <persName>
-                  <forename>Jacques</forename>
-                  <surname>Duclos</surname>
-                  <roleName>Member of the French Communist Party</roleName>
-               </persName>
-               <idno type="Wikidata">Q377790</idno>
-            </person>
-            
-            <person xml:id="Cog_001">
-               <persName>
-                  <forename>Cogniot</forename>
-                  <surname>Georges</surname>
-                  <roleName>Member of the French Communist Party</roleName>
-                  <idno type="Wikidata">Q3102498</idno>
-               </persName>
-            </person>
-            
-            <person xml:id="BR_001">
-               <persName>
-                  <surname>Roger</surname>
-                  <forename>Barbatin</forename>
-                  <roleName>Member of the French Communist Party</roleName>
-               </persName>
-            </person>
-            
-            <person xml:id="Ram_001">
-               <persName>
-                  <alias>Rambanchner</alias>
-                  <roleName>Member of the French Communist Party</roleName>
-               </persName>
-            </person>
-            
-            <person xml:id="Wei_001">
-               <persName>
-                  <forename>Weingaertner</forename>
-                  <alias>Contois</alias>
-                  <roleName>Member of the French Communist Party</roleName>
-               </persName>
-            </person>
-           
-           <person xml:id="Rig_001">
-              <persName>
-                 <alias>Rigal</alias>
-                 <roleName>Member of the French Communist Party</roleName>
-              </persName>
-           </person> 
-            
-            <person xml:id="Ham_001">
-               <persName>
-                  <surname>Hamont</surname>
-                  <alias>Dubreuil</alias>
-                  <roleName>Member of the French Communist Party and commander of the <org ref="FTP_001">F.T.P.F</org></roleName>
-               </persName>
-            </person>
-            
-            <person xml:id="Jan_001">
-               <persName>
-                  <alias>La Janine</alias>
-                  <roleName>Member of the French Communist Party and member of the Mouvement de libération des femmes</roleName>
-               </persName>
-            </person>
-            
-            <person xml:id="Cas_001">
-               <persName>
-                  <alias>Casanova</alias>
-                  <roleName>Member of the French Communist Party and journalist</roleName>
-               </persName>
-            </person>
-            
-            <person xml:id="Til_001">
-               <persName>
-                  <alias>Tillon</alias>
-                  <roleName>Member of the French Communist Party</roleName>
-               </persName>
-            </person>
-         </listPerson>
-         
-         <listPlace>
-            <place xml:id="Bre_001">
-               <placeName>Bretagne</placeName>
-               <idno type="Wikidata">Q12130</idno>
-               <geo>
-                  <location>47.599998 7</location>
-                  <!-- lat long -->
-               </geo>
-            </place>
-            
-            <place xml:id="RP_001">
-               <placeName>Ile-de-France</placeName>
-               <idno type="Wikidata">Q13917</idno>
-               <geo>
-                  <location>48.8499198 2.6370411</location>
-                  <!-- lat long -->
-               </geo>
-            </place>
-         </listPlace>
-         
          <listEvent>
             <event xml:id="ClP_001">
                <eventName>Campagne pour la liberté de la presse</eventName>
@@ -162,9 +335,9 @@
             
             <event xml:id="IP_001">
                <eventName>Libération de Paris</eventName>
-               <note>The liberation of Paris was a battle that took place during Word War II 
-                  from 19 august 1944 until the German garnison surrended the French Capital
-               on 25 august 1944</note>
+               <note>The liberation of Paris was a battle that took place during Word War II from 19
+                  august 1944 until the German garnison surrended the French Capital on 25 august
+                  1944</note>
                <idno type="Wikidata">Q696835</idno>
             </event>
             
@@ -187,196 +360,86 @@
             </org>
             
             <org xml:id="CS_001">
-               <orgName>Ce Soir</orgName>
-               <description>French Newspaper</description>
-               <idno type="Wikidata">Q2943625</idno>
-               <geo>
-                  <location>48.861 2.335833</location>
+               <orgName>
+                  <name>Ce Soir</name>
+               </orgName>
+               <desc>French Newspaper</desc>
+               <location>
+                  <geo>48.861 2.335833</geo>
                   <!-- lat long -->
-               </geo>
+               </location>
+               <idno type="Wikidata">Q2943625</idno>
             </org>
             
             <org xml:id="PP_001">
-               <orgName>Le Petit Parisien</orgName>
-               <description>French Newspaper</description>
-               <idno type="Wikidata">Q831299</idno>
-               <geo>
-                  <location>48.8719437 2.3515342</location>
+               <orgName>
+                  <name>Le Petit Parisien</name>
+                </orgName>
+               <location>
+                  <geo>48.8719437 2.3515342</geo>
                   <!-- lat long -->
-               </geo>
+               </location>
+               <desc>French Newspaper</desc>
+               <idno type="Wikidata">Q831299</idno>
             </org>
             
             <org xml:id="Hum_001">
-               <orgName>L'Humanité</orgName>
-               <description>French Newspaper</description>
-               <idno type="Wikidata">Q1137404</idno>
-               <geo>
-                  <location>48.8719437 2.3515342</location>
+               <orgName>
+                  <name>L'Humanité</name>
+               </orgName>
+               <location>
+                  <geo>48.8719437 2.3515342</geo>
                   <!-- lat long -->
-               </geo>
+               </location>
+               <desc>French Newspaper</desc>
+               <idno type="Wikidata">Q1137404</idno>
             </org>
             
             <org xml:id="FTP_001">
-               <orgName>Francs-tireurs et partisans Francais</orgName>
-               <description>Résistance groups in France during WWII, linked to Communist Party</description>
+               <orgName>
+                  <name>Francs-tireurs et partisans Francais</name>
+               </orgName>
+               <desc>Résistance groups in France during WWII, linked to CommunistParty</desc>
                <idno type="Wikidata">Q15731766</idno>
             </org>
             
             <org xml:id="MdF_001">
-               <orgName>Mouvements de libération des femmes</orgName>
-               <description>French political movement for women's emancipation</description>
+               <orgName>
+                  <name>Mouvements de libération des femmes</name>
+               </orgName>
+               <desc>French political movement for women's emancipation</desc>
                <idno type="Wikidata">Q3326594</idno>
             </org>
             
             <org xml:id="MP_001">
-               <orgName>Milices Patrioques</orgName>
-               <description>the Milices ouvrières were born of a communist initiative;
-                  their creation was announced in L'Humanité on August 15, 1943.
-                  A fortnight later, they changed their name to Milices patriotiques.</description>
+               <orgName>
+                  <name>Milices Patrioques</name>
+               </orgName>
+               <desc>the Milices ouvrières were born of a communist initiative; their
+                  creation was announced in L'Humanité on August 15, 1943. A fortnight later, they
+                  changed their name to Milices patriotiques.</desc>
             </org>
             
             <org xml:id="CEP_001">
-               <orgName>Comission d'épuration de la Presse</orgName>
-               <description>The press purge commission was set up to judge journalists 
-                  who had worked under the French Occupation.</description>
+               <orgName>
+                  <name>Comission d'épuration de la Presse</name>
+               </orgName>
+               <desc>The press purge commission was set up to judge journalists who had
+                  worked under the French Occupation.</desc>
             </org>
+            
             <org xml:id="MdI_001">
-               <orgName>Ministère de l'Information</orgName>
-               <description>The Ministery of Information was the Governement of France departement responsible for propaganda 
-                  from its creation in 1938 to its suppression in 1974</description>
+               <orgName>
+                  <name>Ministère de l'Information</name>
+               </orgName>
+               <desc>The Ministery of Information was the Governement of France departement
+                  responsible for propaganda from its creation in 1938 to its suppression in
+                  1974</desc>
                <idno type="Wikidata">Q3315222</idno>
+               
             </org>
          </listOrg>
       </back>
-   </teiHeader>
-   
-   <text>
-      <body>
-         <div1 type="Compte_Rendue">
-            <head>Secretariat du 4 septembre 1944</head>
-            <div2 type="decisions_arretés">
-               <head>Décisions et Arrêtés</head>
-               
-               <div3 type="Chapter">
-                  <head>1</head>
-                  <p>Mise en place d'un responsable à 
-                     <org ref="AFP_001">l'agence de presse et d'information</org> - 
-                     <persName ref="Maf_001">Mafran</persName> ayant quelqu'un en vue.
-                  </p></div3>
-               
-               <div3 type="Chapter">
-                  <head>2</head>
-                  <p>Le camarade <persName ref="Dor_001">Dorval</persName> sera candidat à la vice-présidence
-                     de la <org ref="FdP_001">Fédération de la presse</org>.
-                  </p></div3>
-               
-               <div3 type="Chapter">
-                  <head>3</head>
-                  <p>Une enquête devra être demandée à la <org ref="FdP_002">Fédération du papier</org> afin de connaître
-                     les stocks de papier et de pâte à papier dans les divers dépôts et usines.
-                  </p></div3>
-               
-               <div3 type="Chapter">
-                  <head>4</head>
-                  <p>Les camrades ayant qualité réclameront la révision de l'attribution du papier pour la presse
-                     et cela compte tenu de la vente des divers journaux.
-                  </p></div3>
-               
-               <div3 type="Chapter">
-                  <head>5</head>
-                  <p>En liaison avec les conditions actuelles de répartition du papier aux journaux, 
-                     il est décidé d'organiser une <event ref="ClP_001">campagne pour la liberté de la presse</event>
-                     (lettres aux journaux et aux pouvoirs intéressés, pétitions, etc.).
-                  </p></div3>
-               
-               <div3 type="Chapter">
-                  <head>6</head>
-                  <p>Le camarade <persName ref="JD_001">Jacques Duclos</persName> acceptera de donner
-                     l'interview demandée par "<org ref="CS_001">Ce Soir</org>".
-                  </p></div3>
-               
-               <div3 type="Chapter">
-                  <head>7</head>
-                  <p>Après un dernier effort pour régler à l'amiable, 
-                     les locaux du <org ref="PP_001">Petit Parisien</org> seront occupés de droit.
-                  </p></div3>
-               
-               <div3 type="Chapter">
-                  <head>8</head>
-                  <p>Il est décidé de donner à <persName ref="Dor_001">Dorval</persName> un administrateur adjoint.
-                  </p></div3>
-               
-               <div3 type="Chapter">
-                  <head>9</head>
-                  <p>Seront recherché pour le service du camarade <persName ref="Cog_001">Cognot</persName> 
-                     1e) <persName ref="BR_001">Barbatin Roger</persName>
-                     2e) <persName ref="Ram_001">Rambanchner</persName>
-                     3e) <persName ref="Wei_001">Weingaertner dit Contois</persName>
-                  </p></div3>
-               
-               <div3 type="Chapter">
-                  <head>10</head>
-                  <p>Le camarade <persName ref="Rig_001">Rigal</persName> reste affecté à l'<org ref="Hum_001">Huma</org> 
-                     dans le service du camarade <persName ref="Cog_001">Cogno</persName>.
-                  </p></div3>
-               
-               <div3 type="Chapter">
-                  <head>11</head>
-                  <p><persName ref="Ham_001">Hamont dit Dubreuil</persName> actuellement en <placeName ref="Bre_001">Bretagne</placeName>
-                     commandant <org ref="FTP_001">F.T.P.F.</org> est affecté à l'<org ref="Hum_001">Huma</org>.
-                  </p></div3>
-               
-               <div3 type="Chapter">
-                  <head>12</head>
-                  <p> La <persName ref="Jan_001">Janine</persName> Marchand des femmes sera rédactrice 
-                     à l'<org ref="Hum_001">Huma</org> tout en resta en liaison avec le <org ref="MdF_001">mouvement des femmes</org>. 
-                  </p></div3>
-               
-               <div3 type="Chapter">
-                  <head>13</head>
-                  <p>Les salaires des permanents sont fixés à 4.000 plus 200 Frs par enfant.
-                     Le salaire des femmes est égal dans la mesure ou celles-ci sont seules à se subvenir.
-                     Les salaires dits de "ménage", sont suprimés.
-                  </p></div3>
-               
-               <div3 type="Chapter">
-                  <head>14</head>
-                  <p>Le camarade <persName ref="Cas_001">Casanova</persName> est chargé de faire dans le courant 
-                     de la semaine une brochure sur " <event ref="IP_001">l'insurrection parisienne</event> "
-                    - Le camarade <persName ref="Til_001">Tillon</persName> est chargé de faire préparer
-                     le recueil des communiqués <org ref="FTP_001">F.T.P.F.</org>
-                  </p></div3>
-               
-               <div3 type="Chapter">
-                  <head>15</head>
-                  <p>Le camarade <persName ref="Til_001">Tillon</persName> se fera interviewer par l'<org ref="Hum_001">Humanité</org>.
-                  </p></div3>
-               
-               <div3 type="Chapter">
-                  <head>16</head>
-                  <p>Il sera procédé le plus rapidement possible à l'affichage des instructions aux <org ref="MP_001">milices patriotiques</org>. 
-                  </p></div3>
-               
-               <div3 type="Chapter">
-                  <head>17</head>
-                  <p> Le <event ref="BP_001">B.P.</event> tiendra sa réunion Jeudi 7 septembre à 9 heures
-                     ou les 6 régions de la <placeName ref="RP_001">région Parisienne</placeName> seront présents.</p>
-               </div3>
-               
-            </div2>
-            <div2 type="ordre_du_jour">
-               <head>Ordre du jour</head>
-               <p>La sitution politique </p>
-               <p>L'état dans la région Parisienne.</p>
-            </div2>
-            
-            <div2 type="other">
-               <p>Dans les décisions du secrétariat du 4 septembre 1944, manque le point suivant :</p>
-               <p>Le camarade <persName ref="Cog_001">COGNIOT</persName> sera candidat à la 
-                  <org ref="CEP_001">commission d'Epuration de la Presse</org> de la Région parisienne 
-                  (<org ref="MdI_001">Ministre de l'information</org> ).</p>
-            </div2>
-         </div1>
-      </body>
+      
    </text>
 </TEI>

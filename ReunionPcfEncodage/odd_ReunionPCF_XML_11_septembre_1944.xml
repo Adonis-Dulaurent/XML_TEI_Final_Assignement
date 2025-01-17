@@ -1,0 +1,819 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title type="main">Encoding guide - <emph rend="italic">Secretariat of the PCF
+                  1944</emph>
+            </title>
+            <title>ODD by Example customization</title>
+         </titleStmt>
+         <publicationStmt>
+            <p>Edition encoded by Adonis Dulaurent, from the archives of the secretariat of the
+               French Communist Party </p>
+         </publicationStmt>
+         <sourceDesc>
+            <p>Derived from <ref
+                  target="https://www.tei-c.org/Vault/P5/current/xml/tei/odd/p5subset.xml">base
+                  odd</ref> after an analysis of 3 files in
+               file:/home/a7donis/homework/Projet_XML_TEI_PCF/ReunionPcfEncodage/</p>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <div1>
+            <head> Encoding guide for the report on <emph rend="Italic">Secretariat of PCF</emph>
+               written in 1944 by the Secretariat of the Pari Communist Francais. </head>
+            
+            <p> This document outlines the methods employed to encode the work referenced in the title
+               using XML-TEI and explains the objectives behind the schema design. The ODD describes
+               rigorous encoding principles to produce a scientifically reliable resource. </p>
+            
+            <p> The encoding is centered on a meeting report. The schema was created to structure the
+               document and highlight entities such as members of the French Communist Party, political
+               organizations, and public institutions, facilitating an analysis of their relationships</p>
+            
+            <p> PSpecial attention was given to data normalization to support reuse.</p>
+            
+            <p> The encoded material supports analyses on multiple levels. At the micro level, the
+               structure and details of the meeting report itself are examined, while at the macro level,
+               the schema sheds light on political dynamics in post-World War II France. The objectives
+               of this encoding include:<list>
+                  
+                  <item>Analyzing the decisions made by the French Communist Party in 1944.</item>
+                  
+                  <item>Documenting the party's history in the post-war period.</item>
+                  
+                  <item>Studying relationships between named entities, including interactions and the
+                     frequency of their appearance in the meeting reports, to generate statistical insights
+                     into these dynamics.</item>
+               </list>
+            </p>
+            
+            <p>These objectives will be revisited throughout the guide.</p>
+            <div2>
+               <head>Exploiting Metadata Through the Structured <gi>teiHeader</gi></head>
+               
+               <p> The <gi>teiHeader</gi> includes metadata describing the document, its provenance, and
+                  details about the encoding process.</p>
+               
+               <p>To ensure standardization, specific structures were made mandatory within the
+                  <gi>teiHeader</gi>.</p>
+               
+               <div3>
+                  <head>External reference systems.</head>
+                  <p> Where possible, references to external records and digital copies of the encoded
+                     material are included to facilitate data retrieval.</p>
+                  
+                  <p>The <gi>author</gi> tag is absent from the <gi>titleStmt</gi>, as the Departmental
+                     Archives of Seine-Saint-Denis lack information on the authorship of these documents,
+                     and no records identify French Communist Party personnel from the period.</p>
+                
+               </div3>
+               
+               <div3>
+                  <head>Metadata and Document-Specific Data.</head>
+                  
+                  <p> The <gi>teiHeader</gi> also serves as a repository for metadata and data specific to
+                     the document.</p>
+                  <p> he <gi>particDesc</gi> includes an index of character names, while the
+                     <gi>settingDesc</gi> contains an index of place names.</p>
+                  
+                  <p> >Users must verify the data, as external sources like Wikidata are used to enrich the
+                     encoding of named entities.</p>
+               </div3>
+            </div2>
+            
+            <div2>
+               <head>Textual Structure of the Work</head>
+               <div3>
+                  
+                  <head>Encoding Approach</head>
+                  
+                  <p> The schema divides the document into hierarchical levels:</p>
+                  <list rend="numbered">
+                     
+                     <item n="1">>The first <gi>div</gi> encompasses the entire meeting report, structuring
+                        the work as a whole.</item>
+                     
+                     <item n="2">The second <gi>div</gi> is used to separate the title from the
+                        subtitle.</item>
+                     
+                     <item n="3">he third <gi>div</gi> organizes the chapters, reflecting the structure of
+                        the report for easier navigation.</item>
+                     
+                     <item n="4">The fourth <gi>div</gi>, used sparingly, accommodates subchapters when
+                        necessary.</item>
+                    
+                  </list>
+                  
+                  <p>Both <gi>div1</gi> and <gi>div3</gi> require a <att>type</att> attribute, and
+                     <gi>div3</gi> additionally requires an <att>n</att> attribute for numbering. For
+                     instance:</p>
+                  
+                  <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                     <div1 type="Title">
+                        <head>Title</head>
+                        <div2>
+                           <head>sub-title</head>
+                           <div3 type="Chapter" n="1">
+                              <!--Your text here-->
+                           </div3>
+                        </div2>
+                     </div1>
+                  </egXML>
+                  <p>A <gi>head</gi> tag follows each <gi>div</gi>, defining the unit's name as specified
+                     by the transcriber.</p>
+                  
+               </div3>
+            </div2>
+            <div2>
+               <head>Literary study: frequency of appearance and mention of named entity.</head>
+               <p>The schema supports detailed encoding of named entities appearing in the texts.</p>
+               <div3>
+                  
+                  <head>Indexes</head>
+                  
+                  <p>Indexes are structured as follows:<list>
+                     
+                     <item>In the <gi>teiHeader</gi>, character names are indexed under
+                        <gi>listPerson</gi> in <gi>particDesc</gi>.</item>
+                     <item>Place names are indexed under <gi>listPlace</gi> in <gi>settingDesc</gi>.</item>
+                     <item>Event names are indexed under <gi>listEvent</gi> in the <gi>back</gi>.</item>
+                     <item>Organization names are indexed under <gi>listOrg</gi> in the <gi>back</gi>.</item>
+                     </list>
+                  </p>
+
+                  <div4>
+                     <head>named entity : Person</head>
+
+                     <p> Each entry in the character name index must include a <gi>person</gi> tag, 
+                        which requires a mandatory <att>xml:id</att> attribute to uniquely identify the individual 
+                        within the encoding. The <gi>persName</gi> tag is used to record the name of the individual, 
+                        while the <gi>roleName</gi> tag specifies the individual's political affiliation and provides 
+                        details regarding their role. If the individual is identifiable and has a corresponding 
+                        Wikidata page, the <gi>idno</gi> tag, combined with the <att>type</att> attribute, 
+                        must be used to reference the Wikidata identifier.
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                           <person>
+                              <persName>
+                                 <!-- Name of individu --></persName>
+                              <roleName><!-- Role de l'individu --></roleName>
+                              <idno type="Wikidata"><!-- Wikidata identifier --></idno>
+                           </person>
+                        </egXML>
+                     </p>
+                  </div4>
+                  <div4>
+                     <head>named entity: Place</head>
+
+                     <p> Each place name entry must include a <gi>place</gi> tag, with a mandatory 
+                        <att>xml:id</att> attribute to uniquely identify the location within the encoding. 
+                        The <gi>placeName</gi> tag is used to record the name of the location. 
+                        An optional <gi>note</gi> tag may be included to provide additional context or brief 
+                        descriptions about the place. The <gi>country</gi> tag is used to specify the country where 
+                        the location is situated, while the optional <gi>settlement</gi> tag can be included to 
+                        indicate the city. For greater accuracy, the <gi>geo</gi> tag, nested within the 
+                        <gi>location</gi> tag, should be used to provide geographical coordinates such as latitude 
+                        and longitude.
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                           <place>
+                              <placeName><!-- Name of the place --></placeName>
+                              <country key="FR"/>
+                              <settlement>
+                                 <!-- Name of th city --></settlement>
+                              <location>
+                                 <geo><!-- location in alt and long --></geo>
+                              </location>
+                           </place>
+                        </egXML>
+                     </p>
+                  </div4>
+                  <div4>
+                     <head>Named entity event</head>
+
+                     <p> Event names are recorded using the <gi>event</gi> tag. This tag must include two mandatory 
+                        attributes: <att>xml:id</att>, which uniquely identifies the event in the encoding, and 
+                        <att>when</att>, which specifies the date or time of the event. The <gi>eventName</gi> tag 
+                        is used to indicate the name of the event, while the optional <gi>note</gi> tag provides 
+                        brief explanatory notes. For further details, two optional elements can be added: a 
+                        <gi>place</gi> tag, which includes a <gi>placeName</gi> tag to specify the location of the 
+                        event, and an <gi>idno</gi> tag to supply a corresponding Wikidata identifier. 
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                           <event>
+                              <eventName><!-- Name of your event --></eventName>
+                              <note><!-- event note --></note>
+                              <place>
+                                 <placeName><!-- PLace Name --></placeName>
+                              </place>
+                              <idno type="Wikidata"><!-- wikidata Identifier --></idno>
+                           </event>
+                        </egXML>
+                     </p>
+                  </div4>
+                  <div4>
+                     <head>Named entity: Organisation</head>
+                     
+                     <p> The items in the organization name index are represented using the <gi>org</gi> tag, which must 
+                        include a mandatory <att>xml:id</att> attribute to uniquely identify the organization in the encoding. 
+                        The <gi>orgName</gi> tag is used to specify the name of the organization. Additionally, the 
+                        <gi>desc</gi> tag is mandatory and provides a concise description of the organization. When the 
+                        organization has an associated Wikidata page, it is recommended to include an <gi>idno</gi> tag 
+                        to specify the corresponding Wikidata identifier.
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                           <org>
+                              <orgName><!-- Name of your organization --></orgName>
+                              <desc><!-- Description of your organization --></desc>
+                              <idno type="wikidata"><!-- wikidata identifier --></idno>
+                           </org>
+                        </egXML>
+                     </p>
+                  </div4>
+               </div3>
+               
+               <div3>
+                  <head>Encoding</head>
+                  <div4>
+                     <head>Characters and their mentions.</head>
+                     <p>
+                        It was decided to systematically encode every mention of each character.
+                     </p>
+                     <p>
+                        When a character's name appears in the body of the text, 
+                        it must be marked with a <gi>persName</gi> tag. To give meaning 
+                        to this tagging, a <att>ref</att> attribute must point to a reference
+                        defined in the character name index. This attribute is mandatory 
+                        only within the <gi>text</gi> tag.
+                        
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                           <p>Lorem ipsum dolor sit amet <persName ref="exp">exp</persName>
+                              consectetur adipiscing elit</p>
+                        </egXML>
+                     </p>
+                  </div4>
+                  
+                  <div4>
+                     <head>Place and their mentions.</head>
+                     <p>It was decided to systematically encode every mention of each place</p>
+                     
+                     <p>
+                        When a place's name appears in the body of the text, 
+                        it must be marked with a <gi>placeName</gi> tag. To give meaning 
+                        to this tagging, a <att>ref</att> attribute must point to a reference
+                        defined in the place name index. This attribute is mandatory 
+                        only within the <gi>text</gi> tag.  
+                        
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                           <p>Lorem ipsum dolor sit amet <placeName ref="exp">exp</placeName>
+                              consectetur adipiscing elit</p>
+                        </egXML>
+                     </p>
+                  </div4>
+                  
+                  <div4>
+                     <head>Event and their mentions</head>
+                     <p>It was decided to systematically encode every mention of each place</p>
+                     
+                     <p>
+                        When an event's name appears in the body of the text, it must be 
+                        marked with an <gi>eventName</gi> tag. To give meaning 
+                        to this tagging, a <att>ref</att> attribute must point to a 
+                        reference defined in the event name index. This attribute is mandatory 
+                        only within the <gi>text</gi> tag.
+                        
+                     </p>
+                     
+                     <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                        <p>Lorem ipsum dolor sit amet <eventName ref="exp">exp</eventName>
+                           consectetur adipiscing elit</p>
+                     </egXML>
+                  </div4>
+                  
+                  <div4>
+                     <head>Organization and their mentions</head>
+                     <p>It was decided to systematically encode every mention of each place</p>
+                     
+                     <p>
+                        When an organization's name appears in the body of the text, 
+                        it must be marked with an <gi>orgName</gi> tag. To give meaning 
+                        to this tagging, a <att>ref</att> attribute must point to a reference 
+                        defined in the organization name index. This attribute is mandatory 
+                        only within the <gi>text</gi> tag.
+                     </p>
+                  </div4>
+               </div3>
+            </div2>
+         </div1>
+         
+         <div1>
+            <head>Documentation</head>
+            <schemaSpec ident="oddbyexample" start="TEI ">
+               <moduleRef key="tei"/>
+               <!--Checking module textcrit-->
+               <classRef key="att.textCritical"/>
+               <classRef key="model.rdgLike"/>
+               <classRef key="model.rdgPart"/>
+               <classSpec ident="att.textCritical" type="atts" mode="change">
+                  <attList>
+                     <attDef ident="type" mode="delete"/>
+                     <attDef ident="cause" mode="delete"/>
+                     <attDef ident="varSeq" mode="delete"/>
+                     <attDef ident="require" mode="delete"/>
+                  </attList>
+               </classSpec>
+               <!--Checking module msdescription-->
+               <classRef key="model.physDescPart"/>
+               <moduleRef key="msdescription" include="msDesc msIdentifier repository"/>
+               <elementSpec ident="msDesc" mode="change">
+                  <attList>
+                     <attDef ident="type" mode="delete"/>
+                  </attList>
+               </elementSpec>
+               <elementSpec ident="repository" mode="change">
+                  <attList>
+                     <attDef ident="key" mode="delete"/>
+                     <attDef ident="ref" mode="delete"/>
+                  </attList>
+               </elementSpec>
+               <!--Checking module namesdates-->
+               <classRef key="model.persNamePart"/>
+               <moduleRef key="namesdates"
+                  include="orgName persName surname forename roleName placeName country settlement district eventName affiliation event geo listOrg listEvent listPerson listPlace location org person place"/>
+               <elementSpec ident="orgName" mode="change">
+                  <attList>
+                     <attDef ident="calendar" mode="delete"/>
+                     <attDef ident="when" mode="delete"/>
+                     <attDef ident="key" mode="delete"/>
+                     <attDef ident="type" mode="delete"/>
+                  </attList>
+               </elementSpec>
+               <elementSpec ident="persName" mode="change">
+                  <attList>
+                     <attDef ident="calendar" mode="delete"/>
+                     <attDef ident="when" mode="delete"/>
+                     <attDef ident="key" mode="delete"/>
+                     <attDef ident="type" mode="delete"/>
+                  </attList>
+               </elementSpec>
+               <elementSpec ident="surname" mode="change">
+                  <attList>
+                     <attDef ident="key" mode="delete"/>
+                     <attDef ident="ref" mode="delete"/>
+                     <attDef ident="type" mode="delete"/>
+                  </attList>
+               </elementSpec>
+               <elementSpec ident="forename" mode="change">
+                  <attList>
+                     <attDef ident="key" mode="delete"/>
+                     <attDef ident="ref" mode="delete"/>
+                     <attDef ident="type" mode="delete"/>
+                  </attList>
+               </elementSpec>
+               <elementSpec ident="roleName" mode="change">
+                  <attList>
+                     <attDef ident="key" mode="delete"/>
+                     <attDef ident="ref" mode="delete"/>
+                     <attDef ident="type" mode="delete"/>
+                  </attList>
+               </elementSpec>
+               <elementSpec ident="placeName" mode="change">
+                  <attList>
+                     <attDef ident="calendar" mode="delete"/>
+                     <attDef ident="when" mode="delete"/>
+                     <attDef ident="key" mode="delete"/>
+                     <attDef ident="type" mode="delete"/>
+                  </attList>
+               </elementSpec>
+               <elementSpec ident="country" mode="change">
+                  <attList>
+                     <attDef ident="calendar" mode="delete"/>
+                     <attDef ident="ref" mode="delete"/>
+                     <attDef ident="type" mode="delete"/>
+                     <attDef ident="when" mode="delete"/>
+                  </attList>
+               </elementSpec>
+               <elementSpec ident="settlement" mode="change">
+                  <attList>
+                     <attDef ident="calendar" mode="delete"/>
+                     <attDef ident="key" mode="delete"/>
+                     <attDef ident="ref" mode="delete"/>
+                     <attDef ident="type" mode="change">
+                        <valList mode="add" type="closed">
+                           <valItem ident="City"/>
+                           <valItem ident="city"/>
+                        </valList>
+                     </attDef>
+                     <attDef ident="when" mode="delete"/>
+                  </attList>
+               </elementSpec>
+               <elementSpec ident="district" mode="change">
+                  <attList>
+                     <attDef ident="calendar" mode="delete"/>
+                     <attDef ident="key" mode="delete"/>
+                     <attDef ident="ref" mode="delete"/>
+                     <attDef ident="type" mode="change">
+                        <valList mode="add" type="closed">
+                           <valItem ident="arrondissement"/>
+                        </valList>
+                     </attDef>
+                     <attDef ident="when" mode="delete"/>
+                  </attList>
+               </elementSpec>
+               <elementSpec ident="eventName" mode="change">
+                  <attList>
+                     <attDef ident="when" mode="delete"/>
+                     <attDef ident="key" mode="delete"/>
+                     <attDef ident="type" mode="delete"/>
+                  </attList>
+               </elementSpec>
+               <elementSpec ident="affiliation" mode="change">
+                  <attList>
+                     <attDef ident="calendar" mode="delete"/>
+                     <attDef ident="type" mode="delete"/>
+                     <attDef ident="when" mode="delete"/>
+                     <attDef ident="key" mode="delete"/>
+                     <attDef ident="type" mode="delete"/>
+                  </attList>
+               </elementSpec>
+               <elementSpec ident="event" mode="change">
+                  <attList>
+                     <attDef ident="calendar" mode="delete"/>
+                     <attDef ident="key" mode="delete"/>
+                     <attDef ident="type" mode="delete"/>
+                  </attList>
+               </elementSpec>
+               <elementSpec ident="listOrg" mode="change">
+                  <attList>
+                     <attDef ident="type" mode="delete"/>
+                  </attList>
+               </elementSpec>
+               <elementSpec ident="listEvent" mode="change">
+                  <attList>
+                     <attDef ident="type" mode="delete"/>
+                  </attList>
+               </elementSpec>
+               <elementSpec ident="listPerson" mode="change">
+                  <attList>
+                     <attDef ident="type" mode="delete"/>
+                  </attList>
+               </elementSpec>
+               <elementSpec ident="listPlace" mode="change">
+                  <attList>
+                     <attDef ident="type" mode="delete"/>
+                  </attList>
+               </elementSpec>
+               <elementSpec ident="location" mode="change">
+                  <attList>
+                     <attDef ident="calendar" mode="delete"/>
+                     <attDef ident="type" mode="delete"/>
+                     <attDef ident="when" mode="delete"/>
+                  </attList>
+               </elementSpec>
+               <elementSpec ident="org" mode="change">
+                  <attList>
+                     <attDef ident="role" mode="delete"/>
+                     <attDef ident="type" mode="delete"/>
+                  </attList>
+               </elementSpec>
+               <elementSpec ident="person" mode="change">
+                  <attList>
+                     <attDef ident="role" mode="delete"/>
+                     <attDef ident="sex" mode="delete"/>
+                     <attDef ident="gender" mode="delete"/>
+                     <attDef ident="age" mode="delete"/>
+                  </attList>
+               </elementSpec>
+               <elementSpec ident="place" mode="change">
+                  <attList>
+                     <attDef ident="type" mode="delete"/>
+                  </attList>
+               </elementSpec>
+               <!--Checking module dictionaries-->
+               <classRef key="att.lexicographic"/>
+               <classRef key="model.entryLike"/>
+               <classRef key="model.formPart"/>
+               <classRef key="model.gramPart"/>
+               <classRef key="model.lexicalRefinement"/>
+               <classRef key="model.morphLike"/>
+               <classRef key="model.ptrLike.form"/>
+               <classSpec ident="att.lexicographic" type="atts" mode="change">
+                  <attList>
+                     <attDef ident="expand" mode="delete"/>
+                     <attDef ident="split" mode="delete"/>
+                     <attDef ident="value" mode="delete"/>
+                     <attDef ident="location" mode="delete"/>
+                     <attDef ident="mergedIn" mode="delete"/>
+                     <attDef ident="opt" mode="delete"/>
+                  </attList>
+               </classSpec>
+               <!--Checking module tagdocs-->
+               <classRef key="att.combinable"/>
+               <classRef key="att.identified"/>
+               <classRef key="model.contentPart"/>
+               <classSpec ident="att.combinable" type="atts" mode="change">
+                  <attList>
+                     <attDef ident="mode" mode="delete"/>
+                  </attList>
+               </classSpec>
+               <classSpec ident="att.identified" type="atts" mode="change">
+                  <attList>
+                     <attDef ident="ident" mode="delete"/>
+                     <attDef ident="predeclare" mode="delete"/>
+                     <attDef ident="module" mode="delete"/>
+                  </attList>
+               </classSpec>
+               <classSpec ident="att.ascribed.directed" type="atts" mode="change">
+                  <attList>
+                     <attDef ident="toWhom" mode="delete"/>
+                  </attList>
+               </classSpec>
+               <classSpec ident="att.dimensions" type="atts" mode="change">
+                  <attList>
+                     <attDef ident="unit" mode="delete"/>
+                     <attDef ident="quantity" mode="delete"/>
+                     <attDef ident="extent" mode="delete"/>
+                     <attDef ident="precision" mode="delete"/>
+                     <attDef ident="scope" mode="delete"/>
+                  </attList>
+               </classSpec>
+               <classSpec ident="att.damaged" type="atts" mode="change">
+                  <attList>
+                     <attDef ident="agent" mode="delete"/>
+                     <attDef ident="degree" mode="delete"/>
+                     <attDef ident="group" mode="delete"/>
+                  </attList>
+               </classSpec>
+               <classSpec ident="att.datable.w3c" type="atts" mode="change">
+                  <attList>
+                     <attDef ident="notBefore" mode="delete"/>
+                     <attDef ident="notAfter" mode="delete"/>
+                     <attDef ident="from" mode="delete"/>
+                     <attDef ident="to" mode="delete"/>
+                  </attList>
+               </classSpec>
+               <classSpec ident="att.datable" type="atts" mode="change">
+                  <attList>
+                     <attDef ident="period" mode="delete"/>
+                  </attList>
+               </classSpec>
+               <classSpec ident="att.divLike" type="atts" mode="change">
+                  <attList>
+                     <attDef ident="org" mode="delete"/>
+                     <attDef ident="sample" mode="delete"/>
+                  </attList>
+               </classSpec>
+               <classSpec ident="att.media" type="atts" mode="change">
+                  <attList>
+                     <attDef ident="width" mode="delete"/>
+                     <attDef ident="height" mode="delete"/>
+                     <attDef ident="scale" mode="delete"/>
+                  </attList>
+               </classSpec>
+               <classSpec ident="att.naming" type="atts" mode="change">
+                  <attList>
+                     <attDef ident="role" mode="delete"/>
+                     <attDef ident="nymRef" mode="delete"/>
+                  </attList>
+               </classSpec>
+               <classSpec ident="att.typed" type="atts" mode="change">
+                  <attList>
+                     <attDef ident="subtype" mode="delete"/>
+                  </attList>
+               </classSpec>
+               <classSpec ident="att.pointing" type="atts" mode="change">
+                  <attList>
+                     <attDef ident="targetLang" mode="delete"/>
+                     <attDef ident="evaluate" mode="delete"/>
+                  </attList>
+               </classSpec>
+               <classSpec ident="att.pointing.group" type="atts" mode="change">
+                  <attList>
+                     <attDef ident="domains" mode="delete"/>
+                     <attDef ident="targFunc" mode="delete"/>
+                  </attList>
+               </classSpec>
+               <classSpec ident="att.segLike" type="atts" mode="change">
+                  <attList>
+                     <attDef ident="function" mode="delete"/>
+                  </attList>
+               </classSpec>
+               <classSpec ident="att.timed" type="atts" mode="change">
+                  <attList>
+                     <attDef ident="start" mode="delete"/>
+                     <attDef ident="end" mode="delete"/>
+                  </attList>
+               </classSpec>
+               <classSpec ident="att.transcriptional" type="atts" mode="change">
+                  <attList>
+                     <attDef ident="status" mode="delete"/>
+                     <attDef ident="cause" mode="delete"/>
+                     <attDef ident="seq" mode="delete"/>
+                  </attList>
+               </classSpec>
+               <classSpec ident="att.personal" type="atts" mode="change">
+                  <attList>
+                     <attDef ident="full" mode="delete"/>
+                     <attDef ident="sort" mode="delete"/>
+                  </attList>
+               </classSpec>
+               <!--Checking module core-->
+               <moduleRef key="core"
+                  include="p desc name date ref head note respStmt resp title publisher pubPlace"/>
+               <elementSpec ident="desc" mode="change">
+                  <attList>
+                     <attDef ident="type" mode="delete"/>
+                     <attDef ident="type" mode="delete"/>
+                  </attList>
+               </elementSpec>
+               <elementSpec ident="name" mode="change">
+                  <attList>
+                     <attDef ident="calendar" mode="delete"/>
+                     <attDef ident="key" mode="delete"/>
+                     <attDef ident="ref" mode="delete"/>
+                     <attDef ident="when" mode="delete"/>
+                     <attDef ident="type" mode="delete"/>
+                  </attList>
+               </elementSpec>
+               <elementSpec ident="date" mode="change">
+                  <attList>
+                     <attDef ident="key" mode="delete"/>
+                     <attDef ident="ref" mode="delete"/>
+                     <attDef ident="type" mode="delete"/>
+                  </attList>
+               </elementSpec>
+               <elementSpec ident="ref" mode="change">
+                  <attList>
+                     <attDef ident="type" mode="change">
+                        <valList mode="add" type="closed">
+                           <valItem ident="url"/>
+                        </valList>
+                     </attDef>
+                  </attList>
+               </elementSpec>
+               <elementSpec ident="head" mode="change">
+                  <attList>
+                     <attDef ident="type" mode="delete"/>
+                  </attList>
+               </elementSpec>
+               <elementSpec ident="note" mode="change">
+                  <attList>
+                     <attDef ident="target" mode="delete"/>
+                     <attDef ident="type" mode="delete"/>
+                  </attList>
+               </elementSpec>
+               <elementSpec ident="respStmt" mode="change">
+                  <attList>
+                     <attDef ident="key" mode="delete"/>
+                     <attDef ident="ref" mode="delete"/>
+                  </attList>
+               </elementSpec>
+               <elementSpec ident="resp" mode="change">
+                  <attList>
+                     <attDef ident="calendar" mode="delete"/>
+                     <attDef ident="key" mode="delete"/>
+                     <attDef ident="ref" mode="delete"/>
+                     <attDef ident="when" mode="delete"/>
+                  </attList>
+               </elementSpec>
+               <elementSpec ident="title" mode="change">
+                  <attList>
+                     <attDef ident="calendar" mode="delete"/>
+                     <attDef ident="level" mode="delete"/>
+                     <attDef ident="type" mode="delete"/>
+                     <attDef ident="type" mode="delete"/>
+                     <attDef ident="key" mode="delete"/>
+                     <attDef ident="ref" mode="delete"/>
+                     <attDef ident="when" mode="delete"/>
+                  </attList>
+               </elementSpec>
+               <elementSpec ident="publisher" mode="change">
+                  <attList>
+                     <attDef ident="key" mode="delete"/>
+                     <attDef ident="ref" mode="delete"/>
+                  </attList>
+               </elementSpec>
+               <elementSpec ident="pubPlace" mode="change">
+                  <attList>
+                     <attDef ident="key" mode="delete"/>
+                     <attDef ident="ref" mode="delete"/>
+                  </attList>
+               </elementSpec>
+               <!--Checking module figures-->
+               <!--Checking module header-->
+               <moduleRef key="header"
+                  include="teiHeader fileDesc titleStmt editionStmt edition publicationStmt distributor idno availability licence sourceDesc profileDesc"/>
+               <elementSpec ident="distributor" mode="change">
+                  <attList>
+                     <attDef ident="key" mode="delete"/>
+                     <attDef ident="ref" mode="delete"/>
+                  </attList>
+               </elementSpec>
+               <elementSpec ident="idno" mode="change">
+                  <attList>
+                     <attDef ident="calendar" mode="delete"/>
+                     <attDef ident="type" mode="change">
+                        <valList mode="add" type="closed">
+                           <valItem ident="Wikidata"/>
+                        </valList>
+                     </attDef>
+                     <attDef ident="when" mode="delete"/>
+                     <attDef ident="type" mode="change">
+                        <valList mode="add" type="closed">
+                           <valItem ident="Wikidata"/>
+                        </valList>
+                     </attDef>
+                  </attList>
+               </elementSpec>
+               <elementSpec ident="availability" mode="change">
+                  <attList>
+                     <attDef ident="status" mode="delete"/>
+                  </attList>
+               </elementSpec>
+               <elementSpec ident="licence" mode="change">
+                  <attList>
+                     <attDef ident="calendar" mode="delete"/>
+                     <attDef ident="target" mode="delete"/>
+                     <attDef ident="when" mode="delete"/>
+                  </attList>
+               </elementSpec>
+               <!--Checking module gaiji-->
+               <classRef key="att.gaijiProp"/>
+               <classSpec ident="att.gaijiProp" type="atts" mode="change">
+                  <attList>
+                     <attDef ident="name" mode="delete"/>
+                     <attDef ident="value" mode="delete"/>
+                     <attDef ident="version" mode="delete"/>
+                     <attDef ident="scheme" mode="delete"/>
+                  </attList>
+               </classSpec>
+               <!--Checking module verse-->
+               <!--Checking module transcr-->
+               <!--Checking module linking-->
+               <!--Checking module analysis-->
+               <classRef key="att.linguistic"/>
+               <classSpec ident="att.linguistic" type="atts" mode="change">
+                  <attList>
+                     <attDef ident="lemma" mode="delete"/>
+                     <attDef ident="lemmaRef" mode="delete"/>
+                     <attDef ident="pos" mode="delete"/>
+                     <attDef ident="msd" mode="delete"/>
+                     <attDef ident="join" mode="delete"/>
+                  </attList>
+               </classSpec>
+               <!--Checking module textstructure-->
+               <moduleRef key="textstructure" include="TEI text body div1 div2 div3 div4 back"/>
+               <elementSpec ident="TEI" mode="change">
+                  <attList>
+                     <attDef ident="version" mode="delete"/>
+                     <attDef ident="type" mode="delete"/>
+                  </attList>
+               </elementSpec>
+               <elementSpec ident="text" mode="change">
+                  <attList>
+                     <attDef ident="type" mode="delete"/>
+                  </attList>
+               </elementSpec>
+               <elementSpec ident="div1" mode="change">
+                  <attList>
+                     <attDef ident="type" mode="change">
+                        <valList mode="add" type="closed">
+                           <valItem ident="Compte_Rendue"/>
+                           <valItem ident="decisions"/>
+                           <valItem ident="title"/>
+                        </valList>
+                     </attDef>
+                  </attList>
+               </elementSpec>
+               <elementSpec ident="div2" mode="change">
+                  <attList>
+                     <attDef ident="type" mode="change">
+                        <valList mode="add" type="closed">
+                           <valItem ident="decisions_arretés"/>
+                           <valItem ident="ordre_du_jour"/>
+                           <valItem ident="other"/>
+                        </valList>
+                     </attDef>
+                  </attList>
+               </elementSpec>
+               <elementSpec ident="div3" mode="change">
+                  <attList>
+                     <attDef ident="type" mode="change">
+                        <valList mode="add" type="closed">
+                           <valItem ident="Chapter"/>
+                        </valList>
+                     </attDef>
+                  </attList>
+               </elementSpec>
+               <elementSpec ident="div4" mode="change">
+                  <attList>
+                     <attDef ident="type" mode="delete"/>
+                  </attList>
+               </elementSpec>
+               <!--Checking module corpus-->
+               <moduleRef key="corpus" include="particDesc settingDesc"/>
+            </schemaSpec>
+         </div1>
+      </body>
+   </text>
+</TEI>

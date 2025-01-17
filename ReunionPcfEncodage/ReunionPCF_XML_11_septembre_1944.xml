@@ -1,522 +1,610 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE TEI SYSTEM "ReunionPCF.dtd">
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="out/odd_ReunionPCF_XML_11_septembre_1944.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Secretariat du PCF du 11 septembre 1944</title>
+            <respStmt>
+               <resp>Transcription and encoding of the minutes of the meeting of the French
+                  Communist Party </resp>
+               <persName>
+                  <forename>Adonis</forename>
+                  <surname>Dulaurent</surname>
+               </persName>
+            </respStmt>
          </titleStmt>
-         <editionStmt>
-            <edition>Assignement XML TEI - École nationale des Chartes <date when="2025-01">January 2025</date></edition>
-         </editionStmt>
-         
-         <respStmt>
-            <resp>Transcription and encoding of the minutes of the meeting of the French Communist Party </resp>
-            <persName>
-               <forename>Adonis</forename>
-               <surname>Dulaurent</surname>
-            </persName>
-         </respStmt>
-         
+
          <publicationStmt>
-            <publisher>Archives Départemental de Seine Saint Denis</publisher>
-            <pubPlace>Seine Saint Denis</pubPlace>
+            <distributor>
+               <surname>Adonis</surname>
+               <forename>Dulaurent</forename>
+               <date when="2025-01">January 2025</date>
+            </distributor>
             <availability>
-               <licence>Uknow</licence>
+               <licence>This file is available under a Creative Commons Attribution 4.0 licence:
+                     <ref type="url" target="https://creativecommons.org/licenses/by/4.0/deed.en"
+                     >https://creativecommons.org/licenses/by/4.0/deed.en</ref>. </licence>
             </availability>
          </publicationStmt>
-         
          <sourceDesc>
             <msDesc>
                <msIdentifier>
-                  <country>France</country>
-                  <settlement>Seine Saint Denis</settlement>
+                  <country key="FR"/>
+                  <settlement type="city">Bobigny</settlement>
                   <repository xml:lang="fr">Archives Départemental de Seine Saint Denis</repository>
                   <idno>261J5-2</idno>
                </msIdentifier>
             </msDesc>
          </sourceDesc>
       </fileDesc>
+         
+      <profileDesc>
+         
+         <particDesc>
+            <listPerson>
+               <person xml:id="Mar_001">
+                  <persName>
+                     <surname>André</surname>
+                     <forename>Marty</forename>
+                     <roleName>Secretary of the <affiliation ref="PCF_001">French Communist
+                           Party</affiliation></roleName>
+                     <idno type="Wikidata">Q369785</idno>
+                  </persName>
+               </person>
+
+               <person xml:id="Faj_001">
+                  <persName>
+                     <surname>Etienne</surname>
+                     <forename>Fajon</forename>
+                     <roleName> member of the Provisional Consultative Assembly in Algiers and
+                        Member of the <affiliation ref="PCF_001">French Communist
+                        Part</affiliation>y</roleName>
+                     <idno type="Wikidata">Q3592156</idno>
+                  </persName>
+               </person>
+
+               <person xml:id="Bon_001">
+                  <persName>
+                     <surname>Florimond</surname>
+                     <forename>Bonte</forename>
+                     <roleName>Delegate to the Provisional Consultative Assembly, where he is one of
+                        the representatives of the <affiliation ref="PCF_001">Communist
+                           group</affiliation> in the Chamber of Deputies.</roleName>
+                     <idno type="Wikidata">Q3074294</idno>
+                  </persName>
+               </person>
+
+               <person xml:id="Cog_001">
+                  <persName>
+                     <forename>Cogniot</forename>
+                     <surname>Georges</surname>
+                     <roleName>Member of the <affiliation ref="PCF_001">French Communist
+                           Party</affiliation></roleName>
+                     <idno type="Wikidata">Q3102498</idno>
+                  </persName>
+               </person>
+
+               <person xml:id="Cas_001">
+                  <persName>
+                     <forename>Casanova</forename>
+                     <roleName>Member of the <affiliation ref="PCF_001">French Communist
+                           Party</affiliation></roleName>
+                  </persName>
+               </person>
+
+               <person xml:id="Bos_001">
+                  <persName>
+                     <forename>Bossus</forename>
+                     <roleName>Member of the <affiliation ref="PCF_001">French Communist
+                           Party</affiliation></roleName>
+                  </persName>
+               </person>
+
+               <person xml:id="Vil_001">
+                  <persName>
+                     <surname>Pierre</surname>
+                     <forename>Villon</forename>
+                     <roleName>Leaders of the Military Action Committee and member of the
+                           <affiliation ref="PCF_001">French Communist
+                        Party</affiliation></roleName>
+                     <idno type="Wikidata">Q461283</idno>
+                  </persName>
+               </person>
+
+               <person xml:id="Mar_002">
+                  <persName>
+                     <surname>Georges</surname>
+                     <forename>Marrane</forename>
+                     <roleName> Vice-President of the Paris Liberation Committee and member of the
+                           <affiliation ref="PCF_001">French Communist
+                        Party</affiliation></roleName>
+                     <idno type="Wikidata">Q1097717</idno>
+                  </persName>
+               </person>
+
+               <person xml:id="Van_001">
+                  <persName>
+                     <forename>Vandel</forename>
+                     <roleName>Member of the <affiliation ref="PCF_001">French Communist
+                           Party</affiliation></roleName>
+                  </persName>
+               </person>
+
+               <person xml:id="Ray_001">
+                  <persName>
+                     <surname>Henri</surname>
+                     <forename>Raynaud</forename>
+                     <roleName>Member of the Bureau confédéral de la CGT, and member of the
+                           <affiliation ref="PCF_001">French Communist
+                        Party</affiliation></roleName>
+                     <idno type="Wikidata">Q3131885</idno>
+                  </persName>
+               </person>
+
+               <person xml:id="Roc_001">
+                  <persName>
+                     <surname>Waldeck</surname>
+                     <forename>Rochet</forename>
+                     <roleName>Deputy of the Seine department</roleName>
+                     <idno type="Wikidata">Q3565308</idno>
+                  </persName>
+               </person>
+
+               <person xml:id="Ali_001">
+                  <persName>
+                     <forename>Alix</forename>
+                  </persName>
+               </person>
+
+               <person xml:id="Ber_001">
+                  <persName>
+                     <forename>Berlioz</forename>
+                  </persName>
+               </person>
+
+               <person xml:id="Dem_001">
+                  <persName>
+                     <surname>Antoine</surname>
+                     <forename>Demusois</forename>
+                     <roleName>General Councillor for <placeName ref="SeO_001"
+                           >Seine-et-Oise</placeName> And <affiliation ref="PCF_001">Member of the
+                           French Communist Party</affiliation></roleName>
+                     <idno type="Wikidata">Q2853855</idno>
+                  </persName>
+               </person>
+
+               <person xml:id="Fei_001">
+                  <persName>
+                     <surname>Léon</surname>
+                     <forename>Feix</forename>
+                     <roleName>Former deportee from <placeName ref="Alg_001">Algeria</placeName> for
+                        communist propaganda.</roleName>
+                     <idno type="Wikidata">Q3270958</idno>
+                  </persName>
+               </person>
+
+               <person xml:id="Car_001">
+                  <persName>
+                     <surname>H...</surname>
+                     <forename>Carlier</forename>
+                     <roleName><affiliation ref="PCF_001">Member of the French Communist
+                           Party</affiliation>and journalist</roleName>
+                  </persName>
+               </person>
+
+               <person xml:id="Gar_001">
+                  <persName>
+                     <surname>Roger</surname>
+                     <forename>Garaudy</forename>
+                     <roleName>Member of the <affiliation ref="PCF_001">PCF</affiliation> Central
+                        Committee</roleName>
+                     <idno type="Wikidata">Q160619</idno>
+                  </persName>
+               </person>
+
+               <person xml:id="Cac_001">
+                  <persName>
+                     <surname>Marcel</surname>
+                     <forename>Cachin</forename>
+                     <roleName>Director of l'<affiliation ref="Hum_001">Humanité</affiliation>,
+                        member of the political bureau of the <affiliation ref="PCF_001"
+                           >PCF</affiliation> and senator</roleName>
+                     <idno type="Wikidata">Q658479</idno>
+                  </persName>
+               </person>
+
+               <person xml:id="Dut_001">
+                  <persName>
+                     <surname>Emile</surname>
+                     <forename>Dutilleul</forename>
+                     <roleName>National Treasurer of the <affiliation ref="PCF_001"
+                           >PCF</affiliation></roleName>
+                     <idno type="Wikidata">Q3588483</idno>
+                  </persName>
+               </person>
+            </listPerson>
+         </particDesc>
+
+         <settingDesc>
+            <listPlace>
+
+               <place xml:id="Fra_001">
+                  <placeName>France</placeName>
+                  <idno type="Wikidata">Q142</idno>
+               </place>
+
+               <place xml:id="Sei_001">
+                  <placeName>
+                     <name>Seine</name>
+                  </placeName>
+                  <country key="FR"/>
+                  <location>
+                     <geo>48.85 2.35</geo>
+                  </location>
+                  <desc>This is a former department of France, which encompassed Paris and its
+                     immediate suburbs.</desc>
+                  <idno type="Wikidata">Q1142326</idno>
+               </place>
+
+               <place xml:id="Par_001">
+                  <placeName>
+                     <name>Paris</name>
+                  </placeName>
+                  <country key="Fr"/>
+                  <settlement type="city">Paris</settlement>
+                  <location>
+                     <geo>48.864716 2.34901</geo>
+                  </location>
+                  <desc>capital city and largest city of France</desc>
+                  <idno type="Wikidata">Q90</idno>
+               </place>
+
+               <place xml:id="SeO_001">
+                  <placeName>
+                     <name>Seine et Oise</name>
+                  </placeName>
+                  <country key="FR"/>
+                  <location>
+                     <geo>48.8 2.1333</geo>
+                  </location>
+                  <desc>former French department (1790-1968)</desc>
+                  <idno type="Wikidata">Q979470</idno>
+               </place>
+
+               <place xml:id="Alg_001">
+                  <placeName>Algérie</placeName>
+                  <desc> the period of Algerian history when the country was a colony and later an
+                     integral part of <placeName ref="Fra_001">France</placeName></desc>
+                  <idno type="Wikidata">Q218272</idno>
+               </place>
+
+               <place xml:id="QL_001">
+                  <placeName>
+                     <name>Quartier Latin</name>
+                  </placeName>
+                  <country key="FR"/>
+                  <settlement type="city">Paris</settlement>
+                  <location>
+                     <geo>48.8485, 2.3428</geo>
+                  </location>
+                  <desc>area from Paris in France</desc>
+                  <idno type="Wikidata">Q321621</idno>
+               </place>
+
+               <place xml:id="Mut_001">
+                  <placeName>
+                     <name>Maison de la Mutualité</name>
+                  </placeName>
+                  <country key="FR"/>
+                  <settlement type="City">Paris</settlement>
+                  <district type="arrondissement">5e</district>
+                  <location>
+                     <geo>48.84875 2.350556</geo>
+                  </location>
+                  <desc>multi-purpose event site</desc>
+                  <idno type="Wikidata">Q3279717</idno>
+               </place>
+            </listPlace>
+         </settingDesc>
+       
+      </profileDesc>
+   </teiHeader>
+
+   <text>
+      <body>
+         <div1 type="title">
+            <head rend="align(center) case(allcaps)">Secretariat du 11 septembre </head>
+
+            <div2>
+               <head rend="align(center) case(allcaps)"> Decision</head>
+
+               <div3 type="Chapter" n="1" >
+                  <head>1</head>
+                  <p>Une commission composée de <persName ref="Mar_001">A. MARTY</persName>,
+                        <persName ref="Faj_001">E. FAJON</persName>, <persName ref="Bon_001">F.
+                        BONTE</persName>, <persName ref="Cog_001">G. COGNIOT</persName> est chargé
+                     d'établir un<eventName ref="PdC_001"> projet de constitution</eventName> de la
+                        <placeName ref="Fra_001">FRANCE</placeName>. </p>
+               </div3>
+
+               <div3 type="Chapter">
+                  <head>2</head>
+                  <p>Une brochure, comprenant toutes les positions de mesures immédiates faites pour
+                     les différents ministères par le <orgName ref="PCF_001">Parti</orgName>, sera éditée
+                     avec une introduction du C.C <persName ref="Cog_001">Georges
+                     Cogniot</persName>, responsable. </p>
+               </div3>
+
+               <div3 type="Chapter">
+                  <head>3</head>
+                  <p> L'action de la jeunesse sera orientée vers la préparation militaire. </p>
+               </div3>
+
+               <div3 type="Chapter">
+                  <head>4</head>
+                  <p>Un dernier délai, expirant lundi sera accordé aux camarades <persName
+                        ref="Cas_001">CASANOVA</persName> et <persName ref="Bos_001"
+                        >BOSSUS</persName> pour présenter le projet de la brochure sur <eventName
+                        ref="IP_001">l'insurrection parisienne.</eventName>
+                  </p>
+               </div3>
+
+               <div3 type="Chapter">
+                  <head>5</head>
+                  <p>Note est prise que les Etat-Majors <affiliation ref="FTP_001">F.T.P</affiliation>. ont recu
+                     l'ordre de disparaitre, de s'intégrer dans l'E.M. des <orgName ref="FFI_001"
+                        >F.F.I</orgName>., tandis que subsistent pourtant les comités militaires
+                     départementaux. </p>
+               </div3>
+
+               <div3 type="Chapter">
+                  <head>6</head>
+                  <p> Dans la lutte menée par le <orgName ref="PCF_001">Parti</orgName> contre les <orgName
+                        ref="Tru_001">trusts</orgName>, il faut tenir compte de la position anti-trusts
+                     de nombreux petits industriels et l'utiliser au maximum. </p>
+               </div3>
+
+               <div3 type="Chapter">
+                  <head>7</head>
+                  <p><persName ref="Vil_001">VILLON</persName> et <persName ref="Mar_002"
+                        >MARRANE</persName> sont chargés de faire des propositions relatives aux
+                     membres du <affiliation ref="FN_001">F.N</affiliation>. à désinger comme membres de l'<orgName
+                        ref="AC_001">Assemblée consultative</orgName>.</p>
+               </div3>
+
+               <div3 type="Chapter">
+                  <head>8</head>
+                  <p>Le <orgName ref="PCF_001">Parti</orgName> doit être mobilisé sur la question des <orgName
+                        ref="MP_001">Milices Patriotiques.</orgName> Tout sera mis en oeuvre pour
+                     obtenir la légalisation des <affiliation ref="MP_001">milices patriotiques</affiliation> dans
+                     le département de la <placeName ref="Sei_001">Seine</placeName>.</p> 
+               </div3>
+
+               <div3 type="Chapter">
+                  <head>9</head>
+                  <p><persName ref="Mar_001">A. MARTY</persName> et <persName ref="Mar_002"
+                        >MARRANE</persName> présenteront un projet de refonte de l'administration de
+                     la capitale. De même l'<orgName ref="Hum_001">HUMA</orgName> profitera de toutes les
+                     occasions pour faire campagne afin que <placeName ref="Par_001"
+                        >PARIS</placeName> jouisse de toutes ses libertés au même titre que les
+                     autres villes de <placeName ref="Fra_001">FRANCE</placeName>. </p>
+               </div3>
+
+               <div3 type="Chapter">
+                  <head>10</head>
+                  <p>Il sera mis en place, au service des Cadres, un camarde s'occupant
+                     particulièrement de l'<orgName ref="UD_001">U.D</orgName>. de la <placeName
+                        ref="Sei_001">Région parisienne</placeName>. </p>
+               </div3>
+
+               <div3 type="Chapter">
+                  <head>11</head>
+                  <p>Le camarade (<persName ref="Van_001">VANDEL</persName>) des cuirs et peaux,
+                     sera mis à la disposition de l'<orgName ref="UD_001">U.D.</orgName> de <placeName
+                        ref="SeO_001">Seine et Oise</placeName>. </p>
+               </div3>
+
+               <div3 type="Chapter">
+                  <head>12</head>
+                  <p>Dans la période présente, le <orgName ref="PCF_001">Parti</orgName> ne doit pas
+                     apparaitre comme menant la lutte de classes, mais il doit être souligné
+                     constammment que la lutte revendicative est menée dans le seul intêret de la
+                     Nation, de facon à montrer les trusts comme défendant des intêrets particuliers
+                     au détriment de la Nation. </p>
+               </div3>
+
+               <div3 type="Chapter">
+                  <head>13</head>
+                  <p>Après la réunion entre <persName ref="Cog_001">G.Cogniot</persName>, <persName
+                        ref="Ray_001">H. RAYNAUD</persName>, <persName ref="Vil_001"
+                        >VILLON</persName> et <persName ref="Bos_001">BOSSUS</persName> sur la
+                     question des instituteurs, <persName ref="Ray_001">RAYNAUD</persName> et
+                        <persName ref="Cog_001">COGNIOT</persName> feront des propositions pour
+                     faire marcher le syndicat des instituteurs. Au cours de cette réunion, le cas
+                     des intellectuels sera examiné. </p>
+               </div3>
+
+               <div3 type="Chapter">
+                  <head>14</head>
+                  <p><persName ref="Faj_001">E. FAJON</persName> assurera la prochaine réunion des
+                     Nords - Africains et fera des propositions d'organisation pour la future
+                     commission de travail parmi les Nords-africains. </p>
+               </div3>
+
+               <div3 type="Chapter">
+                  <head>15</head>
+                  <p><persName ref="Mar_001">André MARTY</persName> examinera les brochures du <orgName
+                        ref="PCF_001">Parti</orgName>, actullement en notre possession pour les futurs
+                     éditions. </p>
+               </div3>
+
+               <div3 type="Chapter">
+                  <head>16</head>
+                  <p><persName ref="Roc_001">W. ROCHET</persName> ira en <placeName ref="Alg_001"
+                        >Algérie</placeName> à la <eventName ref="CpA_001">conférence du parti algérien</eventName>, le 24
+                     septembre 1944. <persName ref="Ali_001">ALIX</persName> rentrera aussitôt
+                     après. Après instructions, retournera remplacer <persName ref="Ber_001"
+                        >BERLIOZ</persName>. Le retour de <persName ref="Ber_001">BERLIOZ</persName>
+                     et <persName ref="Dem_001">DEMUSOIS</persName> se fera aussitôt (vers le 10
+                     octobre). <persName ref="Fei_001">FEIX</persName> viendra avec <persName
+                        ref="Roc_001">ROCHET</persName> et repartira en <placeName ref="Alg_001"
+                        >Algérie</placeName> après avoir recu des instructions du C.C. <persName
+                        ref="Car_001">H. CARLIER</persName> remplacera <persName ref="Gar_001"
+                        >GARAUDY</persName> comme rédacteur en chef de "<orgName>LIBERTE</orgName>"
+                        (<persName ref="Roc_001">ROCHET</persName> et <persName ref="Car_001">H.
+                        CARLIER</persName> recevront les instrcutions du C.C.avant leur départ.)</p>
+               </div3>
+
+               <div3 type="Chapter">
+                  <head>17</head>
+                  <p>le 19, sera organisée, avec le<orgName ref="FN_001"> F.N.</orgName> des juristes,
+                        <eventName ref="MQL_001">une manifestation</eventName> au <placeName ref="QL_001"
+                        >Quartier Latin</placeName></p>
+               </div3>
+
+               <div3 type="Chapter">
+                  <head>18</head>
+                  <p>Le 20, à l'occasion du <eventName ref="Ani_001">75ème anniversaire de <persName
+                           ref="Cac_001">M. CACHIN</persName></eventName>, les dispositions suivantes
+                     seront prises.</p> <div4>
+                        <p> a) les directions du Parti seront prévenues pour l'envoi des
+                           félicitations et résolutions à <persName ref="Cac_001">M.
+                              CACHIN</persName>. Une réception sera organisée à la <placeName
+                              ref="Mut_001">MUTUALITE</placeName>. De large invitations seront
+                           transmises. Un vin d'honneur sera offert <persName ref="Dut_001"
+                              >DUTILLEUL</persName> est chargé de faire l'achat du cadeau qui sera
+                           offert au nom du C.C.</p>
+                     </div4>
+               </div3>
+            </div2>
+         </div1>
+
+      </body>
       
       <back>
-         <listPerson>
-            <person xml:id="Mar_001">
-               <persName>
-                 <surname>André</surname>
-                  <forename>Marty</forename>
-                  <roleName>Secretary of the <org ref="PCF_001">French Communist Party</org></roleName>
-                  <idno type="Wikidata">Q369785</idno>
-               </persName>
-            </person>
-            
-            <person xml:id="Faj_001">
-               <persName>
-                  <surname>Etienne</surname>
-                  <forename>Fajon</forename>
-                  <roleName> member of the Provisional Consultative Assembly in Algiers
-                  and Member of the <org ref="PCF_001">French Communist Part</org>y</roleName>
-                  <idno type="Wikidata">Q3592156</idno>
-               </persName>
-            </person>
-            
-            <person xml:id="Bon_001">
-               <persName>
-                  <surname>Florimond</surname>
-                  <forename>Bonte</forename>
-                  <roleName>Delegate to the Provisional Consultative Assembly,
-                     where he is one of the representatives of the <org ref="PCF_001">Communist group</org>
-                     in the Chamber of Deputies.</roleName>
-                  <idno type="Wikidata">Q3074294</idno>
-               </persName>
-            </person>
-            
-            <person xml:id="Cog_001">
-               <persName>
-                  <forename>Cogniot</forename>
-                  <surname>Georges</surname>
-                  <roleName>Member of the <org ref="PCF_001">French Communist Party</org></roleName>
-                  <idno type="Wikidata">Q3102498</idno>
-               </persName>
-            </person>
-            
-            <person xml:id="Cas_001">
-               <persName>
-                  <forename>Casanova</forename>
-                  <roleName>Member of the <org ref="PCF_001">French Communist Party</org></roleName>
-               </persName>
-            </person>
-            
-            <person xml:id="Bos_001">
-               <persName>
-                  <forename>Bossus</forename>
-                  <roleName>Member of the <org ref="PCF_001">French Communist Party</org></roleName>
-               </persName>
-            </person>
-            
-            <person xml:id="Vil_001">
-               <persName>
-                  <surname>Pierre</surname>
-                  <forename>Villon</forename>
-                  <roleName>Leaders of the Military Action Committee and member of the <org ref="PCF_001">French Communist Party</org></roleName>
-                  <idno type="Wikidata">Q461283</idno>
-               </persName>
-            </person>
-            
-            <person xml:id="Mar_002">
-               <persName>
-                  <surname>Georges</surname>
-                  <forename>Marrane</forename>
-                  <roleName> Vice-President of the Paris Liberation Committee and member of the <org ref="PCF_001">French Communist Party</org></roleName>
-                  <idno type="Wikidata">Q1097717</idno>
-               </persName>
-            </person>
-            
-            <person xml:id="Van_001">
-               <persName>
-                  <forename>Vandel</forename>
-                  <roleName>Member of the <org ref="PCF_001">French Communist Party</org></roleName>
-               </persName>
-            </person>
-            
-            <person xml:id="Ray_001">
-               <persName>
-                  <surname>Henri</surname>
-                  <forename>Raynaud</forename>
-                  <roleName>Member of the Bureau confédéral de la CGT, and member of the <org ref="PCF_001">French Communist Party</org></roleName>
-                  <idno type="Wikidata">Q3131885</idno>
-               </persName>
-            </person>
-            
-            <person xml:id="Roc_001">
-               <persName>
-                  <surname>Waldeck</surname>
-                  <forename>Rochet</forename>
-                  <roleName>Deputy of the Seine department</roleName>
-                  <idno type="Wikidata">Q3565308</idno>
-               </persName>
-            </person>
-            
-            <person xml:id="Ali_001">
-               <persName>
-                  <alias>Alix</alias>
-               </persName>
-            </person>
-            
-            <person xml:id="Ber_001">
-               <persName>
-                  <alias>Berlioz</alias>
-               </persName>
-            </person>
-            
-            <person xml:id="Dem_001">
-               <persName>
-                  <surname>Antoine</surname>
-                  <forename>Demusois</forename>
-                  <roleName>General Councillor for <placeName ref="SeO_001">Seine-et-Oise</placeName>
-                  And <org ref="PCF_001">Member of the French Communist Party</org></roleName>
-                  <idno type="Wikidata">Q2853855</idno>
-               </persName>
-            </person>
-            
-            <person xml:id="Fei_001">
-               <persName>
-                  <surname>Léon</surname>
-                  <forename>Feix</forename>
-                  <roleName>Former deportee from <placeName ref="Alg_001">Algeria</placeName> for communist propaganda.</roleName>
-                  <idno type="Wikidata">Q3270958</idno>
-               </persName>
-            </person>
-            
-            <person xml:id="Car_001">
-               <persName>
-                  <surname>H...</surname>
-                  <forename>Carlier</forename>
-                  <roleName><org ref="PCF_001">Member of the French Communist Party</org>and journalist</roleName>
-               </persName>
-            </person>
-            
-            <person xml:id="Gar_001">
-               <persName>
-                  <surname>Roger</surname>
-                  <forename>Garaudy</forename>
-                  <roleName>Member of the <org ref="PCF_001">PCF</org> Central Committee</roleName>
-                  <idno type="Wikidata">Q160619</idno>
-               </persName>
-            </person>
-            
-            <person xml:id="Cac_001">
-               <persName>
-                  <surname>Marcel</surname>
-                  <forename>Cachin</forename>
-                  <roleName>Director of l'<org ref="Hum_001">Humanité</org>, member of the political bureau of the <org ref="PCF_001">PCF</org> and senator</roleName>
-                  <idno type="Wikidata">Q658479</idno>
-               </persName>
-            </person>
-            
-            <person xml:id="Dut_001">
-               <persName>
-                  <surname>Emile</surname>
-                  <forename>Dutilleul</forename>
-                  <roleName>National Treasurer of the <org ref="PCF_001">PCF</org></roleName>
-                  <idno type="Wikidata">Q3588483</idno>
-               </persName>
-            </person>
-         </listPerson>
-            
-          
-         
-         <listPlace>
-            <place xml:id="Fra_001">
-               <placeName>France</placeName>
-               <idno type="Wikidata">Q142</idno>
-            </place>
-            
-            <place xml:id="Sei_001">
-               <placeName>Seine</placeName>
-               <desc>This is a former department of France, which encompassed Paris and its immediate suburbs.</desc>
-               <idno type="Wikidata">Q1142326</idno>
-               <geo>
-                  <location>48.85 2.35</location>
-                  <!-- lat long -->
-               </geo>
-            </place>
-            
-              <place xml:id="Par_001">
-                 <placeName>Paris</placeName>
-                 <desc>capital city and largest city of France</desc>
-                 <idno type="Wikidata">Q90</idno>
-                 <geo>
-                    <location>48.864716 2.349014</location>
-                    <!-- lat long -->
-                 </geo>
-              </place>
-            
-            <place xml:id="SeO_001">
-               <placeName>Seine et Oise</placeName>
-               <desc>former French department (1790-1968)</desc>
-               <idno type="Wikidata">Q979470</idno>
-               <geo>
-                  <location>48.8 2.1333</location>
-                  <!-- lat long -->
-               </geo>
-            </place>
-            
-            <place xml:id="Alg_001">
-               <placeName>Algérie</placeName>
-               <desc> the period of Algerian history when the country was a colony and later an integral part of <placeName ref="Fra_001">France</placeName></desc>
-               <idno type="Wikidata">Q218272</idno>
-            </place>
-            
-            <place xml:id="QL_001">
-               <placeName>Quartier Latin</placeName>
-               <desc>area from Paris in France</desc>
-               <idno type="Wikidata">Q321621</idno>
-               <geo>
-                  <location>48.8485, 2.3428</location>
-                  <!-- lat long -->
-               </geo>
-            </place>
-            
-            <place xml:id="Mut_001">
-               <placeName>Maison de la Mutualité</placeName>
-               <alias>Mutualité</alias>
-               <desc>multi-purpose event site</desc>
-               <idno type="Wikidata">Q3279717</idno>
-               <geo>
-                  <location>48.84875 2.350556</location>
-                  <!-- lat long -->
-               </geo>
-            </place>
-         </listPlace>
-            
-           
-         
          <listEvent>
             <event xml:id="PdC_001">
                <eventName>Projet de constitution</eventName>
-               <note>Referendum to determine the procedure for drafting a new constitution,
-                  bringing the Third Republic to an end.</note>
+               <note>Referendum to determine the procedure for drafting a new constitution, bringing
+                  the Third Republic to an end.</note>
             </event>
             
             <event xml:id="IP_001">
-            <eventName>Libération de Paris</eventName>
-            <note>The liberation of Paris was a battle that took place during Word War II 
-               from 19 august 1944 until the German garnison surrended the French Capital
-               on 25 august 1944</note>
-            <idno type="Wikidata">Q696835</idno>
+               <eventName>Libération de Paris</eventName>
+               <note>The liberation of Paris was a battle that took place during Word War II from 19
+                  august 1944 until the German garnison surrended the French Capital on 25 august
+                  1944</note>
+               <idno type="Wikidata">Q696835</idno>
             </event>
             
-            <event xml:id="CpA_001">
+            <event xml:id="CpA_001" when="1994-09-24">
                <eventName>Conférence du Parti Comuniste d'Algérie</eventName>
-               <placeName ref="Alg_001">Algérie</placeName>
-               <date when="1944-09-24">24 September 1944</date>
+               <place>
+                  <placeName ref="Alg_001">Algérie</placeName>
+               </place>
             </event>
             
-            <event xml:id="MQL_001">
+            <event xml:id="MQL_001" when="1944-09-19">
                <eventName>Manifestationn</eventName>
-               <placeName ref="QL_001">Quartier Latin</placeName>
-               <date when="1944-09-19">19 September 1944</date>
+               <place>
+                  <placeName ref="QL_001">Quartier Latin</placeName>
+               </place>
+               
             </event>
             
-            <event xml:id="Ani_001">
+            <event xml:id="Ani_001" when="1944-09-20">
                <eventName>75 eme Aniversaire de M.Cachin</eventName>
-               <date when="1994-09-20">20 September 1944</date>
-              <placeName ref="Mut_001">Mutualité</placeName>
+               <place>
+                  <placeName ref="Mut_001">Mutualité</placeName>
+               </place>
             </event>
          </listEvent>
          
          <listOrg>
             <org xml:id="PCF_001">
                <orgName>Parti Communiste Francais</orgName>
-               <description>French political party</description>
+               <desc>French political party</desc>
                <idno type="Wikidata">Q192821</idno>
             </org>
             
             <org xml:id="FTP_001">
                <orgName>Francs-tireurs et partisans Francais</orgName>
-               <description>Résistance groups in France during WWII, linked to Communist Party</description>
+               <desc>Résistance groups in France during WWII, linked to Communist Party</desc>
                <idno type="Wikidata">Q15731766</idno>
             </org>
             
             <org xml:id="FFI_001">
                <orgName>Forces Francaises de l'intérieur</orgName>
-               <description>The FFI were more formally organized into light infantry units and served as a 
-                  valuable manpower addition to regular Free French forces.</description>
+               <desc>The FFI were more formally organized into light infantry units and served as a
+                  valuable manpower addition to regular Free French forces.</desc>
                <idno type="Wikidata">Q186595</idno>
             </org>
             
             <org xml:id="Tru_001">
                <orgName>Trust</orgName>
-               <description>A trust is a large company with strong or even dominant positions
-                  in several closely related markets within an industrial sector. </description>
+               <desc>A trust is a large company with strong or even dominant positions in several
+                  closely related markets within an industrial sector. </desc>
                <idno type="Wikidata">Q1133938</idno>
             </org>
             
             <org xml:id="FN_001">
-               <orgName>Front national de lutte pour la libération et l'indépendance de la France</orgName>
-               <description>This is a French domestic Resistance movement created by the <org ref="PCF_001">French Communist Party</org>
-                  through an appeal published on May 15, 1941 in the party's daily newspaper,
-                  L'Humanité, for a vast patriotic rally1 open to non-Communists to rally the various components of French society.
-               </description>
+               <orgName>Front national de lutte pour la libération et l'indépendance de la
+                  France</orgName>
+               <desc>This is a French domestic Resistance movement created by the <affiliation ref="PCF_001"
+                  >French Communist Party</affiliation> through an appeal published on May 15, 1941 in
+                  the party's daily newspaper, L'Humanité, for a vast patriotic rally1 open to
+                  non-Communists to rally the various components of French society. </desc>
                <idno type="Wikidata">Q738249</idno>
             </org>
             
             <org xml:id="AC_001">
                <orgName>Assemblée consultative provisoire</orgName>
-               <description>The Provisional Consultative Assembly is a French assembly representing Resistance movements,
-                  political parties and territories involved in the war on the side of the Allies,
-                  under the direction of the French Committee for National Liberation. </description>
+               <desc>The Provisional Consultative Assembly is a French assembly representing
+                  Resistance movements, political parties and territories involved in the war on the
+                  side of the Allies, under the direction of the French Committee for National
+                  Liberation. </desc>
                <idno type="Wikidata">Q2867026</idno>
             </org>
             
             <org xml:id="MP_001">
                <orgName>Milices Patrioques</orgName>
-               <description>the Milices ouvrières were born of a communist initiative;
-                  their creation was announced in L'Humanité on August 15, 1943.
-                  A fortnight later, they changed their name to Milices patriotiques.</description>
+               <desc>the Milices ouvrières were born of a communist initiative; their creation was
+                  announced in L'Humanité on August 15, 1943. A fortnight later, they changed their
+                  name to Milices patriotiques.</desc>
             </org>
             
             <org xml:id="Hum_001">
                <orgName>L'Humanité</orgName>
-               <description>French Newspaper</description>
+               <desc>French Newspaper</desc>
                <idno type="Wikidata">Q1137404</idno>
-               <geo>
-                  <location>48.8719437 2.3515342</location>
-                  <!-- lat long -->
-               </geo>
+               <place>
+                  <country>France</country>
+                  <settlement>Paris</settlement>
+                  <location>
+                     <geo>48.8719437 2.351534</geo>
+                  </location>
+               </place>
+               
             </org>
             
             <org xml:id="UD_001">
                <orgName>Union départemental</orgName>
-               <description>Grouping of unions and union members from the same department who are members of the confederation,
-                  regardless of their profession.</description>
+               <desc>Grouping of unions and union members from the same department who are members
+                  of the confederation, regardless of their profession.</desc>
                <idno type="Wikidata">Q3550259</idno>
             </org>
             
             <org xml:id="Lib_001">
                <orgName>Liberté Hebdo</orgName>
-               <description>French Newspaper from Lille</description>
+               <desc>French Newspaper from Lille</desc>
                <idno type="Wikidata">Q126871031</idno>
             </org>
          </listOrg>
-      </back>
-   </teiHeader>
-   
-   <text>
-      <body>
-         <div1 type="decisions">
-            <head>Decisions</head>
-            <div2>
-               
-               <div3 type="Chapter">
-                  <head>1</head>
-                  <p>Une commission composée de <persName ref="Mar_001">A. MARTY</persName>, <persName ref="Faj_001">E. FAJON</persName>,
-                     <persName ref="Bon_001">F. BONTE</persName>, <persName ref="Cog_001">G. COGNIOT</persName>
-                     est chargé d'établir un<event ref="PdC_001"> projet de constitution</event> de la <placeName ref="Fra_001">FRANCE</placeName>. 
-                  </p></div3>
-               
-               <div3 type="Chapter">
-                  <head>2</head>
-                  <p>Une brochure, comprenant toutes les positions de mesures immédiates faites pour les différents ministères par le <org ref="PCF_001">Parti</org>,
-                     sera éditée avec une introduction du C.C <persName ref="Cog_001">Georges Cogniot</persName>, responsable.
-                  </p></div3>
-               
-               <div3 type="Chapter">
-                  <head>3</head>
-                  <p> L'action de la jeunesse sera orientée vers la préparation militaire.
-               </p></div3>
-               
-               <div3 type="Chapter">
-                  <head>4</head>
-                  <p>Un dernier délai, expirant lundi sera accordé aux camarades <persName ref="Cas_001">CASANOVA</persName> et 
-                     <persName ref="Bos_001">BOSSUS</persName> pour présenter le projet de la brochure sur <event ref="IP_001">l'insurrection parisienne.</event> 
-                  </p></div3>
-               
-               <div3 type="Chapter">
-                  <head>5</head>
-                  <p>Note est prise que les Etat-Majors <org ref="FTP_001">F.T.P</org>. ont recu l'ordre de disparaitre,
-                     de s'intégrer dans l'E.M. des <org ref="FFI_001">F.F.I</org>.,
-                     tandis que subsistent pourtant les comités militaires départementaux. 
-                  </p></div3>
-               
-               <div3 type="Chapter">
-                  <head>6</head>
-                  <p> Dans la lutte menée par le <org ref="PCF_001">Parti</org> contre les <org ref="Tru_001">trusts</org>, 
-                     il faut tenir compte de la position anti-trusts de nombreux petits industriels et l'utiliser au maximum.       
-                  </p></div3>
-               
-               <div3 type="Chapter">
-                  <head>7</head>
-                  <p><persName ref="Vil_001">VILLON</persName> et <persName ref="Mar_002">MARRANE</persName> sont chargés
-                     de faire des propositions relatives aux membres du <org ref="FN_001">F.N</org>. 
-                     à désinger comme membres de l'<org ref="AC_001">Assemblée consultative</org>.</p>
-               </div3>
-               
-               <div3 type="Chapter">
-                  <head>8</head>
-                  <p>Le <org ref="PCF_001">Parti</org> doit être mobilisé sur la question des <org ref="MP_001">Milices Patriotiques.</org> 
-                     Tout sera mis en oeuvre pour obtenir la légalisation des <org ref="MP_001">milices patriotiques</org>
-                     dans le département de la <placeName ref="Sei_001">Seine</placeName>. 
-                  </p></div3>
-               
-               <div3 type="Chapter">
-                  <head>9</head>
-                  <p><persName ref="Mar_001">A. MARTY</persName> et <persName ref="Mar_002">MARRANE</persName>
-                     présenteront un projet de refonte de l'administration de la capitale.
-                     De même l'<org ref="Hum_001">HUMA</org> profitera de toutes les occasions pour faire campagne
-                     afin que <placeName ref="Par_001">PARIS</placeName> jouisse de toutes ses libertés au même titre 
-                     que les autres villes de <placeName ref="Fra_001">FRANCE</placeName>.
-                  </p></div3>
-               
-               <div3 type="Chapter">
-                  <head>10</head>
-                  <p>Il sera mis en place, au service des Cadres, un camarde s'occupant particulièrement de l'<org ref="UD_001">U.D</org>.
-                     de la <placeName ref="Sei_001">Région parisienne</placeName>. 
-                  </p></div3>
-               
-               <div3 type="Chapter">
-                  <head>11</head>
-                  <p>Le camarade (<persName ref="Van_001">VANDEL</persName>) des cuirs et peaux,
-                     sera mis à la disposition de l'<org ref="UD_001">U.D.</org> de <placeName ref="SeO_001">Seine et Oise</placeName>.
-                  </p></div3>
-               
-               <div3 type="Chapter">
-                  <head>12</head>
-                  <p>Dans la période présente, le <org ref="PCF_001">Parti</org> ne doit pas apparaitre comme menant la lutte de classes,
-                     mais il doit être souligné constammment que la lutte revendicative est menée dans le seul intêret de la Nation, 
-                     de facon à montrer les trusts comme défendant des intêrets particuliers au détriment de la Nation.
-                  </p></div3>
-               
-               <div3 type="Chapter">
-                  <head>13</head>
-                  <p>Après la réunion entre <persName ref="Cog_001">G.Cogniot</persName>, <persName ref="Ray_001">H. RAYNAUD</persName>,
-                     <persName ref="Vil_001">VILLON</persName> et <persName ref="Bos_001">BOSSUS</persName> sur la question des instituteurs,
-                     <persName ref="Ray_001">RAYNAUD</persName> et <persName ref="Cog_001">COGNIOT</persName> feront des propositions pour faire marcher 
-                     le syndicat des instituteurs. Au cours de cette réunion, le cas des intellectuels sera examiné. 
-                  </p></div3>
-               
-               <div3 type="Chapter">
-                  <head>14</head>
-                  <p><persName ref="Faj_001">E. FAJON</persName> assurera la prochaine réunion des Nords - Africains 
-                     et fera des propositions d'organisation pour la future commission de travail parmi les Nords-africains.
-                  </p></div3>
-               
-               <div3 type="Chapter">
-                  <head>15</head>
-                  <p><persName ref="Mar_001">André MARTY</persName> examinera les brochures du <org ref="PCF_001">Parti</org>,
-                     actullement en notre possession pour les futurs éditions.
-                  </p></div3>
-               
-               <div3 type="Chapter">
-                 <head>16</head>
-                  <p><persName ref="Roc_001">W. ROCHET</persName> ira en <placeName ref="Alg_001">Algérie</placeName> à la <event>conférence du parti algérien</event>,
-                     le 24 septembre 1944. <persName ref="Ali_001">ALIX</persName> rentrera aussitôt après. Après instructions,
-                     retournera remplacer <persName ref="Ber_001">BERLIOZ</persName>. 
-                     Le retour de <persName ref="Ber_001">BERLIOZ</persName> et <persName ref="Dem_001">DEMUSOIS</persName> se fera aussitôt (vers le 10 octobre). 
-                     <persName ref="Fei_001">FEIX</persName> viendra avec <persName ref="Roc_001">ROCHET</persName>
-                     et repartira en <placeName ref="Alg_001">Algérie</placeName> après avoir recu des instructions du C.C. 
-                     <persName ref="Car_001">H. CARLIER</persName> remplacera <persName ref="Gar_001">GARAUDY</persName>
-                     comme rédacteur en chef de "<org>LIBERTE</org>" (<persName ref="Roc_001">ROCHET</persName>
-                     et <persName ref="Car_001">H. CARLIER</persName> recevront les instrcutions du C.C.avant leur départ.)</p>
-               </div3>
-               
-               <div3 type="Chapter">
-                  <head>17</head>
-                  <p>le 19, sera organisée, avec le<org ref="FN_001"> F.N.</org> des juristes, <event ref="MQL_001">une manifestation</event> au 
-                     <placeName ref="QL_001">Quartier Latin</placeName></p></div3>
-            
-            <div3 type="Chapter">
-               <head>18</head>
-               <p>Le 20, à l'occasion du <event ref="Ani_001">75ème anniversaire de <persName ref="Cac_001">M. CACHIN</persName></event>, les dispositions suivantes seront prises. 
-                  <div4><p> a) les directions du Parti seront prévenues pour l'envoi des félicitations et résolutions à <persName ref="Cac_001">M. CACHIN</persName>.
-                     Une réception sera organisée à la <placeName ref="Mut_001">MUTUALITE</placeName>.
-                     De large invitations seront transmises. Un vin d'honneur sera offert <persName ref="Dut_001">DUTILLEUL</persName>
-                     est chargé de faire l'achat du cadeau qui sera offert au nom du C.C</p></div4>.
-            </p></div3>
-            </div2>
-         </div1>
          
-      </body>
+      </back>
    </text>
 </TEI>

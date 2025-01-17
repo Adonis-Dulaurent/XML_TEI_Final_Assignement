@@ -5,9 +5,9 @@
 
 
 <!-- TEI Header -->
-<!ELEMENT teiHeader (fileDesc, back)>
-<!ELEMENT fileDesc (titleStmt, editionStmt, respStmt, publicationStmt, sourceDesc)>
-<!ELEMENT titleStmt (title)>
+<!ELEMENT teiHeader (fileDesc, profileDesc)>
+<!ELEMENT fileDesc (titleStmt, publicationStmt,sourceDesc)>
+<!ELEMENT titleStmt (title,respStmt )>
 <!ELEMENT title (#PCDATA)>
 <!ELEMENT editionStmt (edition)>
 <!ELEMENT edition (#PCDATA | date)*>
@@ -25,15 +25,24 @@
 <!ELEMENT surname (#PCDATA)>
 <!ELEMENT roleName (#PCDATA |org|placeName)*>
 
-<!ELEMENT publicationStmt (publisher, pubPlace, availability)>
+<!ELEMENT publicationStmt (publisher, pubPlace, date, distributor, availability)>
 <!ELEMENT publisher (#PCDATA)>
-<!ELEMENT pubPlace (#PCDATA)>
+<!ELEMENT pubPlace (adress)>
+<!ELEMENT adress (country,settlement, postCode, street) >
+<!ELEMENT postCode (#PCDATA)>
+<!ELEMENT street (#PCDATA | num)* >
+<!ELEMENT num (#PCDATA)>
+<!ELEMENT distibutor (#PCDATA)>
+<!ATTLIST distributor facs CDATA #IMPLIED >
 <!ELEMENT availability (licence)>
 <!ELEMENT licence (#PCDATA)>
+<!ATTLIST licence target CDATA #IMPLIED >
+<!ELEMENT distributor (#PCDATA) >
 <!ELEMENT sourceDesc (msDesc)>
 <!ELEMENT msDesc (msIdentifier)>
 <!ELEMENT msIdentifier (country, settlement, repository, idno)>
 <!ELEMENT country (#PCDATA)>
+<!ATTLIST country key (FR) "FR">
 <!ELEMENT settlement (#PCDATA)>
 <!ATTLIST settlement 
     ref IDREF #IMPLIED
@@ -43,8 +52,9 @@
 <!ELEMENT idno (#PCDATA)>
 <!ATTLIST idno type (Wikidata | OtherType) "Wikidata">
 
-<!-- Back Section -->
-<!ELEMENT back (listPerson, listPlace, listEvent, listOrg)>
+<!-- profile DEsc  Section -->
+<!ELEMENT  profileDesc (particDesc) >
+<!ELEMENT particDesc (listPerson, listPlace, listEvent, listOrg)>
 <!ELEMENT listPerson (person)+>
 <!ELEMENT person (persName, idno?)>
 <!ATTLIST person xml:id ID #REQUIRED>
@@ -55,7 +65,7 @@
 <!ELEMENT placeName (#PCDATA )>
 <!ATTLIST placeName 
     ref IDREF #IMPLIED>
-<!ELEMENT desc (#PCDATA |placeName)* >
+<!ELEMENT desc (#PCDATA |placeName|org)* >
 
 <!ELEMENT listEvent (event)+>
 <!ELEMENT event (#PCDATA |eventName| note | idno| date| placeName| persName)*>
@@ -66,25 +76,25 @@
 <!ELEMENT note (#PCDATA)>
 
 <!ELEMENT listOrg (org)+>
-<!ELEMENT org (#PCDATA |orgName| description| geo|idno)*>
+<!ELEMENT org (#PCDATA |orgName| desc| geo|idno)*>
 <!ATTLIST org 
     xml:id ID #IMPLIED
     ref IDREF #IMPLIED>
 <!ELEMENT orgName (#PCDATA)>
-<!ELEMENT description (#PCDATA |org)*>
 <!ELEMENT geo (location) >
 <!ELEMENT location (#PCDATA)>
 
 <!-- Text Section -->
 <!ELEMENT text (body)>
 <!ELEMENT body (div1+)>
-<!ATTLIST div1 type (Compte_Rendue | decisions | OtherType) "Compte_Rendue">
+<!ATTLIST div1 type CDATA #IMPLIED>
 
 <!-- div1 and div2 for body structure -->
 <!ELEMENT div1 (head, div2*)>
 <!ELEMENT head (#PCDATA)>
+<!ATTLIST head rend CDATA #IMPLIED >
 <!ELEMENT div2 (head| div3| p+)*>
-<!ATTLIST div2 type (decisions_arretés | ordre_du_jour| other) #IMPLIED>
+<!ATTLIST div2 type CDATA #IMPLIED>
 <!ELEMENT div3 (#PCDATA | head|p)*>
 <!ATTLIST div3 type (Chapter) "Chapter">
 <!ELEMENT p (#PCDATA | placeName | persName| event |org |div4)*>
