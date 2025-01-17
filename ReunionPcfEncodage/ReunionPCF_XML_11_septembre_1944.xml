@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
 	schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<?xml-model href="out/odd_ReunionPCF_XML_11_septembre_1944.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="out/RNG_ReunionPCF.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
@@ -331,7 +331,7 @@
                         <placeName ref="Fra_001">FRANCE</placeName>. </p>
                </div3>
 
-               <div3 type="Chapter">
+               <div3 type="Chapter" n="2">
                   <head>2</head>
                   <p>Une brochure, comprenant toutes les positions de mesures immédiates faites pour
                      les différents ministères par le <orgName ref="PCF_001">Parti</orgName>, sera éditée
@@ -339,12 +339,12 @@
                      Cogniot</persName>, responsable. </p>
                </div3>
 
-               <div3 type="Chapter">
+               <div3 type="Chapter" n="3">
                   <head>3</head>
                   <p> L'action de la jeunesse sera orientée vers la préparation militaire. </p>
                </div3>
 
-               <div3 type="Chapter">
+               <div3 type="Chapter" n="4">
                   <head>4</head>
                   <p>Un dernier délai, expirant lundi sera accordé aux camarades <persName
                         ref="Cas_001">CASANOVA</persName> et <persName ref="Bos_001"
@@ -353,7 +353,7 @@
                   </p>
                </div3>
 
-               <div3 type="Chapter">
+               <div3 type="Chapter" n="5">
                   <head>5</head>
                   <p>Note est prise que les Etat-Majors <affiliation ref="FTP_001">F.T.P</affiliation>. ont recu
                      l'ordre de disparaitre, de s'intégrer dans l'E.M. des <orgName ref="FFI_001"
@@ -361,14 +361,14 @@
                      départementaux. </p>
                </div3>
 
-               <div3 type="Chapter">
+               <div3 type="Chapter" n="6">
                   <head>6</head>
                   <p> Dans la lutte menée par le <orgName ref="PCF_001">Parti</orgName> contre les <orgName
                         ref="Tru_001">trusts</orgName>, il faut tenir compte de la position anti-trusts
                      de nombreux petits industriels et l'utiliser au maximum. </p>
                </div3>
 
-               <div3 type="Chapter">
+               <div3 type="Chapter" n="7">
                   <head>7</head>
                   <p><persName ref="Vil_001">VILLON</persName> et <persName ref="Mar_002"
                         >MARRANE</persName> sont chargés de faire des propositions relatives aux
@@ -376,7 +376,7 @@
                         ref="AC_001">Assemblée consultative</orgName>.</p>
                </div3>
 
-               <div3 type="Chapter">
+               <div3 type="Chapter" n="8">
                   <head>8</head>
                   <p>Le <orgName ref="PCF_001">Parti</orgName> doit être mobilisé sur la question des <orgName
                         ref="MP_001">Milices Patriotiques.</orgName> Tout sera mis en oeuvre pour
@@ -384,7 +384,7 @@
                      le département de la <placeName ref="Sei_001">Seine</placeName>.</p> 
                </div3>
 
-               <div3 type="Chapter">
+               <div3 type="Chapter" n="9">
                   <head>9</head>
                   <p><persName ref="Mar_001">A. MARTY</persName> et <persName ref="Mar_002"
                         >MARRANE</persName> présenteront un projet de refonte de l'administration de
@@ -394,21 +394,21 @@
                      autres villes de <placeName ref="Fra_001">FRANCE</placeName>. </p>
                </div3>
 
-               <div3 type="Chapter">
+               <div3 type="Chapter" n="10">
                   <head>10</head>
                   <p>Il sera mis en place, au service des Cadres, un camarde s'occupant
                      particulièrement de l'<orgName ref="UD_001">U.D</orgName>. de la <placeName
                         ref="Sei_001">Région parisienne</placeName>. </p>
                </div3>
 
-               <div3 type="Chapter">
+               <div3 type="Chapter" n="11">
                   <head>11</head>
                   <p>Le camarade (<persName ref="Van_001">VANDEL</persName>) des cuirs et peaux,
                      sera mis à la disposition de l'<orgName ref="UD_001">U.D.</orgName> de <placeName
                         ref="SeO_001">Seine et Oise</placeName>. </p>
                </div3>
 
-               <div3 type="Chapter">
+               <div3 type="Chapter" n="12">
                   <head>12</head>
                   <p>Dans la période présente, le <orgName ref="PCF_001">Parti</orgName> ne doit pas
                      apparaitre comme menant la lutte de classes, mais il doit être souligné
@@ -417,7 +417,7 @@
                      au détriment de la Nation. </p>
                </div3>
 
-               <div3 type="Chapter">
+               <div3 type="Chapter" n="13">
                   <head>13</head>
                   <p>Après la réunion entre <persName ref="Cog_001">G.Cogniot</persName>, <persName
                         ref="Ray_001">H. RAYNAUD</persName>, <persName ref="Vil_001"
@@ -428,21 +428,21 @@
                      des intellectuels sera examiné. </p>
                </div3>
 
-               <div3 type="Chapter">
+               <div3 type="Chapter" n="14">
                   <head>14</head>
                   <p><persName ref="Faj_001">E. FAJON</persName> assurera la prochaine réunion des
                      Nords - Africains et fera des propositions d'organisation pour la future
                      commission de travail parmi les Nords-africains. </p>
                </div3>
 
-               <div3 type="Chapter">
+               <div3 type="Chapter" n="15">
                   <head>15</head>
                   <p><persName ref="Mar_001">André MARTY</persName> examinera les brochures du <orgName
                         ref="PCF_001">Parti</orgName>, actullement en notre possession pour les futurs
                      éditions. </p>
                </div3>
 
-               <div3 type="Chapter">
+               <div3 type="Chapter" n="16">
                   <head>16</head>
                   <p><persName ref="Roc_001">W. ROCHET</persName> ira en <placeName ref="Alg_001"
                         >Algérie</placeName> à la <eventName ref="CpA_001">conférence du parti algérien</eventName>, le 24
@@ -459,14 +459,14 @@
                         CARLIER</persName> recevront les instrcutions du C.C.avant leur départ.)</p>
                </div3>
 
-               <div3 type="Chapter">
+               <div3 type="Chapter" n="17">
                   <head>17</head>
                   <p>le 19, sera organisée, avec le<orgName ref="FN_001"> F.N.</orgName> des juristes,
                         <eventName ref="MQL_001">une manifestation</eventName> au <placeName ref="QL_001"
                         >Quartier Latin</placeName></p>
                </div3>
 
-               <div3 type="Chapter">
+               <div3 type="Chapter" n="18">
                   <head>18</head>
                   <p>Le 20, à l'occasion du <eventName ref="Ani_001">75ème anniversaire de <persName
                            ref="Cac_001">M. CACHIN</persName></eventName>, les dispositions suivantes

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
 	schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<?xml-model href="out/odd_ReunionPCF_XML_11_septembre_1944.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="out/RNG_ReunionPCF.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
 <teiHeader>
@@ -113,36 +113,36 @@
         <div1 type="decisions">
            <head>decisions</head>
            <div2>
-              <div3 type="Chapter">
+              <div3 type="Chapter" n="1">
                  <head>1</head>
                  <p>Le <orgName ref="CPL_001">COMITE PARISIEN DE LIBERATION</orgName> lancera l'idée que les <orgName ref="CLL_001">C.L.L</orgName>, prennent l'initiative du parainage.</p>
                  <p>Des délégations au Ministre seront également faites par les Municipalités, les sections syndicales et les <orgName ref="FUJ_001">F.U.J.P</orgName>.</p>
                  </div3>
               
-              <div3 type="Chapter">
+              <div3 type="Chapter" n="2">
                  <head>2</head>
                  <p>Une atén ayant pour charge de prendre les émissions de la RADIODIFFUSION FRANCAISE, sera installée à l'<orgName ref="Hum_001">HUMANITE</orgName>.</p>
               </div3>
               
-              <div3 type="Chapter">
+              <div3 type="Chapter" n="3">
                  <head>3</head>
                  <p><persName ref="JD_001">Jacques DUCLOS</persName> informe le Secrétariat de la présente activité trotskyste.
                     Il met en garde sur les agissement de ce groupe qu'il convient de dénoncer avec énergie comme étant un groupe de la <orgName ref="Ges_001">GESTAPO</orgName></p>
               </div3>
               
-              <div3 type="Chapter">
+              <div3 type="Chapter" n="4">
                  <head>4</head>
                  <p><persName ref="Cas_001">CASANOVA</persName> préparere un document dénoncant les attaques dont sont l'objet les <orgName ref="MP_001">Milices Patriotiques</orgName>.
                     Entre autres, le coup de forces contre les<orgName ref="MP_001"> Milices Patriotiques</orgName> du <placeName ref="P13_001">13e ART</placeName>. dénoncé.
                     De plus, les représentants des <orgName ref="MP_001">Milices Patriotique</orgName>s des Régions parisiennes sont convoqués en vue de les informer.</p>
               </div3>
               
-              <div3 type="Chapter">
+              <div3 type="Chapter" n="5">
                  <head>5</head>
                  <p><persName ref="JS_001">Jacques SADOUL</persName> sera affecté à "<orgName ref="CS_001">CE SOIR</orgName>" ou il s'occupera de la rubrique de politique exterieure.</p>
               </div3>
               
-              <div3 type="Chapter">
+              <div3 type="Chapter" n="6">
                  <head>6</head>
                  <p><persName ref="Voo_001">VOOG père</persName>sera passé aux camarades de l'<orgName ref="AVN_001">Association des Victimes du Nazisme</orgName>.</p>
               </div3>

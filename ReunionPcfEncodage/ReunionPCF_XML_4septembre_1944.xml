@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
 	schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<?xml-model href="out/odd_ReunionPCF_XML_11_septembre_1944.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="out/RNG_ReunionPCF.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
@@ -191,33 +191,33 @@
             <div2 type="decisions_arretés">
                <head>Décisions et Arrêtés</head>
 
-               <div3 type="Chapter">
+               <div3 type="Chapter" n="1">
                   <head>1</head>
                   <p>Mise en place d'un responsable à <orgName ref="AFP_001">l'agence de presse et
                         d'information</orgName> - <persName ref="Maf_001">Mafran</persName> ayant
                      quelqu'un en vue. </p>
                </div3>
 
-               <div3 type="Chapter">
+               <div3 type="Chapter" n="2">
                   <head>2</head>
                   <p>Le camarade <persName ref="Dor_001">Dorval</persName> sera candidat à la
                      vice-présidence de la <orgName ref="FdP_001">Fédération de la presse</orgName>. </p>
                </div3>
 
-               <div3 type="Chapter">
+               <div3 type="Chapter" n="3">
                   <head>3</head>
                   <p>Une enquête devra être demandée à la <orgName ref="FdP_002">Fédération du
                         papier</orgName> afin de connaître les stocks de papier et de pâte à papier dans
                      les divers dépôts et usines. </p>
                </div3>
 
-               <div3 type="Chapter">
+               <div3 type="Chapter" n="4">
                   <head>4</head>
                   <p>Les camrades ayant qualité réclameront la révision de l'attribution du papier
                      pour la presse et cela compte tenu de la vente des divers journaux. </p>
                </div3>
 
-               <div3 type="Chapter">
+               <div3 type="Chapter" n="5">
                   <head>5</head>
                   <p>En liaison avec les conditions actuelles de répartition du papier aux journaux,
                      il est décidé d'organiser une <eventName ref="ClP_001">campagne pour la liberté de
@@ -225,25 +225,25 @@
                      pétitions, etc.). </p>
                </div3>
 
-               <div3 type="Chapter">
+               <div3 type="Chapter" n="6">
                   <head>6</head>
                   <p>Le camarade <persName ref="JD_001">Jacques Duclos</persName> acceptera de
                      donner l'interview demandée par "<orgName ref="CS_001">Ce Soir</orgName>". </p>
                </div3>
 
-               <div3 type="Chapter">
+               <div3 type="Chapter" n="7">
                   <head>7</head>
                   <p>Après un dernier effort pour régler à l'amiable, les locaux du <orgName
                         ref="PP_001">Petit Parisien</orgName> seront occupés de droit. </p>
                </div3>
 
-               <div3 type="Chapter">
+               <div3 type="Chapter" n="8">
                   <head>8</head>
                   <p>Il est décidé de donner à <persName ref="Dor_001">Dorval</persName> un
                      administrateur adjoint. </p>
                </div3>
 
-               <div3 type="Chapter">
+               <div3 type="Chapter" n="9">
                   <head>9</head>
                   <p>Seront recherché pour le service du camarade <persName ref="Cog_001"
                         >Cognot</persName> 1e) <persName ref="BR_001">Barbatin Roger</persName> 2e)
@@ -252,35 +252,35 @@
                   </p>
                </div3>
 
-               <div3 type="Chapter">
+               <div3 type="Chapter" n="10"> 
                   <head>10</head>
                   <p>Le camarade <persName ref="Rig_001">Rigal</persName> reste affecté à l'<orgName
                         ref="Hum_001">Huma</orgName> dans le service du camarade <persName ref="Cog_001"
                         >Cogno</persName>. </p>
                </div3>
 
-               <div3 type="Chapter">
+               <div3 type="Chapter" n="11">
                   <head>11</head>
                   <p><persName ref="Ham_001">Hamont dit Dubreuil</persName> actuellement en
                         <placeName ref="Bre_001">Bretagne</placeName> commandant <orgName ref="FTP_001"
                         >F.T.P.F.</orgName> est affecté à l'<orgName ref="Hum_001">Huma</orgName>. </p>
                </div3>
 
-               <div3 type="Chapter">
+               <div3 type="Chapter" n="12">
                   <head>12</head>
                   <p> La <persName ref="Jan_001">Janine</persName> Marchand des femmes sera
                      rédactrice à l'<orgName ref="Hum_001">Huma</orgName> tout en resta en liaison avec le
                         <orgName ref="MdF_001">mouvement des femmes</orgName>. </p>
                </div3>
 
-               <div3 type="Chapter">
+               <div3 type="Chapter" n="13">
                   <head>13</head>
                   <p>Les salaires des permanents sont fixés à 4.000 plus 200 Frs par enfant. Le
                      salaire des femmes est égal dans la mesure ou celles-ci sont seules à se
                      subvenir. Les salaires dits de "ménage", sont suprimés. </p>
                </div3>
 
-               <div3 type="Chapter">
+               <div3 type="Chapter" n="14">
                   <head>14</head>
                   <p>Le camarade <persName ref="Cas_001">Casanova</persName> est chargé de faire
                      dans le courant de la semaine une brochure sur " <eventName ref="IP_001"
@@ -290,19 +290,19 @@
                   </p>
                </div3>
 
-               <div3 type="Chapter">
+               <div3 type="Chapter" n="15">
                   <head>15</head>
                   <p>Le camarade <persName ref="Til_001">Tillon</persName> se fera interviewer par
                         l'<orgName ref="Hum_001">Humanité</orgName>. </p>
                </div3>
 
-               <div3 type="Chapter">
+               <div3 type="Chapter" n="16">
                   <head>16</head>
                   <p>Il sera procédé le plus rapidement possible à l'affichage des instructions aux
                         <orgName ref="MP_001">milices patriotiques</orgName>. </p>
                </div3>
 
-               <div3 type="Chapter">
+               <div3 type="Chapter" n="17">
                   <head>17</head>
                   <p> Le <eventName ref="BP_001">B.P.</eventName> tiendra sa réunion Jeudi 7 septembre à 9
                      heures ou les 6 régions de la <placeName ref="RP_001">région
