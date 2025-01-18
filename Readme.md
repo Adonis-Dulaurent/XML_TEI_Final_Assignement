@@ -1,36 +1,38 @@
- # Archives of the Secretariat of the French Communist Party
+# Archives of the Secretariat of the French Communist Party
 
-Welcome to this repository, whose purpose is to highlight and preserve the archives of the Secretariat of the French Communist Party. For this project, we will focus on the oldest reports (dating from September 1944). These documents are encoded in **XML** and follow **TEI** standards.
+Welcome to this repository, dedicated to preserving and showcasing the archives of the Secretariat of the French Communist Party (PCF). This project focuses on the earliest reports, dating back to September 1944. These documents are encoded in **XML** following the **TEI (Text Encoding Initiative)** standards.
 
-## Historical Context:
+## Historical Context
 
-The French Communist Party (PCF) was the most influential political party in France following World War II. In 1943, the PC-SFIC (French Section of the Communist International) dissolved and took on the name PCF. At this time, the party became rooted in the working class, rural areas, and intellectual circles, allowing it to capture 26.2% of the vote and secure 159 seats in the 1945 elections. These documents from the Secretariat do not reveal the party’s political decisions but rather show how it organized itself in the lead-up to the elections.
+The French Communist Party (PCF) emerged as the most influential political force in France following World War II. In 1943, the French Section of the Communist International (PC-SFIC) dissolved, rebranding itself as the PCF. During this period, the party solidified its roots among the working class, rural populations, and intellectuals, ultimately securing 26.2% of the vote and 159 parliamentary seats in the 1945 elections.
 
-## Presentation of the Sources:
+The documents from the Secretariat do not detail the party's political decisions but instead illustrate how the organization structured itself in preparation for these pivotal elections.
 
-The documents consist of three meeting reports from the French Communist Party:
+## Presentation of the Sources
 
-   . Doc 1: September 4, 1944
-   . Doc 2: September 11, 1944
-   . Doc 3: September 18, 1944
+The collection consists of three meeting reports from the French Communist Party:
 
-These documents are preserved in the departmental archives of Seine-Saint-Denis (54 Avenue du Président-Salvador-Allende, 93000 Bobigny, France).
+- **Doc 1**: September 4, 1944
+- **Doc 2**: September 11, 1944
+- **Doc 3**: September 18, 1944
 
-Each document is two or three typed pages detailing decisions and assignments, along with the names of agents.
+These documents are preserved in the departmental archives of Seine-Saint-Denis:
+**54 Avenue du Président-Salvador-Allende, 93000 Bobigny, France.**
 
-## Project Objectives:
+Each report spans two to three typed pages, detailing decisions, assignments, and the names of key agents involved.
 
-  . **Accessibility**: By digitizing and encoding these texts, we aim to make them accessible to the general public.
+## Project Objectives
 
-  .  **Support for Historians** : Through encoding, particularly of agent names and locations, we hope to assist historians researching the political and social history of France after World War II.
+The project aims to achieve the following goals:
 
-  . **Open Source**: All XML files are published under an open license to encourage research and scientific use.
+1. **Accessibility**: By digitizing and encoding these texts, the project seeks to make them widely accessible to the general public.
+2. **Support for Historians**: Encoding names of agents, locations, and other details provides valuable tools for historians researching France's political and social landscape post-World War II.
+3. **Open Source**: All XML files are published under an open license to encourage further research and scholarly use.
 
-## Repository Structure: 
+## Repository Structure
 
-- `~/ReunionPcfEncoding/`: This directory contains the XML tei files, a ODD files and a guide lines in HTML.
+The repository is organized as follows:
 
-- `~/Sources/`: Contains the meeting reports in PDF format.
-
-- `~/Transcription/`: Offers transcriptions in `.txt` format of the various sources, prepared by us.
-
+- `~/ReunionPcfEncoding/`: Contains XML TEI files, an ODD file, and accompanying guidelines in HTML format.
+- `~/Sources/`: Includes PDF copies of the original meeting reports.
+- `~/Transcription/`: Features `.txt` transcriptions of the documents, prepared by the project team.

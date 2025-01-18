@@ -23,95 +23,98 @@
    <text>
       <body>
          <div1>
-            <head> Encoding guide for the report on <emph rend="Italic">Secretariat of PCF</emph>
+            <head>Encoding guide for the report on <emph rend="Italic">Secretariat of PCF</emph>
                written in 1944 by the Secretariat of the Pari Communist Francais. </head>
-            
-            <p> This document outlines the methods employed to encode the work referenced in the title
-               using XML-TEI and explains the objectives behind the schema design. The ODD describes
-               rigorous encoding principles to produce a scientifically reliable resource. </p>
-            
-            <p> The encoding is centered on a meeting report. The schema was created to structure the
-               document and highlight entities such as members of the French Communist Party, political
-               organizations, and public institutions, facilitating an analysis of their relationships</p>
-            
-            <p> PSpecial attention was given to data normalization to support reuse.</p>
-            
+
+            <p>This document outlines the methods employed to encode the work referenced in the
+               title using XML-TEI and explains the objectives behind the schema design. The ODD
+               describes rigorous encoding principles to produce a scientifically reliable resource. </p>
+
+            <p>The encoding is centered on a meeting report. The schema was created to structure the
+               document and highlight entities such as members of the French Communist Party,
+               political organizations, and public institutions, facilitating an analysis of their
+               relationships</p>
+
+            <p>Special attention was given to data normalization to support reuse.</p>
+
             <p> The encoded material supports analyses on multiple levels. At the micro level, the
-               structure and details of the meeting report itself are examined, while at the macro level,
-               the schema sheds light on political dynamics in post-World War II France. The objectives
-               of this encoding include:<list>
-                  
+               structure and details of the meeting report itself are examined, while at the macro
+               level, the schema sheds light on political dynamics in post-World War II France. The
+               objectives of this encoding include:<list>
+
                   <item>Analyzing the decisions made by the French Communist Party in 1944.</item>
-                  
+
                   <item>Documenting the party's history in the post-war period.</item>
-                  
-                  <item>Studying relationships between named entities, including interactions and the
-                     frequency of their appearance in the meeting reports, to generate statistical insights
-                     into these dynamics.</item>
+
+                  <item>Studying relationships between named entities, including interactions and
+                     the frequency of their appearance in the meeting reports, to generate
+                     statistical insights into these dynamics.</item>
                </list>
             </p>
-            
+
             <p>These objectives will be revisited throughout the guide.</p>
             <div2>
                <head>Exploiting Metadata Through the Structured <gi>teiHeader</gi></head>
-               
-               <p> The <gi>teiHeader</gi> includes metadata describing the document, its provenance, and
-                  details about the encoding process.</p>
-               
+
+               <p>The <gi>teiHeader</gi> includes metadata describing the document, its provenance,
+                  and details about the encoding process.</p>
+
                <p>To ensure standardization, specific structures were made mandatory within the
-                  <gi>teiHeader</gi>.</p>
-               
+                     <gi>teiHeader</gi>.</p>
+
+
                <div3>
                   <head>External reference systems.</head>
-                  <p> Where possible, references to external records and digital copies of the encoded
-                     material are included to facilitate data retrieval.</p>
-                  
-                  <p>The <gi>author</gi> tag is absent from the <gi>titleStmt</gi>, as the Departmental
-                     Archives of Seine-Saint-Denis lack information on the authorship of these documents,
-                     and no records identify French Communist Party personnel from the period.</p>
-                
+                  <p> Where possible, references to external records and digital copies of the
+                     encoded material are included to facilitate data retrieval.</p>
+
+                  <p>The <gi>author</gi> tag is absent from the <gi>titleStmt</gi>, as the
+                     Departmental Archives of Seine-Saint-Denis lack information on the authorship
+                     of these documents, and no records identify French Communist Party personnel
+                     from the period.</p>
+
                </div3>
-               
+
                <div3>
                   <head>Metadata and Document-Specific Data.</head>
-                  
-                  <p> The <gi>teiHeader</gi> also serves as a repository for metadata and data specific to
-                     the document.</p>
-                  <p> he <gi>particDesc</gi> includes an index of character names, while the
-                     <gi>settingDesc</gi> contains an index of place names.</p>
-                  
-                  <p> >Users must verify the data, as external sources like Wikidata are used to enrich the
-                     encoding of named entities.</p>
+
+                  <p> The <gi>teiHeader</gi> also serves as a repository for metadata and data
+                     specific to the document.</p>
+                  <p>The <gi>particDesc</gi> includes an index of character names, while the
+                        <gi>settingDesc</gi> contains an index of place names.</p>
+
+                  <p>Users must verify the data, as external sources like Wikidata are used to
+                     enrich the encoding of named entities.</p>
                </div3>
             </div2>
-            
+
             <div2>
                <head>Textual Structure of the Work</head>
                <div3>
-                  
+
                   <head>Encoding Approach</head>
-                  
+
                   <p> The schema divides the document into hierarchical levels:</p>
                   <list rend="numbered">
-                     
-                     <item n="1">>The first <gi>div</gi> encompasses the entire meeting report, structuring
-                        the work as a whole.</item>
-                     
+
+                     <item n="1">>The first <gi>div</gi> encompasses the entire meeting report,
+                        structuring the work as a whole.</item>
+
                      <item n="2">The second <gi>div</gi> is used to separate the title from the
                         subtitle.</item>
-                     
-                     <item n="3">he third <gi>div</gi> organizes the chapters, reflecting the structure of
-                        the report for easier navigation.</item>
-                     
-                     <item n="4">The fourth <gi>div</gi>, used sparingly, accommodates subchapters when
-                        necessary.</item>
-                    
+
+                     <item n="3">he third <gi>div</gi> organizes the chapters, reflecting the
+                        structure of the report for easier navigation.</item>
+
+                     <item n="4">The fourth <gi>div</gi>, used sparingly, accommodates subchapters
+                        when necessary.</item>
+
                   </list>
-                  
+
                   <p>Both <gi>div1</gi> and <gi>div3</gi> require a <att>type</att> attribute, and
-                     <gi>div3</gi> additionally requires an <att>n</att> attribute for numbering. For
-                     instance:</p>
-                  
+                        <gi>div3</gi> additionally requires an <att>n</att> attribute for numbering.
+                     For instance:</p>
+
                   <egXML xmlns="http://www.tei-c.org/ns/Examples">
                      <div1 type="Title">
                         <head>Title</head>
@@ -123,193 +126,253 @@
                         </div2>
                      </div1>
                   </egXML>
-                  <p>A <gi>head</gi> tag follows each <gi>div</gi>, defining the unit's name as specified
-                     by the transcriber.</p>
-                  
+                  <p>A <gi>head</gi> tag follows each <gi>div</gi>, defining the unit's name as
+                     specified by the transcriber.</p>
+
                </div3>
             </div2>
             <div2>
                <head>Literary study: frequency of appearance and mention of named entity.</head>
-               <p>The schema supports detailed encoding of named entities appearing in the texts.</p>
+               <p>The schema supports detailed encoding of named entities appearing in the
+                  texts.</p>
                <div3>
-                  
+
                   <head>Indexes</head>
-                  
+
                   <p>Indexes are structured as follows:<list>
-                     
-                     <item>In the <gi>teiHeader</gi>, character names are indexed under
-                        <gi>listPerson</gi> in <gi>particDesc</gi>.</item>
-                     <item>Place names are indexed under <gi>listPlace</gi> in <gi>settingDesc</gi>.</item>
-                     <item>Event names are indexed under <gi>listEvent</gi> in the <gi>back</gi>.</item>
-                     <item>Organization names are indexed under <gi>listOrg</gi> in the <gi>back</gi>.</item>
+
+                        <item>In the <gi>teiHeader</gi>, character names are indexed under
+                              <gi>listPerson</gi> in <gi>particDesc</gi>.</item>
+                        <item>Place names are indexed under <gi>listPlace</gi> in
+                              <gi>settingDesc</gi>.</item>
+                        <item>Event names are indexed under <gi>listEvent</gi> in the
+                           <gi>back</gi>.</item>
+                        <item>Organization names are indexed under <gi>listOrg</gi> in the
+                              <gi>back</gi>.</item>
                      </list>
                   </p>
 
                   <div4>
                      <head>named entity : Person</head>
 
-                     <p> Each entry in the character name index must include a <gi>person</gi> tag, 
-                        which requires a mandatory <att>xml:id</att> attribute to uniquely identify the individual 
-                        within the encoding. The <gi>persName</gi> tag is used to record the name of the individual, 
-                        while the <gi>roleName</gi> tag specifies the individual's political affiliation and provides 
-                        details regarding their role. If the individual is identifiable and has a corresponding 
-                        Wikidata page, the <gi>idno</gi> tag, combined with the <att>type</att> attribute, 
-                        must be used to reference the Wikidata identifier.
-                        <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                           <person>
-                              <persName>
-                                 <!-- Name of individu --></persName>
-                              <roleName><!-- Role de l'individu --></roleName>
-                              <idno type="Wikidata"><!-- Wikidata identifier --></idno>
+                     <p> Each entry in the character name index must include a <gi>person</gi> tag,
+                        which requires a mandatory <att>xml:id</att> attribute to uniquely identify
+                        the individual within the encoding.We have create an attribute
+                           <att>gender</att> will be used to indicate not the biological sex,but the
+                        gender of the character.The <gi>persName</gi> tag is used to record the name
+                        of the individual, while the <gi>roleName</gi> tag specifies the
+                        individual's political affiliation and provides details regarding their
+                        role. If the individual is identifiable and has a corresponding Wikidata
+                        page, the <gi>idno</gi> tag, combined with the <att>type</att> attribute,
+                        must be used to reference the Wikidata identifier. <egXML
+                           xmlns="http://www.tei-c.org/ns/Examples">
+                           <person xml:id="DA_042" gender="male">
+                              <persName>Douglas Adams</persName>
+                              <roleName>Scientifique fiction writer and humoris</roleName>
+                              <idno type="Wikidata">Q42</idno>
                            </person>
                         </egXML>
                      </p>
                   </div4>
+
                   <div4>
                      <head>named entity: Place</head>
 
-                     <p> Each place name entry must include a <gi>place</gi> tag, with a mandatory 
-                        <att>xml:id</att> attribute to uniquely identify the location within the encoding. 
-                        The <gi>placeName</gi> tag is used to record the name of the location. 
-                        An optional <gi>note</gi> tag may be included to provide additional context or brief 
-                        descriptions about the place. The <gi>country</gi> tag is used to specify the country where 
-                        the location is situated, while the optional <gi>settlement</gi> tag can be included to 
-                        indicate the city. For greater accuracy, the <gi>geo</gi> tag, nested within the 
-                        <gi>location</gi> tag, should be used to provide geographical coordinates such as latitude 
-                        and longitude.
-                        <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                           <place>
-                              <placeName><!-- Name of the place --></placeName>
+                     <p> Each place name entry must include a <gi>place</gi> tag, with a mandatory
+                           <att>xml:id</att> attribute to uniquely identify the location within the
+                        encoding. The <gi>placeName</gi> tag is used to record the name of the
+                        location. An optional <gi>note</gi> tag may be included to provide
+                        additional context or brief descriptions about the place. An <gi>idno</gi>
+                        tag to supply a corresponding wikidata identifier.</p>
+
+                     <p>To document the address as precisely as possible, an <gi>address</gi> tag
+                        has been created, consisting of the following tags:<list>
+                           <item><gi>country</gi></item>
+                           <item><gi>settlement</gi></item>
+                           <item><gi>postCode</gi></item>
+                           <item><gi>district</gi></item>
+                           <item><gi>street</gi></item>
+                           <item><gi>location</gi></item>
+                        </list>
+                     </p>
+
+                     <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                        <place xml:id="ENC_001">
+                           <placeName>Ecoles nationale des Chartes</placeName>
+                           <adress>
                               <country key="FR"/>
-                              <settlement>
-                                 <!-- Name of th city --></settlement>
-                              <location>
-                                 <geo><!-- location in alt and long --></geo>
-                              </location>
-                           </place>
-                        </egXML>
+                              <settlement type="city">Paris</settlement>
+                              <postCode>75002</postCode>
+                              <district type="arrondissement">02e</district>
+                              <street><num>65</num>rue de Richelieu</street>
+                           </adress>
+                           <notes>grande école in Paris specialised in history</notes>
+                           <idno type="wikidata">Q273570</idno>
+                        </place>
+                     </egXML>
+
+                     <p>The <gi>country</gi> tag will include a mandatory <att>key</att> attribute
+                        to identify the country in question. The ISO 3166 standard
+                        (https://en.wikipedia.org/wiki/List_of_ISO_3166_country_codes) is adopted
+                        for this purpose. </p>
+                     
+                     <p> The <gi>settlement</gi> and <gi>district</gi> tags will, when deemed
+                        necessary, include a <att>type</att> attribute specifying the nature of the
+                        entity being described. </p>
+                     
+                     <p> These tags are not mandatory but must appear in this order to ensure the
+                        normalization of the address. If the user lacks information, they may omit
+                        them. </p>
+
+                     <p> The <gi>num</gi> tag can be used to specify a numeric value corresponding
+                        to an address number. For example, the street number of Rue de Richelieu.
                      </p>
                   </div4>
+
                   <div4>
                      <head>Named entity event</head>
 
-                     <p> Event names are recorded using the <gi>event</gi> tag. This tag must include two mandatory 
-                        attributes: <att>xml:id</att>, which uniquely identifies the event in the encoding, and 
-                        <att>when</att>, which specifies the date or time of the event. The <gi>eventName</gi> tag 
-                        is used to indicate the name of the event, while the optional <gi>note</gi> tag provides 
-                        brief explanatory notes. For further details, two optional elements can be added: a 
-                        <gi>place</gi> tag, which includes a <gi>placeName</gi> tag to specify the location of the 
-                        event, and an <gi>idno</gi> tag to supply a corresponding Wikidata identifier. 
+                     <p> Event names are recorded using the <gi>event</gi> tag. This tag must
+                        include two mandatory attributes: <att>xml:id</att>, which uniquely
+                        identifies the event in the encoding, and <att>when</att>, which specifies
+                        the date or time of the event. The <gi>eventName</gi> tag is used to
+                        indicate the name of the event, while the optional <gi>note</gi> tag
+                        provides brief explanatory notes. For further details, two optional elements
+                        can be added: a <gi>place</gi> tag, which includes a <gi>placeName</gi> tag
+                        to specify the location of the event, and an <gi>idno</gi> tag to supply a
+                        corresponding Wikidata identifier.
+                        
                         <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                           <event>
-                              <eventName><!-- Name of your event --></eventName>
-                              <note><!-- event note --></note>
+                           <event xml:id="PCF_F_001" when="1920-12">
+                              <eventName>Congrès de Tours</eventName>
                               <place>
-                                 <placeName><!-- PLace Name --></placeName>
+                                 <placeName>Tours</placeName>
+                                 <adress>
+                                    <country key="FR"/>
+                                    <settlement type="city">Tours</settlement>
+                                    <postCode>37261</postCode>
+                                    <street><num>18</num>rue Nationale</street>
+                                    <location>
+                                       <geo>46.026026 46.144516</geo>
+                                    </location>
+                                 </adress>
                               </place>
-                              <idno type="Wikidata"><!-- wikidata Identifier --></idno>
+                              <note>Fondation of PCF</note>
+                              <idno type="Wikidata">Q2993104</idno>
                            </event>
                         </egXML>
+                        
                      </p>
                   </div4>
                   <div4>
                      <head>Named entity: Organisation</head>
+
+                     <p> Elements for indexing organisation names are represented using the
+                        <gi>org</gi>tag. This tag must include a mandatory <att>xml:id</att>
+                        attribute to uniquely identify the organisation in the encoding. The
+                        <gi>orgName</gi>tag is employed to specify the name of the organisation.</p>
                      
-                     <p> The items in the organization name index are represented using the <gi>org</gi> tag, which must 
-                        include a mandatory <att>xml:id</att> attribute to uniquely identify the organization in the encoding. 
-                        The <gi>orgName</gi> tag is used to specify the name of the organization. Additionally, the 
-                        <gi>desc</gi> tag is mandatory and provides a concise description of the organization. When the 
-                        organization has an associated Wikidata page, it is recommended to include an <gi>idno</gi> tag 
-                        to specify the corresponding Wikidata identifier.
+                     <p>A <gi>place</gi>tag can optionally be added to indicate the location of
+                        the organisation's main office. Additionally, the <gi>desc</gi>
+                        tag is mandatory and provides a concise description of the organisation.</p>
+                       
+                       <p>
+                          When the organisation is associated with a Wikidata page, it is recommended
+                          to include an <gi>idno</gi> tag to specify the corresponding
+                          Wikidata identifier.
+                       </p>
+                     
                         <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                           <org>
-                              <orgName><!-- Name of your organization --></orgName>
-                              <desc><!-- Description of your organization --></desc>
-                              <idno type="wikidata"><!-- wikidata identifier --></idno>
+                           <org xml:id="CS_001">
+                              <orgName>
+                                 <name>Ce Soir</name>
+                              </orgName>
+                              <place>
+                                 <address>
+                                    <country key="FR"/>
+                                    <settlement type="City">Paris</settlement>
+                                    <postCode>75001</postCode>
+                                    <district type="arrondisement">1er</district>
+                                    <street>place du Palais royal</street>
+                                    <location>
+                                       <geo>48.861 2.335833</geo>
+                                    </location>
+                                 </address>
+                              </place>
+                              <desc>French Newspaper</desc>
+                              <idno type="Wikidata">Q2943625</idno>
                            </org>
                         </egXML>
-                     </p>
+                     
                   </div4>
                </div3>
-               
+
                <div3>
                   <head>Encoding</head>
                   <div4>
                      <head>Characters and their mentions.</head>
-                     <p>
-                        It was decided to systematically encode every mention of each character.
-                     </p>
-                     <p>
-                        When a character's name appears in the body of the text, 
-                        it must be marked with a <gi>persName</gi> tag. To give meaning 
-                        to this tagging, a <att>ref</att> attribute must point to a reference
-                        defined in the character name index. This attribute is mandatory 
-                        only within the <gi>text</gi> tag.
-                        
-                        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                     <p> It was decided to systematically encode every mention of each character. </p>
+                     <p> When a character's name appears in the body of the text, it must be marked
+                        with a <gi>persName</gi> tag. To give meaning to this tagging, a
+                           <att>ref</att> attribute must point to a reference defined in the
+                        character name index. This attribute is mandatory only within the
+                           <gi>text</gi> tag. <egXML xmlns="http://www.tei-c.org/ns/Examples">
                            <p>Lorem ipsum dolor sit amet <persName ref="exp">exp</persName>
                               consectetur adipiscing elit</p>
                         </egXML>
                      </p>
                   </div4>
-                  
+
                   <div4>
                      <head>Place and their mentions.</head>
                      <p>It was decided to systematically encode every mention of each place</p>
-                     
-                     <p>
-                        When a place's name appears in the body of the text, 
-                        it must be marked with a <gi>placeName</gi> tag. To give meaning 
-                        to this tagging, a <att>ref</att> attribute must point to a reference
-                        defined in the place name index. This attribute is mandatory 
-                        only within the <gi>text</gi> tag.  
-                        
-                        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+
+                     <p> When a place's name appears in the body of the text, it must be marked with
+                        a <gi>placeName</gi> tag. To give meaning to this tagging, a <att>ref</att>
+                        attribute must point to a reference defined in the place name index. This
+                        attribute is mandatory only within the <gi>text</gi> tag. <egXML
+                           xmlns="http://www.tei-c.org/ns/Examples">
                            <p>Lorem ipsum dolor sit amet <placeName ref="exp">exp</placeName>
                               consectetur adipiscing elit</p>
                         </egXML>
                      </p>
                   </div4>
-                  
+
                   <div4>
                      <head>Event and their mentions</head>
                      <p>It was decided to systematically encode every mention of each place</p>
-                     
-                     <p>
-                        When an event's name appears in the body of the text, it must be 
-                        marked with an <gi>eventName</gi> tag. To give meaning 
-                        to this tagging, a <att>ref</att> attribute must point to a 
-                        reference defined in the event name index. This attribute is mandatory 
-                        only within the <gi>text</gi> tag.
-                        
-                     </p>
-                     
+
+                     <p> When an event's name appears in the body of the text, it must be marked
+                        with an <gi>eventName</gi> tag. To give meaning to this tagging, a
+                           <att>ref</att> attribute must point to a reference defined in the event
+                        name index. This attribute is mandatory only within the <gi>text</gi> tag. </p>
+
                      <egXML xmlns="http://www.tei-c.org/ns/Examples">
                         <p>Lorem ipsum dolor sit amet <eventName ref="exp">exp</eventName>
                            consectetur adipiscing elit</p>
                      </egXML>
                   </div4>
-                  
+
                   <div4>
                      <head>Organization and their mentions</head>
                      <p>It was decided to systematically encode every mention of each place</p>
-                     
-                     <p>
-                        When an organization's name appears in the body of the text, 
-                        it must be marked with an <gi>orgName</gi> tag. To give meaning 
-                        to this tagging, a <att>ref</att> attribute must point to a reference 
-                        defined in the organization name index. This attribute is mandatory 
-                        only within the <gi>text</gi> tag.
-                     </p>
+
+                     <p> When an organization's name appears in the body of the text, it must be
+                        marked with an <gi>orgName</gi> tag. To give meaning to this tagging, a
+                           <att>ref</att> attribute must point to a reference defined in the
+                        organization name index. This attribute is mandatory only within the
+                           <gi>text</gi> tag. </p>
                   </div4>
                </div3>
             </div2>
          </div1>
-         
+
          <div1>
             <head>Documentation</head>
+
             <schemaSpec ident="oddbyexample" start="TEI ">
                <moduleRef key="tei"/>
+
                <!--Checking module textcrit-->
                <classRef key="att.textCritical"/>
                <classRef key="model.rdgLike"/>
@@ -322,6 +385,7 @@
                      <attDef ident="require" mode="delete"/>
                   </attList>
                </classSpec>
+
                <!--Checking module msdescription-->
                <classRef key="model.physDescPart"/>
                <moduleRef key="msdescription" include="msDesc msIdentifier repository"/>
@@ -336,10 +400,11 @@
                      <attDef ident="ref" mode="delete"/>
                   </attList>
                </elementSpec>
+
                <!--Checking module namesdates-->
                <classRef key="model.persNamePart"/>
                <moduleRef key="namesdates"
-                  include="orgName persName surname forename roleName placeName country settlement district eventName affiliation event geo listOrg listEvent listPerson listPlace location org person place"/>
+                  include="orgName persName surname forename roleName placeName address country postCode settlement district eventName affiliation event geo listOrg listEvent listPerson listPlace location org person place"/>
                <elementSpec ident="orgName" mode="change">
                   <attList>
                      <attDef ident="calendar" mode="delete"/>
@@ -377,6 +442,7 @@
                      <attDef ident="type" mode="delete"/>
                   </attList>
                </elementSpec>
+               <elementRef key="address"/>
                <elementSpec ident="placeName" mode="change">
                   <attList>
                      <attDef ident="calendar" mode="delete"/>
@@ -407,19 +473,8 @@
                      <attDef ident="when" mode="delete"/>
                   </attList>
                </elementSpec>
-               <elementSpec ident="district" mode="change">
-                  <attList>
-                     <attDef ident="calendar" mode="delete"/>
-                     <attDef ident="key" mode="delete"/>
-                     <attDef ident="ref" mode="delete"/>
-                     <attDef ident="type" mode="change">
-                        <valList mode="add" type="closed">
-                           <valItem ident="arrondissement"/>
-                        </valList>
-                     </attDef>
-                     <attDef ident="when" mode="delete"/>
-                  </attList>
-               </elementSpec>
+
+
                <elementSpec ident="eventName" mode="change">
                   <attList>
                      <attDef ident="when" mode="delete"/>
@@ -476,19 +531,69 @@
                      <attDef ident="type" mode="delete"/>
                   </attList>
                </elementSpec>
+
                <elementSpec ident="person" mode="change">
+                  <content>
+                     <sequence preserveOrder="true">
+                        <elementRef key="persName" minOccurs="1" maxOccurs="1"/>
+                        <elementRef key="note" minOccurs="0" maxOccurs="1"/>
+                        <elementRef key="idno" minOccurs="0" maxOccurs="1"/>
+                     </sequence>
+                  </content>
                   <attList>
                      <attDef ident="role" mode="delete"/>
-                     <attDef ident="sex" mode="delete"/>
-                     <attDef ident="gender" mode="delete"/>
                      <attDef ident="age" mode="delete"/>
+                     <attDef ident="next" mode="delete"/>
+                     <attDef ident="prev" mode="delete"/>
+                     <attDef ident="facs" mode="delete"/>
+                     <attDef ident="cert" mode="delete"/>
+                     <attDef ident="xml:id" mode="change" usage="req"/>
+                     <attDef ident="gender" mode="change" usage="opt">
+                        <datatype>
+                           <dataRef key="teidata.name"/>
+                        </datatype>
+                        <valList mode="replace" type="open">
+                           <valItem ident="male"/>
+                           <valItem ident="female"/>
+                           <valItem ident="transmale/transman"/>
+                           <valItem ident="transfemale/transwoman"/>
+                           <valItem ident="genderqueer"/>
+                           <valItem ident="inapplicable"/>
+                        </valList>
+                     </attDef>
                   </attList>
                </elementSpec>
+
                <elementSpec ident="place" mode="change">
+                  <content>
+                     <sequence preserveOrder="true">
+                        <elementRef key="placeName" minOccurs="0" maxOccurs="1"/>
+                        <elementRef key="address" minOccurs="0" maxOccurs="1"/>
+                        <elementRef key="desc" minOccurs="0" maxOccurs="1"/>
+                        <elementRef key="idno" minOccurs="0" maxOccurs="1"/>
+                     </sequence>
+                  </content>
                   <attList>
                      <attDef ident="type" mode="delete"/>
                   </attList>
                </elementSpec>
+
+               <elementSpec ident="address" mode="change">
+                  <content>
+                     <sequence preserveOrder="true">
+                        <elementRef key="country"/>
+                        <elementRef key="settlement" minOccurs="0" maxOccurs="1"/>
+                        <elementRef key="postCode" minOccurs="0" maxOccurs="1"/>
+                        <elementRef key="district" minOccurs="0" maxOccurs="1"/>
+                        <elementRef key="street" minOccurs="0" maxOccurs="1"/>
+                        <elementRef key="location" minOccurs="0" maxOccurs="1"/>
+                     </sequence>
+                  </content>
+                  <attList>
+                     <attDef ident="type" mode="delete"> </attDef>
+                  </attList>
+               </elementSpec>
+
                <!--Checking module dictionaries-->
                <classRef key="att.lexicographic"/>
                <classRef key="model.entryLike"/>
@@ -619,7 +724,7 @@
                </classSpec>
                <!--Checking module core-->
                <moduleRef key="core"
-                  include="p desc name date ref head note respStmt resp title publisher pubPlace"/>
+                  include="p desc postCode district street name num date ref head note respStmt resp title publisher pubPlace"/>
                <elementSpec ident="desc" mode="change">
                   <attList>
                      <attDef ident="type" mode="delete"/>
@@ -642,6 +747,15 @@
                      <attDef ident="type" mode="delete"/>
                   </attList>
                </elementSpec>
+
+               <elementSpec ident="postCode" mode="change">
+                  <attList>
+                     <attDef ident="next" mode="delete"/>
+                     <attDef ident="prev" mode="delete"/>
+                     <attDef ident="facs" mode="delete"/>
+                     <attDef ident="cert" mode="delete"/>
+                  </attList>
+               </elementSpec>
                <elementSpec ident="ref" mode="change">
                   <attList>
                      <attDef ident="type" mode="change">
@@ -651,6 +765,42 @@
                      </attDef>
                   </attList>
                </elementSpec>
+
+               <elementSpec ident="district" mode="change">
+                  <attList>
+                     <attDef ident="calendar" mode="delete"/>
+                     <attDef ident="key" mode="delete"/>
+                     <attDef ident="ref" mode="delete"/>
+                     <attDef ident="type" mode="change" usage="opt">
+                        <datatype>
+                           <dataRef key="teidata.name"/>
+                        </datatype>
+                        <valList mode="add" type="open">
+                           <valItem ident="arrondissement"/>
+                        </valList>
+                     </attDef>
+                     <attDef ident="when" mode="delete"/>
+                  </attList>
+               </elementSpec>
+
+               <elementSpec ident="street" mode="change">
+                  <attList>
+                     <attDef ident="key" mode="delete"/>
+                     <attDef ident="ref" mode="delete"/>
+                     <attDef ident="type" mode="delete"/>
+                  </attList>
+               </elementSpec>
+
+               <elementSpec ident="num" mode="change">
+                  <attList>
+                     <attDef ident="calendar" mode="delete"/>
+                     <attDef ident="key" mode="delete"/>
+                     <attDef ident="ref" mode="delete"/>
+                     <attDef ident="when" mode="delete"/>
+                     <attDef ident="type" mode="delete"/>
+                  </attList>
+               </elementSpec>
+
                <elementSpec ident="head" mode="change">
                   <attList>
                      <attDef ident="type" mode="delete"/>

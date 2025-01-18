@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
-	schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?xml-model href="out/RNG_ReunionPCF.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
 <teiHeader>
    <fileDesc>
@@ -48,7 +45,7 @@
       <particDesc>
          <listPerson>
             
-            <person xml:id="JD_001">
+            <person xml:id="JD_001" gender="male">
                <persName>
                   <forename>Jacques</forename>
                   <surname>Duclos</surname>
@@ -57,7 +54,7 @@
                <idno type="Wikidata">Q377790</idno>
             </person>
             
-            <person xml:id="Cas_001">
+            <person xml:id="Cas_001" gender="male">
                <persName>
                   <surname>Laurent</surname>
                   <forename>Casanova</forename>
@@ -66,7 +63,7 @@
                </persName>
             </person>
             
-            <person xml:id="JS_001">
+            <person xml:id="JS_001" gender ="male">
                <persName>
                   <surname>Jacques</surname>
                   <forename>Sadoul</forename>
@@ -91,14 +88,13 @@
                <placeName>
                   <name>Paris 13e arrondissement</name>
                </placeName>
-               <country key="FR"/>
-               <settlement type="City">Paris</settlement>
-               <location></location>
+               <address>
+                  <country key="FR"></country>
+                  <settlement type="City">Paris</settlement>
+                  <postCode>75013</postCode>
+                  <district type="arrondissement">13e</district>
+               </address>
                <desc>one of the 20 administrative districts of Paris, France</desc>
-               <location>
-                  <geo>48.832222 2.355556</geo>
-                  <!-- lat long -->
-               </location>
                <idno type="Wikidata">Q175129</idno>
             </place>
             
@@ -188,11 +184,19 @@
                <orgName>
                   <name>L'Humanité</name>
                </orgName>
+               <place>
+                  <address>
+                     <country key="FR"/>
+                     <settlement type="City">Paris</settlement>
+                     <postCode>75010</postCode>
+                     <district type="arrondissement">10e</district>
+                     <street><num>18-21</num>Rue d'Enghien</street>
+                     <location>
+                        <geo>48.8719437 2.3515342</geo>
+                     </location>
+                  </address>
+               </place>
                <desc>French Newspaper</desc>
-               <location>
-                  <geo>48.8719437 2.3515342</geo>
-                  <!-- lat long -->
-               </location>
                <idno type="Wikidata">Q1137404</idno>
             </org>
             
@@ -217,10 +221,18 @@
                <orgName>
                   <name>Ce Soir</name>
                </orgName>
-               <location>
-                  <geo>48.861 2.335833</geo>
-                  <!-- lat long -->
-               </location>
+               <place>
+                  <address>
+                     <country key="FR"/>
+                     <settlement type="City">Paris</settlement>
+                     <postCode>75001</postCode>
+                     <district type="arrondisement">1er</district>
+                     <street>place du Palais royal</street>
+                     <location>
+                        <geo>48.861 2.335833</geo>
+                     </location>
+                  </address>
+               </place>
                <desc>French Newspaper</desc>
                <idno type="Wikidata">Q2943625</idno>
             </org>
@@ -229,10 +241,18 @@
                <orgName>
                   <name>Association des Victimes du Nazisme</name>
                </orgName>
-               <location>
-                  <geo>48.880863 2.3273031</geo>
-                  <!-- lat long -->
-               </location>
+               <place>
+                  <address>
+                     <country key="FR"/>
+                     <settlement type="City">Paris</settlement>
+                     <postCode>75009</postCode>
+                     <district type="arrondissement">9e</district>
+                     <street><num>79</num>Rue d'Amsterdam</street>
+                     <location>
+                        <geo>48.880863 2.3273031</geo>
+                     </location>
+                  </address>
+               </place>
             </org>
             
          </listOrg>

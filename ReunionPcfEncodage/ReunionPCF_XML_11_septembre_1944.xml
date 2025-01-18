@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
-	schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?xml-model href="out/RNG_ReunionPCF.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
@@ -46,17 +43,18 @@
          
          <particDesc>
             <listPerson>
-               <person xml:id="Mar_001">
+               <person xml:id="Mar_001" gender="male">
                   <persName>
                      <surname>André</surname>
                      <forename>Marty</forename>
                      <roleName>Secretary of the <affiliation ref="PCF_001">French Communist
                            Party</affiliation></roleName>
+                     
                      <idno type="Wikidata">Q369785</idno>
                   </persName>
                </person>
 
-               <person xml:id="Faj_001">
+               <person xml:id="Faj_001" gender="male">
                   <persName>
                      <surname>Etienne</surname>
                      <forename>Fajon</forename>
@@ -67,18 +65,19 @@
                   </persName>
                </person>
 
-               <person xml:id="Bon_001">
+               <person xml:id="Bon_001" gender="male">
                   <persName>
                      <surname>Florimond</surname>
                      <forename>Bonte</forename>
                      <roleName>Delegate to the Provisional Consultative Assembly, where he is one of
                         the representatives of the <affiliation ref="PCF_001">Communist
                            group</affiliation> in the Chamber of Deputies.</roleName>
+                     
                      <idno type="Wikidata">Q3074294</idno>
                   </persName>
                </person>
 
-               <person xml:id="Cog_001">
+               <person xml:id="Cog_001" gender="male">
                   <persName>
                      <forename>Cogniot</forename>
                      <surname>Georges</surname>
@@ -88,7 +87,7 @@
                   </persName>
                </person>
 
-               <person xml:id="Cas_001">
+               <person xml:id="Cas_001" gender ="male">
                   <persName>
                      <forename>Casanova</forename>
                      <roleName>Member of the <affiliation ref="PCF_001">French Communist
@@ -96,7 +95,7 @@
                   </persName>
                </person>
 
-               <person xml:id="Bos_001">
+               <person xml:id="Bos_001" gender="male">
                   <persName>
                      <forename>Bossus</forename>
                      <roleName>Member of the <affiliation ref="PCF_001">French Communist
@@ -104,7 +103,7 @@
                   </persName>
                </person>
 
-               <person xml:id="Vil_001">
+               <person xml:id="Vil_001" gender="male">
                   <persName>
                      <surname>Pierre</surname>
                      <forename>Villon</forename>
@@ -115,7 +114,7 @@
                   </persName>
                </person>
 
-               <person xml:id="Mar_002">
+               <person xml:id="Mar_002" gender="male">
                   <persName>
                      <surname>Georges</surname>
                      <forename>Marrane</forename>
@@ -126,7 +125,7 @@
                   </persName>
                </person>
 
-               <person xml:id="Van_001">
+               <person xml:id="Van_001" gender="male">
                   <persName>
                      <forename>Vandel</forename>
                      <roleName>Member of the <affiliation ref="PCF_001">French Communist
@@ -134,7 +133,7 @@
                   </persName>
                </person>
 
-               <person xml:id="Ray_001">
+               <person xml:id="Ray_001" gender="male">
                   <persName>
                      <surname>Henri</surname>
                      <forename>Raynaud</forename>
@@ -145,7 +144,7 @@
                   </persName>
                </person>
 
-               <person xml:id="Roc_001">
+               <person xml:id="Roc_001" gender="male">
                   <persName>
                      <surname>Waldeck</surname>
                      <forename>Rochet</forename>
@@ -154,19 +153,19 @@
                   </persName>
                </person>
 
-               <person xml:id="Ali_001">
+               <person xml:id="Ali_001" gender="female">
                   <persName>
                      <forename>Alix</forename>
                   </persName>
                </person>
 
-               <person xml:id="Ber_001">
+               <person xml:id="Ber_001" gender="male">
                   <persName>
                      <forename>Berlioz</forename>
                   </persName>
                </person>
 
-               <person xml:id="Dem_001">
+               <person xml:id="Dem_001" gender="male">
                   <persName>
                      <surname>Antoine</surname>
                      <forename>Demusois</forename>
@@ -177,7 +176,7 @@
                   </persName>
                </person>
 
-               <person xml:id="Fei_001">
+               <person xml:id="Fei_001" gender="male">
                   <persName>
                      <surname>Léon</surname>
                      <forename>Feix</forename>
@@ -187,7 +186,7 @@
                   </persName>
                </person>
 
-               <person xml:id="Car_001">
+               <person xml:id="Car_001" gender="inaplicable">
                   <persName>
                      <surname>H...</surname>
                      <forename>Carlier</forename>
@@ -196,7 +195,7 @@
                   </persName>
                </person>
 
-               <person xml:id="Gar_001">
+               <person xml:id="Gar_001" gender="male">
                   <persName>
                      <surname>Roger</surname>
                      <forename>Garaudy</forename>
@@ -206,7 +205,7 @@
                   </persName>
                </person>
 
-               <person xml:id="Cac_001">
+               <person xml:id="Cac_001" gender="male">
                   <persName>
                      <surname>Marcel</surname>
                      <forename>Cachin</forename>
@@ -217,7 +216,7 @@
                   </persName>
                </person>
 
-               <person xml:id="Dut_001">
+               <person xml:id="Dut_001" gender="male">
                   <persName>
                      <surname>Emile</surname>
                      <forename>Dutilleul</forename>
@@ -234,6 +233,9 @@
 
                <place xml:id="Fra_001">
                   <placeName>France</placeName>
+                  <address>
+                     <country key="FR"/>
+                  </address>
                   <idno type="Wikidata">Q142</idno>
                </place>
 
@@ -241,10 +243,12 @@
                   <placeName>
                      <name>Seine</name>
                   </placeName>
-                  <country key="FR"/>
-                  <location>
-                     <geo>48.85 2.35</geo>
-                  </location>
+                  <address>
+                     <country key="FR"/>
+                     <location>
+                        <geo>48.85 2.35</geo>
+                     </location>
+                  </address>
                   <desc>This is a former department of France, which encompassed Paris and its
                      immediate suburbs.</desc>
                   <idno type="Wikidata">Q1142326</idno>
@@ -254,11 +258,14 @@
                   <placeName>
                      <name>Paris</name>
                   </placeName>
-                  <country key="Fr"/>
-                  <settlement type="city">Paris</settlement>
-                  <location>
-                     <geo>48.864716 2.34901</geo>
-                  </location>
+                  <address>
+                     <country key="FR"/>
+                     <settlement type="city">Paris</settlement>
+                     <postCode>75000</postCode>
+                     <location>
+                        <geo>48.864716 2.34901</geo>
+                     </location>
+                  </address> 
                   <desc>capital city and largest city of France</desc>
                   <idno type="Wikidata">Q90</idno>
                </place>
@@ -267,16 +274,21 @@
                   <placeName>
                      <name>Seine et Oise</name>
                   </placeName>
-                  <country key="FR"/>
-                  <location>
-                     <geo>48.8 2.1333</geo>
-                  </location>
+                  <address>
+                     <country key="FR"/>
+                     <location>
+                        <geo>48.8 2.1333</geo>
+                     </location>
+                  </address>
                   <desc>former French department (1790-1968)</desc>
                   <idno type="Wikidata">Q979470</idno>
                </place>
 
                <place xml:id="Alg_001">
                   <placeName>Algérie</placeName>
+                  <address>
+                     <country key="Alg"/>
+                  </address>
                   <desc> the period of Algerian history when the country was a colony and later an
                      integral part of <placeName ref="Fra_001">France</placeName></desc>
                   <idno type="Wikidata">Q218272</idno>
@@ -286,11 +298,16 @@
                   <placeName>
                      <name>Quartier Latin</name>
                   </placeName>
-                  <country key="FR"/>
-                  <settlement type="city">Paris</settlement>
-                  <location>
-                     <geo>48.8485, 2.3428</geo>
-                  </location>
+                  <address>
+                     <country key="FR"/>
+                     <settlement type="city">Paris</settlement>
+                     <postCode>75005</postCode>
+                     <district type="arrondissement">5e</district>
+                     <street>place de la réunion</street>
+                     <location>
+                        <geo>48.8485, 2.3428</geo>
+                     </location>
+                  </address>
                   <desc>area from Paris in France</desc>
                   <idno type="Wikidata">Q321621</idno>
                </place>
@@ -299,12 +316,15 @@
                   <placeName>
                      <name>Maison de la Mutualité</name>
                   </placeName>
-                  <country key="FR"/>
-                  <settlement type="City">Paris</settlement>
-                  <district type="arrondissement">5e</district>
-                  <location>
-                     <geo>48.84875 2.350556</geo>
-                  </location>
+                  <address>
+                     <country key="FR"/>
+                     <settlement type="City">Paris</settlement>
+                     <district type="arrondissement">5e</district>
+                     <street><num>24</num>rue Saint-Victor</street>
+                     <location>
+                        <geo>48.84875 2.350556</geo>
+                     </location>
+                  </address>
                   <desc>multi-purpose event site</desc>
                   <idno type="Wikidata">Q3279717</idno>
                </place>
@@ -582,11 +602,15 @@
                <desc>French Newspaper</desc>
                <idno type="Wikidata">Q1137404</idno>
                <place>
-                  <country>France</country>
-                  <settlement>Paris</settlement>
-                  <location>
-                     <geo>48.8719437 2.351534</geo>
-                  </location>
+                  <address>
+                     <country key="FR"/>
+                     <settlement type="City">Paris</settlement>
+                     <district type="arrondissement">10e</district>
+                     <street><num>18-21</num> Rue d'Enghien</street>
+                     <location>
+                        <geo>48.8719437 2.351534</geo>
+                     </location>
+                  </address>
                </place>
                
             </org>
