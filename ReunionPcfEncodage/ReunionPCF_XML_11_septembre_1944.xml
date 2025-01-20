@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="out/RNG_ReunionPCF.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="out/RNG_ReunionPCF.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
@@ -8,6 +9,7 @@
             <respStmt>
                <resp>Transcription and encoding of the minutes of the meeting of the French
                   Communist Party </resp>
+               
                <persName>
                   <forename>Adonis</forename>
                   <surname>Dulaurent</surname>
@@ -17,8 +19,10 @@
 
          <publicationStmt>
             <distributor>
-               <surname>Adonis</surname>
-               <forename>Dulaurent</forename>
+               <persName>
+                  <surname>Adonis</surname>
+                  <forename>Dulaurent</forename>
+               </persName>
                <date when="2025-01">January 2025</date>
             </distributor>
             <availability>
@@ -38,9 +42,9 @@
             </msDesc>
          </sourceDesc>
       </fileDesc>
-         
+
       <profileDesc>
-         
+
          <particDesc>
             <listPerson>
                <person xml:id="Mar_001" gender="male">
@@ -49,7 +53,6 @@
                      <forename>Marty</forename>
                      <roleName>Secretary of the <affiliation ref="PCF_001">French Communist
                            Party</affiliation></roleName>
-                     
                      <idno type="Wikidata">Q369785</idno>
                   </persName>
                </person>
@@ -72,7 +75,6 @@
                      <roleName>Delegate to the Provisional Consultative Assembly, where he is one of
                         the representatives of the <affiliation ref="PCF_001">Communist
                            group</affiliation> in the Chamber of Deputies.</roleName>
-                     
                      <idno type="Wikidata">Q3074294</idno>
                   </persName>
                </person>
@@ -87,7 +89,7 @@
                   </persName>
                </person>
 
-               <person xml:id="Cas_001" gender ="male">
+               <person xml:id="Cas_001" gender="male">
                   <persName>
                      <forename>Casanova</forename>
                      <roleName>Member of the <affiliation ref="PCF_001">French Communist
@@ -265,7 +267,7 @@
                      <location>
                         <geo>48.864716 2.34901</geo>
                      </location>
-                  </address> 
+                  </address>
                   <desc>capital city and largest city of France</desc>
                   <idno type="Wikidata">Q90</idno>
                </place>
@@ -330,7 +332,7 @@
                </place>
             </listPlace>
          </settingDesc>
-       
+
       </profileDesc>
    </teiHeader>
 
@@ -342,7 +344,7 @@
             <div2>
                <head rend="align(center) case(allcaps)"> Decision</head>
 
-               <div3 type="Chapter" n="1" >
+               <div3 type="Chapter" n="1">
                   <head>1</head>
                   <p>Une commission composée de <persName ref="Mar_001">A. MARTY</persName>,
                         <persName ref="Faj_001">E. FAJON</persName>, <persName ref="Bon_001">F.
@@ -354,9 +356,9 @@
                <div3 type="Chapter" n="2">
                   <head>2</head>
                   <p>Une brochure, comprenant toutes les positions de mesures immédiates faites pour
-                     les différents ministères par le <orgName ref="PCF_001">Parti</orgName>, sera éditée
-                     avec une introduction du C.C <persName ref="Cog_001">Georges
-                     Cogniot</persName>, responsable. </p>
+                     les différents ministères par le <orgName ref="PCF_001">Parti</orgName>, sera
+                     éditée avec une introduction du C.C <persName ref="Cog_001">Georges
+                        Cogniot</persName>, responsable. </p>
                </div3>
 
                <div3 type="Chapter" n="3">
@@ -375,41 +377,42 @@
 
                <div3 type="Chapter" n="5">
                   <head>5</head>
-                  <p>Note est prise que les Etat-Majors <affiliation ref="FTP_001">F.T.P</affiliation>. ont recu
-                     l'ordre de disparaitre, de s'intégrer dans l'E.M. des <orgName ref="FFI_001"
-                        >F.F.I</orgName>., tandis que subsistent pourtant les comités militaires
-                     départementaux. </p>
+                  <p>Note est prise que les Etat-Majors <affiliation ref="FTP_001"
+                        >F.T.P</affiliation>. ont recu l'ordre de disparaitre, de s'intégrer dans
+                     l'E.M. des <orgName ref="FFI_001">F.F.I</orgName>., tandis que subsistent
+                     pourtant les comités militaires départementaux. </p>
                </div3>
 
                <div3 type="Chapter" n="6">
                   <head>6</head>
-                  <p> Dans la lutte menée par le <orgName ref="PCF_001">Parti</orgName> contre les <orgName
-                        ref="Tru_001">trusts</orgName>, il faut tenir compte de la position anti-trusts
-                     de nombreux petits industriels et l'utiliser au maximum. </p>
+                  <p> Dans la lutte menée par le <orgName ref="PCF_001">Parti</orgName> contre les
+                        <orgName ref="Tru_001">trusts</orgName>, il faut tenir compte de la position
+                     anti-trusts de nombreux petits industriels et l'utiliser au maximum. </p>
                </div3>
 
                <div3 type="Chapter" n="7">
                   <head>7</head>
                   <p><persName ref="Vil_001">VILLON</persName> et <persName ref="Mar_002"
                         >MARRANE</persName> sont chargés de faire des propositions relatives aux
-                     membres du <affiliation ref="FN_001">F.N</affiliation>. à désinger comme membres de l'<orgName
-                        ref="AC_001">Assemblée consultative</orgName>.</p>
+                     membres du <affiliation ref="FN_001">F.N</affiliation>. à désinger comme
+                     membres de l'<orgName ref="AC_001">Assemblée consultative</orgName>.</p>
                </div3>
 
                <div3 type="Chapter" n="8">
                   <head>8</head>
-                  <p>Le <orgName ref="PCF_001">Parti</orgName> doit être mobilisé sur la question des <orgName
-                        ref="MP_001">Milices Patriotiques.</orgName> Tout sera mis en oeuvre pour
-                     obtenir la légalisation des <affiliation ref="MP_001">milices patriotiques</affiliation> dans
-                     le département de la <placeName ref="Sei_001">Seine</placeName>.</p> 
+                  <p>Le <orgName ref="PCF_001">Parti</orgName> doit être mobilisé sur la question
+                     des <orgName ref="MP_001">Milices Patriotiques.</orgName> Tout sera mis en
+                     oeuvre pour obtenir la légalisation des <affiliation ref="MP_001">milices
+                        patriotiques</affiliation> dans le département de la <placeName
+                        ref="Sei_001">Seine</placeName>.</p>
                </div3>
 
                <div3 type="Chapter" n="9">
                   <head>9</head>
                   <p><persName ref="Mar_001">A. MARTY</persName> et <persName ref="Mar_002"
                         >MARRANE</persName> présenteront un projet de refonte de l'administration de
-                     la capitale. De même l'<orgName ref="Hum_001">HUMA</orgName> profitera de toutes les
-                     occasions pour faire campagne afin que <placeName ref="Par_001"
+                     la capitale. De même l'<orgName ref="Hum_001">HUMA</orgName> profitera de
+                     toutes les occasions pour faire campagne afin que <placeName ref="Par_001"
                         >PARIS</placeName> jouisse de toutes ses libertés au même titre que les
                      autres villes de <placeName ref="Fra_001">FRANCE</placeName>. </p>
                </div3>
@@ -424,8 +427,8 @@
                <div3 type="Chapter" n="11">
                   <head>11</head>
                   <p>Le camarade (<persName ref="Van_001">VANDEL</persName>) des cuirs et peaux,
-                     sera mis à la disposition de l'<orgName ref="UD_001">U.D.</orgName> de <placeName
-                        ref="SeO_001">Seine et Oise</placeName>. </p>
+                     sera mis à la disposition de l'<orgName ref="UD_001">U.D.</orgName> de
+                        <placeName ref="SeO_001">Seine et Oise</placeName>. </p>
                </div3>
 
                <div3 type="Chapter" n="12">
@@ -457,21 +460,22 @@
 
                <div3 type="Chapter" n="15">
                   <head>15</head>
-                  <p><persName ref="Mar_001">André MARTY</persName> examinera les brochures du <orgName
-                        ref="PCF_001">Parti</orgName>, actullement en notre possession pour les futurs
-                     éditions. </p>
+                  <p><persName ref="Mar_001">André MARTY</persName> examinera les brochures du
+                        <orgName ref="PCF_001">Parti</orgName>, actullement en notre possession pour
+                     les futurs éditions. </p>
                </div3>
 
                <div3 type="Chapter" n="16">
                   <head>16</head>
                   <p><persName ref="Roc_001">W. ROCHET</persName> ira en <placeName ref="Alg_001"
-                        >Algérie</placeName> à la <eventName ref="CpA_001">conférence du parti algérien</eventName>, le 24
-                     septembre 1944. <persName ref="Ali_001">ALIX</persName> rentrera aussitôt
-                     après. Après instructions, retournera remplacer <persName ref="Ber_001"
-                        >BERLIOZ</persName>. Le retour de <persName ref="Ber_001">BERLIOZ</persName>
-                     et <persName ref="Dem_001">DEMUSOIS</persName> se fera aussitôt (vers le 10
-                     octobre). <persName ref="Fei_001">FEIX</persName> viendra avec <persName
-                        ref="Roc_001">ROCHET</persName> et repartira en <placeName ref="Alg_001"
+                        >Algérie</placeName> à la <eventName ref="CpA_001">conférence du parti
+                        algérien</eventName>, le 24 septembre 1944. <persName ref="Ali_001"
+                        >ALIX</persName> rentrera aussitôt après. Après instructions, retournera
+                     remplacer <persName ref="Ber_001">BERLIOZ</persName>. Le retour de <persName
+                        ref="Ber_001">BERLIOZ</persName> et <persName ref="Dem_001"
+                        >DEMUSOIS</persName> se fera aussitôt (vers le 10 octobre). <persName
+                        ref="Fei_001">FEIX</persName> viendra avec <persName ref="Roc_001"
+                        >ROCHET</persName> et repartira en <placeName ref="Alg_001"
                         >Algérie</placeName> après avoir recu des instructions du C.C. <persName
                         ref="Car_001">H. CARLIER</persName> remplacera <persName ref="Gar_001"
                         >GARAUDY</persName> comme rédacteur en chef de "<orgName>LIBERTE</orgName>"
@@ -481,30 +485,30 @@
 
                <div3 type="Chapter" n="17">
                   <head>17</head>
-                  <p>le 19, sera organisée, avec le<orgName ref="FN_001"> F.N.</orgName> des juristes,
-                        <eventName ref="MQL_001">une manifestation</eventName> au <placeName ref="QL_001"
-                        >Quartier Latin</placeName></p>
+                  <p>le 19, sera organisée, avec le<orgName ref="FN_001"> F.N.</orgName> des
+                     juristes, <eventName ref="MQL_001">une manifestation</eventName> au <placeName
+                        ref="QL_001">Quartier Latin</placeName></p>
                </div3>
 
                <div3 type="Chapter" n="18">
                   <head>18</head>
                   <p>Le 20, à l'occasion du <eventName ref="Ani_001">75ème anniversaire de <persName
-                           ref="Cac_001">M. CACHIN</persName></eventName>, les dispositions suivantes
-                     seront prises.</p> <div4>
-                        <p> a) les directions du Parti seront prévenues pour l'envoi des
-                           félicitations et résolutions à <persName ref="Cac_001">M.
-                              CACHIN</persName>. Une réception sera organisée à la <placeName
-                              ref="Mut_001">MUTUALITE</placeName>. De large invitations seront
-                           transmises. Un vin d'honneur sera offert <persName ref="Dut_001"
-                              >DUTILLEUL</persName> est chargé de faire l'achat du cadeau qui sera
-                           offert au nom du C.C.</p>
-                     </div4>
+                           ref="Cac_001">M. CACHIN</persName></eventName>, les dispositions
+                     suivantes seront prises.</p>
+                  <div4>
+                     <p> a) les directions du Parti seront prévenues pour l'envoi des félicitations
+                        et résolutions à <persName ref="Cac_001">M. CACHIN</persName>. Une réception
+                        sera organisée à la <placeName ref="Mut_001">MUTUALITE</placeName>. De large
+                        invitations seront transmises. Un vin d'honneur sera offert <persName
+                           ref="Dut_001">DUTILLEUL</persName> est chargé de faire l'achat du cadeau
+                        qui sera offert au nom du C.C.</p>
+                  </div4>
                </div3>
             </div2>
          </div1>
 
       </body>
-      
+
       <back>
          <listEvent>
             <event xml:id="PdC_001">
@@ -512,7 +516,7 @@
                <note>Referendum to determine the procedure for drafting a new constitution, bringing
                   the Third Republic to an end.</note>
             </event>
-            
+
             <event xml:id="IP_001">
                <eventName>Libération de Paris</eventName>
                <note>The liberation of Paris was a battle that took place during Word War II from 19
@@ -520,22 +524,22 @@
                   1944</note>
                <idno type="Wikidata">Q696835</idno>
             </event>
-            
+
             <event xml:id="CpA_001" when="1994-09-24">
                <eventName>Conférence du Parti Comuniste d'Algérie</eventName>
                <place>
                   <placeName ref="Alg_001">Algérie</placeName>
                </place>
             </event>
-            
+
             <event xml:id="MQL_001" when="1944-09-19">
                <eventName>Manifestationn</eventName>
                <place>
                   <placeName ref="QL_001">Quartier Latin</placeName>
                </place>
-               
+
             </event>
-            
+
             <event xml:id="Ani_001" when="1944-09-20">
                <eventName>75 eme Aniversaire de M.Cachin</eventName>
                <place>
@@ -543,44 +547,44 @@
                </place>
             </event>
          </listEvent>
-         
+
          <listOrg>
             <org xml:id="PCF_001">
                <orgName>Parti Communiste Francais</orgName>
                <desc>French political party</desc>
                <idno type="Wikidata">Q192821</idno>
             </org>
-            
+
             <org xml:id="FTP_001">
                <orgName>Francs-tireurs et partisans Francais</orgName>
                <desc>Résistance groups in France during WWII, linked to Communist Party</desc>
                <idno type="Wikidata">Q15731766</idno>
             </org>
-            
+
             <org xml:id="FFI_001">
                <orgName>Forces Francaises de l'intérieur</orgName>
                <desc>The FFI were more formally organized into light infantry units and served as a
                   valuable manpower addition to regular Free French forces.</desc>
                <idno type="Wikidata">Q186595</idno>
             </org>
-            
+
             <org xml:id="Tru_001">
                <orgName>Trust</orgName>
                <desc>A trust is a large company with strong or even dominant positions in several
                   closely related markets within an industrial sector. </desc>
                <idno type="Wikidata">Q1133938</idno>
             </org>
-            
+
             <org xml:id="FN_001">
                <orgName>Front national de lutte pour la libération et l'indépendance de la
                   France</orgName>
-               <desc>This is a French domestic Resistance movement created by the <affiliation ref="PCF_001"
-                  >French Communist Party</affiliation> through an appeal published on May 15, 1941 in
-                  the party's daily newspaper, L'Humanité, for a vast patriotic rally1 open to
-                  non-Communists to rally the various components of French society. </desc>
+               <desc>This is a French domestic Resistance movement created by the <affiliation
+                     ref="PCF_001">French Communist Party</affiliation> through an appeal published
+                  on May 15, 1941 in the party's daily newspaper, L'Humanité, for a vast patriotic
+                  rally1 open to non-Communists to rally the various components of French society. </desc>
                <idno type="Wikidata">Q738249</idno>
             </org>
-            
+
             <org xml:id="AC_001">
                <orgName>Assemblée consultative provisoire</orgName>
                <desc>The Provisional Consultative Assembly is a French assembly representing
@@ -589,14 +593,14 @@
                   Liberation. </desc>
                <idno type="Wikidata">Q2867026</idno>
             </org>
-            
+
             <org xml:id="MP_001">
                <orgName>Milices Patrioques</orgName>
                <desc>the Milices ouvrières were born of a communist initiative; their creation was
                   announced in L'Humanité on August 15, 1943. A fortnight later, they changed their
                   name to Milices patriotiques.</desc>
             </org>
-            
+
             <org xml:id="Hum_001">
                <orgName>L'Humanité</orgName>
                <desc>French Newspaper</desc>
@@ -612,23 +616,23 @@
                      </location>
                   </address>
                </place>
-               
+
             </org>
-            
+
             <org xml:id="UD_001">
                <orgName>Union départemental</orgName>
                <desc>Grouping of unions and union members from the same department who are members
                   of the confederation, regardless of their profession.</desc>
                <idno type="Wikidata">Q3550259</idno>
             </org>
-            
+
             <org xml:id="Lib_001">
                <orgName>Liberté Hebdo</orgName>
                <desc>French Newspaper from Lille</desc>
                <idno type="Wikidata">Q126871031</idno>
             </org>
          </listOrg>
-         
+
       </back>
    </text>
 </TEI>

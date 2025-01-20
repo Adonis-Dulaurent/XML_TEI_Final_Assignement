@@ -1,169 +1,189 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="out/RNG_ReunionPCF.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="out/RNG_ReunionPCF.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
-<teiHeader>
-   <fileDesc>
-      <titleStmt>
-         <title>Secretariat du PCF du 18 septembre 1944</title>
-         <respStmt>
-            <resp>Transcription and encoding of the minutes of the meeting of the French
-               Communist Party </resp>
-            <persName>
-               <forename>Adonis</forename>
-               <surname>Dulaurent</surname>
-            </persName>
-         </respStmt>
-      </titleStmt>
-      
-      <publicationStmt>
-         <distributor>
-            <surname>Adonis</surname>
-            <forename>Dulaurent</forename>
-            <date when="2025-01">January 2025</date>
-         </distributor>
-         
-         <availability>
-            <licence>This file is available under a Creative Commons Attribution 4.0 licence:
-               <ref type="url" target="https://creativecommons.org/licenses/by/4.0/deed.en"
-                  >https://creativecommons.org/licenses/by/4.0/deed.en</ref>. </licence>
-         </availability>
-      </publicationStmt>
-      
-      <sourceDesc>
-         <msDesc>
-            <msIdentifier>
-               <country key="FR"/>
-               <settlement type="city">Bobigny</settlement>
-               <repository xml:lang="fr">Archives Départemental de Seine Saint Denis</repository>
-               <idno>261J5-3</idno>
-            </msIdentifier>
-         </msDesc>
-      </sourceDesc>
-   </fileDesc>
-   
-   <profileDesc>
-      <particDesc>
-         <listPerson>
-            
-            <person xml:id="JD_001" gender="male">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Secretariat du PCF du 18 septembre 1944</title>
+            <respStmt>
+               <resp>Transcription and encoding of the minutes of the meeting of the French
+                  Communist Party </resp>
                <persName>
-                  <forename>Jacques</forename>
-                  <surname>Duclos</surname>
-                  <roleName>Member of the <affiliation>French Communist Party</affiliation></roleName>
+                  <forename>Adonis</forename>
+                  <surname>Dulaurent</surname>
                </persName>
-               <idno type="Wikidata">Q377790</idno>
-            </person>
-            
-            <person xml:id="Cas_001" gender="male">
+            </respStmt>
+         </titleStmt>
+
+         <publicationStmt>
+            <distributor>
                <persName>
-                  <surname>Laurent</surname>
-                  <forename>Casanova</forename>
-                  <roleName>Member of the <affiliation>National Assembly</affiliation> and member of the <affiliation>PCF</affiliation></roleName>
-                  <idno type="Wikidata">Q442690</idno>
+                  <surname>Adonis</surname>
+                  <forename>Dulaurent</forename>
                </persName>
-            </person>
-            
-            <person xml:id="JS_001" gender ="male">
-               <persName>
-                  <surname>Jacques</surname>
-                  <forename>Sadoul</forename>
-                  <roleName>Fondator of "<affiliation>Mouvement social révolutionnaire"</affiliation> and memeber of the <affiliation>PCF</affiliation></roleName>
-                  <idno type="Wikidata">Q3159955</idno>
-               </persName>
-            </person>
-            
-            <person xml:id="Voo_001">
-               <persName>
-                  <forename>Voog</forename>
-               </persName>
-            </person>
-         </listPerson>
-      </particDesc>
-      
-      <settingDesc>
-         
-         <listPlace>
-            
-            <place xml:id="P13_001">
-               <placeName>
-                  <name>Paris 13e arrondissement</name>
-               </placeName>
-               <address>
-                  <country key="FR"></country>
-                  <settlement type="City">Paris</settlement>
-                  <postCode>75013</postCode>
-                  <district type="arrondissement">13e</district>
-               </address>
-               <desc>one of the 20 administrative districts of Paris, France</desc>
-               <idno type="Wikidata">Q175129</idno>
-            </place>
-            
-         </listPlace>
-         
-      </settingDesc>
-   </profileDesc>
+               <date when="2025-01">January 2025</date>
+            </distributor>
+
+            <availability>
+               <licence>This file is available under a Creative Commons Attribution 4.0 licence:
+                     <ref type="url" target="https://creativecommons.org/licenses/by/4.0/deed.en"
+                     >https://creativecommons.org/licenses/by/4.0/deed.en</ref>. </licence>
+            </availability>
+         </publicationStmt>
+
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier>
+                  <country key="FR"/>
+                  <settlement type="city">Bobigny</settlement>
+                  <repository xml:lang="fr">Archives Départemental de Seine Saint Denis</repository>
+                  <idno>261J5-3</idno>
+               </msIdentifier>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+
+      <profileDesc>
+         <particDesc>
+            <listPerson>
+
+               <person xml:id="JD_001" gender="male">
+                  <persName>
+                     <forename>Jacques</forename>
+                     <surname>Duclos</surname>
+                     <roleName>Member of the <affiliation>French Communist
+                        Party</affiliation></roleName>
+                  </persName>
+                  <idno type="Wikidata">Q377790</idno>
+               </person>
+
+               <person xml:id="Cas_001" gender="male">
+                  <persName>
+                     <surname>Laurent</surname>
+                     <forename>Casanova</forename>
+                     <roleName>Member of the <affiliation>National Assembly</affiliation> and member
+                        of the <affiliation>PCF</affiliation></roleName>
+                     <idno type="Wikidata">Q442690</idno>
+                  </persName>
+               </person>
+
+               <person xml:id="JS_001" gender="male">
+                  <persName>
+                     <surname>Jacques</surname>
+                     <forename>Sadoul</forename>
+                     <roleName>Fondator of "<affiliation>Mouvement social
+                           révolutionnaire"</affiliation> and memeber of the
+                           <affiliation>PCF</affiliation></roleName>
+                     <idno type="Wikidata">Q3159955</idno>
+                  </persName>
+               </person>
+
+               <person xml:id="Voo_001">
+                  <persName>
+                     <forename>Voog</forename>
+                  </persName>
+               </person>
+            </listPerson>
+         </particDesc>
+
+         <settingDesc>
+
+            <listPlace>
+
+               <place xml:id="P13_001">
+                  <placeName>
+                     <name>Paris 13e arrondissement</name>
+                  </placeName>
+                  <address>
+                     <country key="FR"/>
+                     <settlement type="City">Paris</settlement>
+                     <postCode>75013</postCode>
+                     <district type="arrondissement">13e</district>
+                  </address>
+                  <desc>one of the 20 administrative districts of Paris, France</desc>
+                  <idno type="Wikidata">Q175129</idno>
+               </place>
+
+            </listPlace>
+
+         </settingDesc>
+      </profileDesc>
    </teiHeader>
-   
+
    <text>
       <body>
-        <div1 type="decisions">
-           <head>decisions</head>
-           <div2>
-              <div3 type="Chapter" n="1">
-                 <head>1</head>
-                 <p>Le <orgName ref="CPL_001">COMITE PARISIEN DE LIBERATION</orgName> lancera l'idée que les <orgName ref="CLL_001">C.L.L</orgName>, prennent l'initiative du parainage.</p>
-                 <p>Des délégations au Ministre seront également faites par les Municipalités, les sections syndicales et les <orgName ref="FUJ_001">F.U.J.P</orgName>.</p>
-                 </div3>
-              
-              <div3 type="Chapter" n="2">
-                 <head>2</head>
-                 <p>Une atén ayant pour charge de prendre les émissions de la RADIODIFFUSION FRANCAISE, sera installée à l'<orgName ref="Hum_001">HUMANITE</orgName>.</p>
-              </div3>
-              
-              <div3 type="Chapter" n="3">
-                 <head>3</head>
-                 <p><persName ref="JD_001">Jacques DUCLOS</persName> informe le Secrétariat de la présente activité trotskyste.
-                    Il met en garde sur les agissement de ce groupe qu'il convient de dénoncer avec énergie comme étant un groupe de la <orgName ref="Ges_001">GESTAPO</orgName></p>
-              </div3>
-              
-              <div3 type="Chapter" n="4">
-                 <head>4</head>
-                 <p><persName ref="Cas_001">CASANOVA</persName> préparere un document dénoncant les attaques dont sont l'objet les <orgName ref="MP_001">Milices Patriotiques</orgName>.
-                    Entre autres, le coup de forces contre les<orgName ref="MP_001"> Milices Patriotiques</orgName> du <placeName ref="P13_001">13e ART</placeName>. dénoncé.
-                    De plus, les représentants des <orgName ref="MP_001">Milices Patriotique</orgName>s des Régions parisiennes sont convoqués en vue de les informer.</p>
-              </div3>
-              
-              <div3 type="Chapter" n="5">
-                 <head>5</head>
-                 <p><persName ref="JS_001">Jacques SADOUL</persName> sera affecté à "<orgName ref="CS_001">CE SOIR</orgName>" ou il s'occupera de la rubrique de politique exterieure.</p>
-              </div3>
-              
-              <div3 type="Chapter" n="6">
-                 <head>6</head>
-                 <p><persName ref="Voo_001">VOOG père</persName>sera passé aux camarades de l'<orgName ref="AVN_001">Association des Victimes du Nazisme</orgName>.</p>
-              </div3>
-           </div2>
-           
-        </div1>
+         <div1 type="decisions">
+            <head>decisions</head>
+            <div2>
+               <div3 type="Chapter" n="1">
+                  <head>1</head>
+                  <p>Le <orgName ref="CPL_001">COMITE PARISIEN DE LIBERATION</orgName> lancera
+                     l'idée que les <orgName ref="CLL_001">C.L.L</orgName>, prennent l'initiative du
+                     parainage.</p>
+                  <p>Des délégations au Ministre seront également faites par les Municipalités, les
+                     sections syndicales et les <orgName ref="FUJ_001">F.U.J.P</orgName>.</p>
+               </div3>
+
+               <div3 type="Chapter" n="2">
+                  <head>2</head>
+                  <p>Une atén ayant pour charge de prendre les émissions de la RADIODIFFUSION
+                     FRANCAISE, sera installée à l'<orgName ref="Hum_001">HUMANITE</orgName>.</p>
+               </div3>
+
+               <div3 type="Chapter" n="3">
+                  <head>3</head>
+                  <p><persName ref="JD_001">Jacques DUCLOS</persName> informe le Secrétariat de la
+                     présente activité trotskyste. Il met en garde sur les agissement de ce groupe
+                     qu'il convient de dénoncer avec énergie comme étant un groupe de la <orgName
+                        ref="Ges_001">GESTAPO</orgName></p>
+               </div3>
+
+               <div3 type="Chapter" n="4">
+                  <head>4</head>
+                  <p><persName ref="Cas_001">CASANOVA</persName> préparere un document dénoncant les
+                     attaques dont sont l'objet les <orgName ref="MP_001">Milices
+                        Patriotiques</orgName>. Entre autres, le coup de forces contre les<orgName
+                        ref="MP_001"> Milices Patriotiques</orgName> du <placeName ref="P13_001">13e
+                        ART</placeName>. dénoncé. De plus, les représentants des <orgName
+                        ref="MP_001">Milices Patriotique</orgName>s des Régions parisiennes sont
+                     convoqués en vue de les informer.</p>
+               </div3>
+
+               <div3 type="Chapter" n="5">
+                  <head>5</head>
+                  <p><persName ref="JS_001">Jacques SADOUL</persName> sera affecté à "<orgName
+                        ref="CS_001">CE SOIR</orgName>" ou il s'occupera de la rubrique de politique
+                     exterieure.</p>
+               </div3>
+
+               <div3 type="Chapter" n="6">
+                  <head>6</head>
+                  <p><persName ref="Voo_001">VOOG père</persName>sera passé aux camarades de
+                        l'<orgName ref="AVN_001">Association des Victimes du Nazisme</orgName>.</p>
+               </div3>
+            </div2>
+
+         </div1>
       </body>
       <back>
-         
-         
+
+
          <listEvent>
             <event xml:id="PdC_001">
                <eventName>Projet de constitution</eventName>
-               <note>Referendum to determine the procedure for drafting a new constitution,
-                  bringing the Third Republic to an end.</note>
+               <note>Referendum to determine the procedure for drafting a new constitution, bringing
+                  the Third Republic to an end.</note>
             </event>
          </listEvent>
-         
+
          <listOrg>
             <org xml:id="CPL_001">
                <orgName>Comité parisien de la Libération</orgName>
                <desc>Civilian resistance structure during the 2nd World War</desc>
                <idno type="Wikidata">Q60833774</idno>
             </org>
-            
+
             <org xml:id="CLL_001">
                <orgName>
                   <name>Comité départemental de la libération</name>
@@ -171,7 +191,7 @@
                <desc>Structure of the French Resistance</desc>
                <idno type="Wikidata">Q2985442</idno>
             </org>
-            
+
             <org xml:id="FUJ_001">
                <orgName>
                   <name>Forces Unies de la Jeunesse patriotique</name>
@@ -179,7 +199,7 @@
                <desc>Civilian resistance structure during the 2nd World War</desc>
                <idno type="Wikidata">Q3077044</idno>
             </org>
-            
+
             <org xml:id="Hum_001">
                <orgName>
                   <name>L'Humanité</name>
@@ -199,7 +219,7 @@
                <desc>French Newspaper</desc>
                <idno type="Wikidata">Q1137404</idno>
             </org>
-            
+
             <org xml:id="Ges_001">
                <orgName>
                   <name>Gestapo</name>
@@ -207,16 +227,16 @@
                <desc>The official secret Nazi Germany and in German-occupied Europe</desc>
                <idno type="Wikidata">Q43250</idno>
             </org>
-            
+
             <org xml:id="MP_001">
                <orgName>
                   <name>Milices Patrioques</name>
                </orgName>
-               <desc>the Milices ouvrières were born of a communist initiative;
-                  their creation was announced in L'Humanité on August 15, 1943.
-                  A fortnight later, they changed their name to Milices patriotiques.</desc>
+               <desc>the Milices ouvrières were born of a communist initiative; their creation was
+                  announced in L'Humanité on August 15, 1943. A fortnight later, they changed their
+                  name to Milices patriotiques.</desc>
             </org>
-            
+
             <org xml:id="CS_001">
                <orgName>
                   <name>Ce Soir</name>
@@ -236,7 +256,7 @@
                <desc>French Newspaper</desc>
                <idno type="Wikidata">Q2943625</idno>
             </org>
-            
+
             <org xml:id="AVN_001">
                <orgName>
                   <name>Association des Victimes du Nazisme</name>
@@ -254,7 +274,7 @@
                   </address>
                </place>
             </org>
-            
+
          </listOrg>
       </back>
    </text>

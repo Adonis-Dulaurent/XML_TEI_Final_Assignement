@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron"  xml:lang="en">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -72,7 +72,14 @@
                      Departmental Archives of Seine-Saint-Denis lack information on the authorship
                      of these documents, and no records identify French Communist Party personnel
                      from the period.</p>
-
+                  
+                  <p>
+                     A Schematron rule has been added to the <gi>publicationStmt</gi> element.
+                     This rule requires that, within the <gi>persname</gi> tag—when it has 
+                     <gi>distributo</gi> as an ancestor—both a <gi>forename</gi> and a <gi>surname</gi> 
+                     must appear.
+                  </p>     
+                  
                </div3>
 
                <div3>
@@ -414,6 +421,15 @@
                   </attList>
                </elementSpec>
                <elementSpec ident="persName" mode="change">
+                  <constraintSpec ident="distributor_child" mode="change" scheme="schematron">
+                  <constraint>
+                     <sch:rule context="tei:distributor/tei:persName">
+                        <sch:assert test="count(tei:forename) = 1 and count(tei:surname) = 1">
+                           The persName element inside distributor must have exactly one forename, surname.
+                        </sch:assert>
+                     </sch:rule>
+                  </constraint>
+                  </constraintSpec>
                   <attList>
                      <attDef ident="calendar" mode="delete"/>
                      <attDef ident="when" mode="delete"/>

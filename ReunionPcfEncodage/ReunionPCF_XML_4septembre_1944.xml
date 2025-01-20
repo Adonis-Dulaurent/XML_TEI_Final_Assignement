@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="out/RNG_ReunionPCF.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="out/RNG_ReunionPCF.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
@@ -17,18 +18,20 @@
 
          <publicationStmt>
             <distributor>
-               <surname>Adonis</surname>
-               <forename>Dulaurent</forename>
+               <persName>
+                  <surname>Adonis</surname>
+                  <forename>Dulaurent</forename>
+               </persName>
                <date when="2025-01">January 2025</date>
             </distributor>
-            
+
             <availability>
                <licence>This file is available under a Creative Commons Attribution 4.0 licence:
                      <ref type="url" target="https://creativecommons.org/licenses/by/4.0/deed.en"
                      >https://creativecommons.org/licenses/by/4.0/deed.en</ref>. </licence>
             </availability>
          </publicationStmt>
-         
+
          <sourceDesc>
             <msDesc>
                <msIdentifier>
@@ -56,7 +59,6 @@
                <person xml:id="Dor_001" gender="male">
                   <persName>
                      <forename>Dorval</forename>
-                     
                      <roleName>Member of the <affiliation>French Communist
                         Party</affiliation></roleName>
                   </persName>
@@ -153,7 +155,7 @@
 
          <settingDesc>
             <listPlace>
-               
+
                <place xml:id="Bre_001">
                   <placeName>
                      <name>Bretagne</name>
@@ -169,7 +171,7 @@
                      <name>Ile-de-France</name>
                   </placeName>
                   <address>
-                     <country key="FR"></country>
+                     <country key="FR"/>
                   </address>
                   <idno type="Wikidata">Q13917</idno>
                </place>
@@ -177,7 +179,7 @@
          </settingDesc>
       </profileDesc>
 
-     
+
    </teiHeader>
 
    <text>
@@ -197,14 +199,15 @@
                <div3 type="Chapter" n="2">
                   <head>2</head>
                   <p>Le camarade <persName ref="Dor_001">Dorval</persName> sera candidat à la
-                     vice-présidence de la <orgName ref="FdP_001">Fédération de la presse</orgName>. </p>
+                     vice-présidence de la <orgName ref="FdP_001">Fédération de la presse</orgName>.
+                  </p>
                </div3>
 
                <div3 type="Chapter" n="3">
                   <head>3</head>
                   <p>Une enquête devra être demandée à la <orgName ref="FdP_002">Fédération du
-                        papier</orgName> afin de connaître les stocks de papier et de pâte à papier dans
-                     les divers dépôts et usines. </p>
+                        papier</orgName> afin de connaître les stocks de papier et de pâte à papier
+                     dans les divers dépôts et usines. </p>
                </div3>
 
                <div3 type="Chapter" n="4">
@@ -216,8 +219,8 @@
                <div3 type="Chapter" n="5">
                   <head>5</head>
                   <p>En liaison avec les conditions actuelles de répartition du papier aux journaux,
-                     il est décidé d'organiser une <eventName ref="ClP_001">campagne pour la liberté de
-                        la presse</eventName> (lettres aux journaux et aux pouvoirs intéressés,
+                     il est décidé d'organiser une <eventName ref="ClP_001">campagne pour la liberté
+                        de la presse</eventName> (lettres aux journaux et aux pouvoirs intéressés,
                      pétitions, etc.). </p>
                </div3>
 
@@ -248,25 +251,26 @@
                   </p>
                </div3>
 
-               <div3 type="Chapter" n="10"> 
+               <div3 type="Chapter" n="10">
                   <head>10</head>
                   <p>Le camarade <persName ref="Rig_001">Rigal</persName> reste affecté à l'<orgName
-                        ref="Hum_001">Huma</orgName> dans le service du camarade <persName ref="Cog_001"
-                        >Cogno</persName>. </p>
+                        ref="Hum_001">Huma</orgName> dans le service du camarade <persName
+                        ref="Cog_001">Cogno</persName>. </p>
                </div3>
 
                <div3 type="Chapter" n="11">
                   <head>11</head>
                   <p><persName ref="Ham_001">Hamont dit Dubreuil</persName> actuellement en
-                        <placeName ref="Bre_001">Bretagne</placeName> commandant <orgName ref="FTP_001"
-                        >F.T.P.F.</orgName> est affecté à l'<orgName ref="Hum_001">Huma</orgName>. </p>
+                        <placeName ref="Bre_001">Bretagne</placeName> commandant <orgName
+                        ref="FTP_001">F.T.P.F.</orgName> est affecté à l'<orgName ref="Hum_001"
+                        >Huma</orgName>. </p>
                </div3>
 
                <div3 type="Chapter" n="12">
                   <head>12</head>
                   <p> La <persName ref="Jan_001">Janine</persName> Marchand des femmes sera
-                     rédactrice à l'<orgName ref="Hum_001">Huma</orgName> tout en resta en liaison avec le
-                        <orgName ref="MdF_001">mouvement des femmes</orgName>. </p>
+                     rédactrice à l'<orgName ref="Hum_001">Huma</orgName> tout en resta en liaison
+                     avec le <orgName ref="MdF_001">mouvement des femmes</orgName>. </p>
                </div3>
 
                <div3 type="Chapter" n="13">
@@ -280,9 +284,9 @@
                   <head>14</head>
                   <p>Le camarade <persName ref="Cas_001">Casanova</persName> est chargé de faire
                      dans le courant de la semaine une brochure sur " <eventName ref="IP_001"
-                        >l'insurrection parisienne</eventName> " - Le camarade <persName ref="Til_001"
-                        >Tillon</persName> est chargé de faire préparer le recueil des communiqués
-                        <orgName ref="FTP_001">F.T.P.F.</orgName>
+                        >l'insurrection parisienne</eventName> " - Le camarade <persName
+                        ref="Til_001">Tillon</persName> est chargé de faire préparer le recueil des
+                     communiqués <orgName ref="FTP_001">F.T.P.F.</orgName>
                   </p>
                </div3>
 
@@ -300,8 +304,8 @@
 
                <div3 type="Chapter" n="17">
                   <head>17</head>
-                  <p> Le <eventName ref="BP_001">B.P.</eventName> tiendra sa réunion Jeudi 7 septembre à 9
-                     heures ou les 6 régions de la <placeName ref="RP_001">région
+                  <p> Le <eventName ref="BP_001">B.P.</eventName> tiendra sa réunion Jeudi 7
+                     septembre à 9 heures ou les 6 régions de la <placeName ref="RP_001">région
                         Parisienne</placeName> seront présents.</p>
                </div3>
 
@@ -316,19 +320,19 @@
                <p>Dans les décisions du secrétariat du 4 septembre 1944, manque le point suivant
                   :</p>
                <p>Le camarade <persName ref="Cog_001">COGNIOT</persName> sera candidat à la <orgName
-                     ref="CEP_001">commission d'Epuration de la Presse</orgName> de la Région parisienne
-                     (<orgName ref="MdI_001">Ministre de l'information</orgName> ).</p>
+                     ref="CEP_001">commission d'Epuration de la Presse</orgName> de la Région
+                  parisienne (<orgName ref="MdI_001">Ministre de l'information</orgName> ).</p>
             </div2>
          </div1>
       </body>
-      
+
       <back>
          <listEvent>
             <event xml:id="ClP_001">
                <eventName>Campagne pour la liberté de la presse</eventName>
                <note>First campaign in the aftermath of World War IIe</note>
             </event>
-            
+
             <event xml:id="IP_001">
                <eventName>Libération de Paris</eventName>
                <note>The liberation of Paris was a battle that took place during Word War II from 19
@@ -336,25 +340,25 @@
                   1944</note>
                <idno type="Wikidata">Q696835</idno>
             </event>
-            
+
             <event xml:id="BP_001">
                <eventName>Bilan Politique</eventName>
             </event>
          </listEvent>
-         
+
          <listOrg>
             <org xml:id="AFP_001">
                <orgName>Agence de presse et d'information</orgName>
             </org>
-            
+
             <org xml:id="FdP_001">
                <orgName>Fédération de la presse</orgName>
             </org>
-            
+
             <org xml:id="FdP_002">
                <orgName>Fédération du papier</orgName>
             </org>
-            
+
             <org xml:id="CS_001">
                <orgName>
                   <name>Ce Soir</name>
@@ -374,11 +378,11 @@
                <desc>French Newspaper</desc>
                <idno type="Wikidata">Q2943625</idno>
             </org>
-            
+
             <org xml:id="PP_001">
                <orgName>
                   <name>Le Petit Parisien</name>
-                </orgName>
+               </orgName>
                <place>
                   <address>
                      <country key="FR"/>
@@ -393,7 +397,7 @@
                <desc>French Newspaper</desc>
                <idno type="Wikidata">Q831299</idno>
             </org>
-            
+
             <org xml:id="Hum_001">
                <orgName>
                   <name>L'Humanité</name>
@@ -412,7 +416,7 @@
                <desc>French Newspaper</desc>
                <idno type="Wikidata">Q1137404</idno>
             </org>
-            
+
             <org xml:id="FTP_001">
                <orgName>
                   <name>Francs-tireurs et partisans Francais</name>
@@ -420,7 +424,7 @@
                <desc>Résistance groups in France during WWII, linked to CommunistParty</desc>
                <idno type="Wikidata">Q15731766</idno>
             </org>
-            
+
             <org xml:id="MdF_001">
                <orgName>
                   <name>Mouvements de libération des femmes</name>
@@ -428,24 +432,24 @@
                <desc>French political movement for women's emancipation</desc>
                <idno type="Wikidata">Q3326594</idno>
             </org>
-            
+
             <org xml:id="MP_001">
                <orgName>
                   <name>Milices Patrioques</name>
                </orgName>
-               <desc>the Milices ouvrières were born of a communist initiative; their
-                  creation was announced in L'Humanité on August 15, 1943. A fortnight later, they
-                  changed their name to Milices patriotiques.</desc>
+               <desc>the Milices ouvrières were born of a communist initiative; their creation was
+                  announced in L'Humanité on August 15, 1943. A fortnight later, they changed their
+                  name to Milices patriotiques.</desc>
             </org>
-            
+
             <org xml:id="CEP_001">
                <orgName>
                   <name>Comission d'épuration de la Presse</name>
                </orgName>
-               <desc>The press purge commission was set up to judge journalists who had
-                  worked under the French Occupation.</desc>
+               <desc>The press purge commission was set up to judge journalists who had worked under
+                  the French Occupation.</desc>
             </org>
-            
+
             <org xml:id="MdI_001">
                <orgName>
                   <name>Ministère de l'Information</name>
@@ -454,10 +458,10 @@
                   responsible for propaganda from its creation in 1938 to its suppression in
                   1974</desc>
                <idno type="Wikidata">Q3315222</idno>
-               
+
             </org>
          </listOrg>
       </back>
-      
+
    </text>
 </TEI>
