@@ -184,10 +184,11 @@
 
    <text>
       <body>
-         <div1 type="Compte_Rendue">
+         <div1 type="title">
+         <head rend="align(center) case(allcaps)">Secretariat du 4 septembre </head>
             <head>Secretariat du 4 septembre 1944</head>
             <div2 type="decisions_arretés">
-               <head>Décisions et Arrêtés</head>
+               <head rend="align(center) case(allcaps)"> Decision et Arretes</head>
 
                <div3 type="Chapter" n="1">
                   <head>1</head>

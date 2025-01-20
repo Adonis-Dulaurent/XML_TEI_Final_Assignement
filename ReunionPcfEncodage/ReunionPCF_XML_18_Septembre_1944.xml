@@ -113,9 +113,11 @@
 
    <text>
       <body>
-         <div1 type="decisions">
-            <head>decisions</head>
+         <div1 type="title">
+            <head rend="align(center) case(allcaps)">Secretariat du 18 septembre </head>
             <div2>
+               <head rend="align(center) case(allcaps)"> Decision</head>
+               
                <div3 type="Chapter" n="1">
                   <head>1</head>
                   <p>Le <orgName ref="CPL_001">COMITE PARISIEN DE LIBERATION</orgName> lancera
