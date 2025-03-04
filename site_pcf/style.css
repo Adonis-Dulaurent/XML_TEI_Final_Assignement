@@ -1,0 +1,149 @@
+/* Reset de base */
+body, h1, h2, h3, p, ul, li, a {
+    margin: 0;
+    padding: 0;
+    font-family: 'Comic Sans MS', cursive, sans-serif; /* Police typique des Skyblogs */
+    color: #333;
+}
+
+/* Fond de page */
+body {
+    background-color: #f0e4f7; /* Fond violet pastel */
+    background-repeat: repeat;
+    padding: 20px;
+}
+
+/* En-tête */
+header {
+    background-color: #ffccff; /* Rose clair */
+    border: 2px solid #ff66cc; /* Bordure rose vif */
+    border-radius: 15px; /* Bordures arrondies */
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header nav a {
+    color: #cc0066; /* Rose foncé */
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 10px;
+}
+
+header nav a:hover {
+    color: #ff3399; /* Rose plus clair au survol */
+    text-decoration: underline;
+}
+
+/* Bannière */
+#banner {
+    background-color: #ff99cc; /* Rose pâle */
+    border: 3px dashed #ff3399; /* Bordure en pointillés rose */
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#banner h1 {
+    color: #cc0066; /* Rose foncé */
+    font-size: 36px;
+    text-shadow: 2px 2px 0 #ffccff; /* Ombre rose clair */
+}
+
+.banner_text {
+    color: #660033; /* Rouge foncé */
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+/* Contenu principal */
+main {
+    background-color: #ffffff; /* Fond blanc */
+    border: 2px solid #ff66cc; /* Bordure rose */
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.about p {
+    color: #333;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.about a {
+    color: #ff3399; /* Rose vif */
+    text-decoration: none;
+}
+
+.about a:hover {
+    text-decoration: underline;
+}
+
+/* Pied de page */
+footer {
+    background-color: #ffccff; /* Rose clair */
+    border: 2px solid #ff66cc; /* Bordure rose */
+    border-radius: 15px;
+    padding: 10px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+footer p {
+    color: #cc0066; /* Rose foncé */
+    font-size: 14px;
+}
+
+/* Bouton de retour */
+#bouton_retour {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #ff3399; /* Rose vif */
+    border: 2px solid #cc0066; /* Bordure rose foncé */
+    border-radius: 50%;
+    padding: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Ombre légère */
+}
+
+#bouton_retour img {
+    filter: brightness(0) invert(1); /* Flèche blanche */
+}
+
+/* Effets supplémentaires */
+h2 {
+    color: #ff3399; /* Rose vif */
+    font-size: 24px;
+    text-shadow: 1px 1px 0 #ffccff; /* Ombre rose clair */
+    margin-bottom: 10px;
+}
+
+.cadre {
+    background-color: #ffffff; /* Fond blanc */
+    border: 2px solid #ff66cc; /* Bordure rose */
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.org-entry, .place-entry {
+    background-color: #fff0f5; /* Rose très clair */
+    border: 1px solid #ff66cc; /* Bordure rose */
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+.org-entry h5, .place-entry h5 {
+    color: #cc0066; /* Rose foncé */
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.org-entry p, .place-entry p {
+    color: #333;
+    font-size: 16px;
+    line-height: 1.6;
+}

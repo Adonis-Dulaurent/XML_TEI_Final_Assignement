@@ -17,8 +17,16 @@
         <xsl:value-of select="concat('facsimile', '.', 'html')"/>
     </xsl:variable>
 
-    <xsl:variable name="index">
-        <xsl:value-of select="concat('index', '.', 'html')"/>
+    <xsl:variable name="index_name">
+        <xsl:value-of select="concat('index_name', '.', 'html')"/>
+    </xsl:variable>
+
+    <xsl:variable name="index_lieux">
+        <xsl:value-of select="concat('index_lieux', '.', 'html')"/>
+    </xsl:variable>
+
+    <xsl:variable name="index_organisme">
+        <xsl:value-of select="concat('index_organisme', '.', 'html')"/>
     </xsl:variable>
 
     <!-- Variable containing the HTML Header -->
@@ -55,7 +63,13 @@
                         <a class="nav-link" href="{$facsimile}">Facsimile</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{$index}">Index</a>
+                        <a class="nav-link" href="{$index_name}">Index des noms</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{$index_lieux}">Index des lieux</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{$index_organisme}">Index des Organismes</a>
                     </li>
                 </ul>
             </nav>
@@ -82,9 +96,11 @@
     <!--Matching TEI doc root with templates -->
     <xsl:template match="/">
         <xsl:call-template name="home"/>
-        <!--<xsl:call-template name="transcription"/>
+        <xsl:call-template name="transcription"/>
         <xsl:call-template name="facsimile"/>
-        <xsl:call-template name="index"/>-->
+        <xsl:call-template name="index_name"/>
+        <xsl:call-template name="index_lieux"/>
+        <xsl:call-template name="index_organisme"/>
     </xsl:template>
 
     <!-- Template for Home -->
@@ -126,7 +142,279 @@
                                 documents.</p>
                         </div>
                     </main>
-                    <xsl:copy-of select="$footer"/>> </body>
+                    <xsl:copy-of select="$footer"/>
+                </body>
+            </html>
+        </xsl:result-document>
+    </xsl:template>
+
+    <!-- Template pour la Transcription -->
+    <xsl:template name="transcription">
+        <xsl:result-document href="{$transcription}" method="html" indent="yes">
+            <html>
+                <xsl:copy-of select="$head"/>
+                <body>
+                    <xsl:copy-of select="$navbar"/>
+                    <main class="container-fluid">
+                        <div class="container-fluid">
+                            <div class="row mt-3">
+                                <!-- Itération sur chaque div1 -->
+                                <xsl:for-each select="//body/div1">
+                                    <div class="col-md-4">
+                                        <!-- Utilisation de col-md-4 pour 3 colonnes côte à côte -->
+                                        <section class="text-section">
+                                            <!-- Titre principal (h2) extrait du <head> du div1 courant -->
+                                            <h2>
+                                                <xsl:value-of select="head"/>
+                                            </h2>
+
+                                            <!-- Itération sur chaque div2 dans le div1 courant -->
+                                            <xsl:for-each select="div2/div3">
+                                                <div class="sub-section">
+                                                  <!-- Titre secondaire (h3) extrait du <head> du div2 courant -->
+                                                  <h3>
+                                                  <xsl:value-of select="head"/>
+                                                  </h3>
+
+                                                  <!-- Contenu du div2 SANS le head -->
+                                                  <div class="content">
+                                                  <xsl:apply-templates select="node() except head"/>
+                                                  </div>
+                                                </div>
+                                            </xsl:for-each>
+                                        </section>
+                                    </div>
+                                </xsl:for-each>
+                            </div>
+                        </div>
+                    </main>
+                    <xsl:copy-of select="$footer"/>
+                </body>
+            </html>
+        </xsl:result-document>
+    </xsl:template>
+
+    <!-- Templates pour le contenu des div1 et div2 -->
+    <xsl:template match="p">
+        <!-- Traitement des paragraphes -->
+        <p>
+            <xsl:apply-templates/>
+        </p>
+    </xsl:template>
+
+    <xsl:template match="list">
+        <!-- Traitement des listes -->
+        <ul>
+            <xsl:for-each select="item">
+                <li>
+                    <xsl:apply-templates/>
+                </li>
+            </xsl:for-each>
+        </ul>
+    </xsl:template>
+
+    <!-- Création d'un fac-similé -->
+    <xsl:template name="facsimile">
+        <xsl:result-document href="{$facsimile}" method="html" indent="yes">
+            <html>
+                <xsl:copy-of select="$head"/>
+                <body>
+                    <xsl:copy-of select="$navbar"/>
+                    <main class="container-fluid">
+                        <div class="row mt-3">
+                            <div class="col-md-4">
+                                <section class="image-section">
+                                    <h2>Secretariat du 4 septembre</h2>
+                                    <img src="site_pcf/pictures/doc/doc_1_1.png"/>
+                                    <img src="site_pcf/pictures/doc/doc_1_2.png"/>
+                                    <img src="site_pcf/pictures/doc/doc_1_3.png.png"/>
+                                </section>
+                            </div>
+                            <div class="col-md-4">
+                                <section class="image-section">
+                                    <h2>Secretariat du 11 septembre</h2>
+                                    <img src="site_pcf/pictures/doc/doc_2_1.png"/>
+                                    <img src="site_pcf/pictures/doc/doc_2_2.png"/>
+                                </section>
+                            </div>
+                            <div class="col-md-4">
+                                <h2>Secretariat du 18 septembre</h2>
+                                <img src="site_pcf/pictures/doc/doc_3.png"/>
+                            </div>
+                        </div>
+                    </main>
+                    <xsl:copy-of select="$footer"/>
+                </body>
+            </html>
+        </xsl:result-document>
+    </xsl:template>
+
+    <!-- Template pour l'index des noms -->
+    <xsl:template name="index_name">
+        <xsl:result-document href="{$index_name}" method="html" indent="yes">
+            <html>
+                <xsl:copy-of select="$head"/>
+                <body>
+                    <xsl:copy-of select="$navbar"/>
+                    <main class="container-fluid">
+                        <div class="row mt-3 mb-3">
+                            <h2 class="offset-2">Index des noms</h2>
+                            <div class="col-md-8 offset-2 cadre">
+                                <!-- Itération sur chaque personne -->
+                                <xsl:for-each select="//listPerson/person">
+                                    <div class="person-entry">
+                                        <!-- Titre avec les noms (forename et surname) -->
+                                        <h5>
+                                            <xsl:if test="persName/forename">
+                                                <xsl:value-of select="persName/forename"/>
+                                                <xsl:text> </xsl:text>
+                                            </xsl:if>
+                                            <xsl:if test="persName/surname">
+                                                <xsl:value-of select="persName/surname"/>
+                                            </xsl:if>
+                                        </h5>
+
+                                        <!-- Rôle correspondant à cette entité -->
+                                        <p>
+                                            <xsl:apply-templates select="persName/roleName"/>
+                                        </p>
+                                        <p>
+                                            <xsl:if test="idno">
+                                                <strong>Identifiant Wikidata: </strong>
+                                                <xsl:for-each select="idno">
+                                                  <xsl:value-of select="."/>
+                                                </xsl:for-each>
+                                            </xsl:if>
+                                        </p>
+                                        <hr/>
+                                    </div>
+                                </xsl:for-each>
+                            </div>
+                        </div>
+                    </main>
+                    <xsl:copy-of select="$footer"/>
+                </body>
+            </html>
+        </xsl:result-document>
+    </xsl:template>
+
+    <!-- Template pour l'index des lieux -->
+    <xsl:template name="index_lieux">
+        <xsl:result-document href="{$index_lieux}" method="html" indent="yes">
+            <html>
+                <xsl:copy-of select="$head"/>
+                <body>
+                    <xsl:copy-of select="$navbar"/>
+                    <main class="container-fluid">
+                        <div class="row mt-3 mb-3">
+                            <h2 class="offset-2">Index des lieux</h2>
+                            <div class="col-md-8 offset-2 cadre">
+                                <!-- Itération sur chaque lieu -->
+                                <xsl:for-each select="//listPlace/place">
+                                    <div class="place-entry">
+                                        <!-- Titre avec le nom du lieu -->
+                                        <h5>
+                                            <xsl:value-of select="label/name"/>
+                                        </h5>
+
+                                        <!-- Affichage des informations de localisation -->
+                                        <p>
+                                            <xsl:if test="location/geo">
+                                                <strong>Location : </strong>
+                                                <xsl:for-each select="location/*">
+                                                  <!-- Affiche la valeur de l'élément -->
+                                                  <xsl:value-of select="."/>
+
+                                                  <!-- Ajoute une virgule sauf pour le dernier élément ou le premier -->
+                                                  <xsl:if
+                                                  test="position() != last() and position() != 1">,
+                                                  </xsl:if>
+                                                </xsl:for-each>
+                                            </xsl:if>
+                                        </p>
+                                        <!-- Description du lieu -->
+                                        <p>
+                                            <xsl:if test="desc">
+                                                <strong>Description : </strong>
+                                                <xsl:for-each select="desc">
+                                                  <xsl:value-of select="."/>
+                                                </xsl:for-each>
+                                            </xsl:if>
+                                        </p>
+                                        <p>
+                                            <xsl:if test="idno">
+                                                <strong>Identifiant Wikidata: </strong>
+                                                <xsl:for-each select="idno">
+                                                  <xsl:value-of select="."/>
+                                                </xsl:for-each>
+                                            </xsl:if>
+                                        </p>
+                                        <hr/>
+                                    </div>
+                                </xsl:for-each>
+                            </div>
+                        </div>
+                    </main>
+                    <xsl:copy-of select="$footer"/>
+                </body>
+            </html>
+        </xsl:result-document>
+    </xsl:template>
+
+    <xsl:template name="index_organisme">
+        <xsl:result-document href="{$index_organisme}" method="html" indent="yes">
+            <html>
+                <xsl:copy-of select="$head"/>
+                <body>
+                    <xsl:copy-of select="$navbar"/>
+                    <main class="container-fluid">
+                        <div class="row mt-3 mb-3">
+                            <h2 class="offset-2">Index des organismes</h2>
+                            <div class="col-md-8 offset-2 cadre">
+                                <!-- Itération sur chaque organisme -->
+                                <xsl:for-each select="//listOrg/org">
+                                    <div class="org-entry">
+                                        <!-- Nom de l'organisme -->
+                                        <h5>
+                                            <xsl:value-of select="orgName"/>
+                                        </h5>
+                                        
+                                        <!-- Affichage des informations de localisation -->
+                                        <p>
+                                            <xsl:if test="place/location/*"> <!-- Vérifie s'il y a des éléments dans place/location -->
+                                                <strong>Location : </strong>
+                                                <xsl:for-each select="place/location/*">
+                                                    <!-- Affiche la valeur de l'élément -->
+                                                    <xsl:value-of select="."/>
+                                                    <!-- Ajoute une virgule sauf pour le dernier élément ou le premier -->
+                                                    <xsl:if test="position() != last() and position() != 1">, </xsl:if>
+                                                </xsl:for-each>
+                                            </xsl:if>
+                                        </p>
+                                        <p>
+                                            <xsl:if test="desc">
+                                                <strong>Description : </strong>
+                                                <xsl:for-each select="desc">
+                                                    <xsl:value-of select="."/>
+                                                </xsl:for-each>
+                                            </xsl:if>
+                                        </p>
+                                        <p>
+                                            <xsl:if test="idno">
+                                                <strong>Identifiant Wikidata: </strong>
+                                                <xsl:for-each select="idno">
+                                                    <xsl:value-of select="."/>
+                                                </xsl:for-each>
+                                            </xsl:if>
+                                        </p>
+                                        <hr/>
+                                    </div>
+                                </xsl:for-each>
+                            </div>
+                        </div>
+                    </main>
+                    <xsl:copy-of select="$footer"/>
+                </body>
             </html>
         </xsl:result-document>
     </xsl:template>

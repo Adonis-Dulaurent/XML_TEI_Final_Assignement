@@ -346,7 +346,9 @@
                </place>
 
                <place xml:id="Fra_001">
-                  <label>France</label>
+                  <label>
+                     <name>France</name>
+                  </label>
                   <location>
                      <country key="FR"/>
                   </location>
@@ -392,7 +394,7 @@
                </place>
 
                <place xml:id="Alg_001">
-                  <label>Algérie</label>
+                  <label><name>Algérie</name></label>
                   <location>
                      <country key="Alg"/>
                   </location>
@@ -432,9 +434,9 @@
                </place>
 
                <place xml:id="P13_001">
-                  <placeName>
+                  <label>
                      <name>Paris 13e arrondissement</name>
-                  </placeName>
+                  </label>
                   <location>
                      <country key="FR"/>
                      <settlement type="City">Paris</settlement>
@@ -502,7 +504,7 @@
                         <country key="FR"/>
                         <settlement type="City">Paris</settlement>
                         <district type="arrondisement">10e</district>
-                        <placeName type="street"><num>18-21</num>Rue d'Enghien</placeName>
+                        <placeName type="street"><num>18-21</num> Rue d'Enghien</placeName>
                         <geo>48.8719437 2.3515342</geo>
                      </location>
                   </place>
@@ -646,7 +648,7 @@
                         <country key="FR"/>
                         <settlement type="City">Paris</settlement>
                         <district type="arrondissement">9e</district>
-                        <placeName type="street"><num>79</num>Rue d'Amsterdam</placeName>
+                        <placeName type="street"><num>79</num> Rue d'Amsterdam</placeName>
                         <geo>48.880863 2.3273031</geo>
                      </location>
                   </place>
@@ -660,9 +662,8 @@
    <text>
       <body>
          <div1 type="part">
-            <head>Secretariat du PCF du 4 septembre 1944</head>
+            <head rend="align(center) case(allcaps)">Secretariat du 4 septembre</head>
             <div2 type="title">
-               <head rend="align(center) case(allcaps)">Secretariat du 4 septembre </head>
                <div3 type="decisions_arretés">
                   <head rend="align(center) case(allcaps)"> Decision et Arretes</head>
 
@@ -803,8 +804,8 @@
          </div1>
 
          <div1 type="part">
+            <head rend="align(center), case(allcaps)"> Secretariat du 11 septembre</head>
             <div2 type="title">
-               <head rend="align(center) case(allcaps)">Secretariat du 11 septembre </head>
                <div3 type="Decision">
                   <head rend="align(center) case(allcaps)"> Decision</head>
                   <div4 type="Chapter" n="1">
@@ -967,8 +968,8 @@
             </div2>
          </div1>
          <div1 type="part">
+            <head rend="align(center) case(allcaps)">Secretariat du 18 septembre</head>
             <div2 type="title">
-               <head rend="align(center) case(allcaps)">Secretariat du 18 septembre </head>
                <div3>
                   <head rend="align(center) case(allcaps)"> Decision</head>
                   <div4 type="Chapter" n="1">
