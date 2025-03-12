@@ -928,7 +928,7 @@
                   </attList>
                </classSpec>
                <!--Checking module textstructure-->
-               <moduleRef key="textstructure" include="TEI text body div1 div2 div3 div4 back"/>
+               <moduleRef key="textstructure" include="TEI text body div0 div1 div2 div3 div4 back"/>
                <elementSpec ident="TEI" mode="change">
                   <attList>
                      <attDef ident="version" mode="delete"/>
@@ -938,6 +938,20 @@
                <elementSpec ident="text" mode="change">
                   <attList>
                      <attDef ident="type" mode="delete"/>
+                  </attList>
+               </elementSpec>
+               <elementSpec ident="div0" mode="add">
+                  <content autoPrefix="false">
+                     <sequence>
+                        <!-- Titre obligatoire -->
+                        <elementRef key="title"/>
+                        <!-- Div1 obligatoire -->
+                        <elementRef key="div1"/>
+                     </sequence>
+                  </content>
+                  <attList>
+                     <!-- Attributs optionnels (exemple) -->
+                     <attDef ident="type" usage="opt"/>
                   </attList>
                </elementSpec>
                <elementSpec ident="div1" mode="change">
