@@ -33,9 +33,9 @@
     <xsl:variable name="head">
         <head>
             <meta name="viewport" content="width=device-width, initial-scale=1"/>
-            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
                 rel="stylesheet"
-                integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+                integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
                 crossorigin="anonymous"/>
             <link rel="stylesheet" href="style.css"/>
             <xsl:value-of select="//titleStmt/title"/>
@@ -74,11 +74,6 @@
                 </ul>
             </nav>
         </header>
-
-        <!--back to top of page -->
-        <button type="button" class="btn" id="bouton_retour">
-            <img src="../pictures/caret-up-fill.svg" alt="Flèche" width="15" height="25"/>
-        </button>
     </xsl:variable>
 
     <!--Variable for  Footer -->
@@ -225,21 +220,63 @@
                             <div class="col-md-4">
                                 <section class="image-section">
                                     <h2>Secretariat du 4 septembre</h2>
-                                    <img src="site_pcf/pictures/doc/doc_1_1.png"/>
-                                    <img src="site_pcf/pictures/doc/doc_1_2.png"/>
-                                    <img src="site_pcf/pictures/doc/doc_1_3.png.png"/>
+                                    <div id="carouselExample" class="carousel slide">
+                                        <div class="carousel-inner">
+                                            <div class="carousel-item active">
+                                                <img src="pictures/doc_1_1.png"/>
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="pictures/doc_1_2.png"/>
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="pictures/doc_1_3.png"/>
+                                            </div>
+                                        </div>
+                                        <button class="carousel-control-prev" type="button"
+                                            data-bs-target="#carouselExample" data-bs-slide="prev">
+                                            <span class="carousel-control-prev-icon"
+                                                aria-hidden="true"/>
+                                            <span class="visually-hidden">Previous</span>
+                                        </button>
+                                        <button class="carousel-control-next" type="button"
+                                            data-bs-target="#carouselExample" data-bs-slide="next">
+                                            <span class="carousel-control-next-icon"
+                                                aria-hidden="true"/>
+                                            <span class="visually-hidden">Next</span>
+                                        </button>
+                                    </div>
                                 </section>
                             </div>
                             <div class="col-md-4">
                                 <section class="image-section">
                                     <h2>Secretariat du 11 septembre</h2>
-                                    <img src="site_pcf/pictures/doc/doc_2_1.png"/>
-                                    <img src="site_pcf/pictures/doc/doc_2_2.png"/>
+                                    <div id="carouselExample2" class="carousel slide">
+                                        <div class="carousel-inner">
+                                            <div class="carousel-item active">
+                                                <img src="pictures/doc_2_1.png"/>
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="pictures/doc_2_2.png"/>
+                                            </div>
+                                        </div>
+                                            <button class="carousel-control-prev" type="button"
+                                                data-bs-target="#carouselExample2" data-bs-slide="prev">
+                                                <span class="carousel-control-prev-icon"
+                                                    aria-hidden="true"/>
+                                                <span class="visually-hidden">Previous</span>
+                                            </button>
+                                            <button class="carousel-control-next" type="button"
+                                                data-bs-target="#carouselExample2" data-bs-slide="next">
+                                                <span class="carousel-control-next-icon"
+                                                    aria-hidden="true"/>
+                                                <span class="visually-hidden">Next</span>
+                                            </button>
+                                    </div>
                                 </section>
                             </div>
                             <div class="col-md-4">
                                 <h2>Secretariat du 18 septembre</h2>
-                                <img src="site_pcf/pictures/doc/doc_3.png"/>
+                                <img src="pictures/doc_3.png"/>
                             </div>
                         </div>
                     </main>
@@ -378,16 +415,19 @@
                                         <h5>
                                             <xsl:value-of select="orgName"/>
                                         </h5>
-                                        
+
                                         <!-- Affichage des informations de localisation -->
                                         <p>
-                                            <xsl:if test="place/location/*"> <!-- Vérifie s'il y a des éléments dans place/location -->
+                                            <xsl:if test="place/location/*">
+                                                <!-- Vérifie s'il y a des éléments dans place/location -->
                                                 <strong>Location : </strong>
                                                 <xsl:for-each select="place/location/*">
-                                                    <!-- Affiche la valeur de l'élément -->
-                                                    <xsl:value-of select="."/>
-                                                    <!-- Ajoute une virgule sauf pour le dernier élément ou le premier -->
-                                                    <xsl:if test="position() != last() and position() != 1">, </xsl:if>
+                                                  <!-- Affiche la valeur de l'élément -->
+                                                  <xsl:value-of select="."/>
+                                                  <!-- Ajoute une virgule sauf pour le dernier élément ou le premier -->
+                                                  <xsl:if
+                                                  test="position() != last() and position() != 1">,
+                                                  </xsl:if>
                                                 </xsl:for-each>
                                             </xsl:if>
                                         </p>
@@ -395,7 +435,7 @@
                                             <xsl:if test="desc">
                                                 <strong>Description : </strong>
                                                 <xsl:for-each select="desc">
-                                                    <xsl:value-of select="."/>
+                                                  <xsl:value-of select="."/>
                                                 </xsl:for-each>
                                             </xsl:if>
                                         </p>
@@ -403,7 +443,7 @@
                                             <xsl:if test="idno">
                                                 <strong>Identifiant Wikidata: </strong>
                                                 <xsl:for-each select="idno">
-                                                    <xsl:value-of select="."/>
+                                                  <xsl:value-of select="."/>
                                                 </xsl:for-each>
                                             </xsl:if>
                                         </p>

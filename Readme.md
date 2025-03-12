@@ -36,3 +36,7 @@ The repository is organized as follows:
 - `~/ReunionPcfEncoding/`: Contains XML TEI files, an ODD file, and accompanying guidelines in HTML format.
 - `~/Sources/`: Includes PDF copies of the original meeting reports.
 - `~/Transcription/`: Features `.txt` transcriptions of the documents, prepared by the project team.
+- `~/xslt` : Contains an XSLT stylesheet for transforming the XML-TEI document into 
+  six HTML documents, a CSS stylesheet to enhance the readability of the 
+  HTML documents, and a folder containing the photos used in the HTML 
+  transcription.

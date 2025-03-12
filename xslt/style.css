@@ -1,0 +1,79 @@
+/* Importation de la police Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
+
+:root {
+    --primary-color: #b53535;
+    --background-color: #1e1e1e;
+    --text-color: #e0e0e0;
+    --accent-color: #ffcc66;
+    --navbar-bg: #2a2a2a;
+    --footer-bg: #181818;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    background-color: var(--navbar-bg) !important;
+    padding: 1rem;
+}
+
+.navbar-brand, .nav-link {
+    color: var(--text-color) !important;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: var(--accent-color) !important;
+}
+
+#banner {
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.2)), url('https://source.unsplash.com/1600x900/?archives,history');
+    background-size: cover;
+    background-position: center;
+    padding: 4rem 2rem;
+    text-align: center;
+    color: var(--text-color);
+}
+
+#Title {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.banner_text {
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+.about {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+}
+
+.about a {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.about a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    background-color: var(--footer-bg);
+    color: var(--text-color);
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
