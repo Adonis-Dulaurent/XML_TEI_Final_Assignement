@@ -2,9 +2,14 @@
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xpath-default-namespace="http://www.tei-c.org/ns/1.0" version="2.0">
 
+
+    <!-- Configuration globale de la transformation -->
     <xsl:output method="html" indent="yes" encoding="UTF-8"/>
 
-    <!--Output file name variable -->
+    <!-- 
+    Variables pour les noms de fichiers de sortie
+    Permet de centraliser et facilement modifier les noms de fichiers générés 
+    -->
     <xsl:variable name="home">
         <xsl:value-of select="concat('home', '.', 'html')"/>
     </xsl:variable>
@@ -29,15 +34,20 @@
         <xsl:value-of select="concat('index_organisme', '.', 'html')"/>
     </xsl:variable>
 
-    <!-- Variable containing the HTML Header -->
+    <!-- VARIABLES DE STRUCTURE HTML 
+    Extraction centralisée des éléments communs à toutes les pages -->
+    <!-- Variable contenant l'en-tête HTML générique -->
     <xsl:variable name="head">
         <head>
+            <!-- Métadonnées et configuration responsive -->
             <meta name="viewport" content="width=device-width, initial-scale=1"/>
+            <!-- Intégration des bibliothèques CSS et JS -->
             <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
                 rel="stylesheet"
                 integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
                 crossorigin="anonymous"/>
             <link rel="stylesheet" href="style.css"/>
+            <!-- Métadonnées dynamiques extraites du document source -->
             <xsl:value-of select="//titleStmt/title"/>
             <meta name="author">
                 <xsl:attribute name="content">
@@ -88,7 +98,11 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"/>
     </xsl:variable>
 
-    <!--Matching TEI doc root with templates -->
+    <!-- 
+    Template principal
+    Génère l'ensemble des pages HTML à partir du document source 
+    -->
+    
     <xsl:template match="/">
         <xsl:call-template name="home"/>
         <xsl:call-template name="transcription"/>
@@ -98,7 +112,7 @@
         <xsl:call-template name="index_organisme"/>
     </xsl:template>
 
-    <!-- Template for Home -->
+    <!-- Template pour Home -->
     <xsl:template name="home">
         <xsl:result-document href="{$home}" method="html" indent="yes">
             <html>
@@ -109,18 +123,18 @@
                         <!-- banner -->
                         <div class="row">
                             <div class="col-md-12" id="banner">
-                                <!-- Principal Title  -->
+                                <!-- Titre principal  -->
                                 <h1 class="text_light" id="Title">
                                     <xsl:value-of select="//titleStmt/title"/>
                                 </h1>
-                                <!-- Text on the banner-->
+                                <!-- Texte de la banière-->
                                 <div class="banner_text">
                                     <xsl:value-of select="//respStmt/resp"/> by <xsl:value-of
                                         select="//respStmt/persName"/>
                                 </div>
                             </div>
                         </div>
-                        <!-- About -->
+                        <!-- A propos -->
                         <div class="about">
                             <p>This project constitutes an encoding proposal for the digitized
                                 meeting minutes of the French Communist Party’s Secretariat,
